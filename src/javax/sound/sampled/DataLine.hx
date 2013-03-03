@@ -78,7 +78,7 @@ package javax.sound.sampled;
 	*
 	* @see #flush()
 	*/
-	@:overload @:public @:public @:public public function drain() : Void;
+	@:overload @:public public function drain() : Void;
 	
 	/**
 	* Flushes queued data from the line.  The flushed data is discarded.
@@ -94,7 +94,7 @@ package javax.sound.sampled;
 	* @see #stop()
 	* @see #drain()
 	*/
-	@:overload @:public @:public @:public public function flush() : Void;
+	@:overload @:public public function flush() : Void;
 	
 	/**
 	* Allows a line to engage in data I/O.  If invoked on a line
@@ -108,7 +108,7 @@ package javax.sound.sampled;
 	* @see #isRunning()
 	* @see LineEvent
 	*/
-	@:overload @:public @:public public function start() : Void;
+	@:overload @:public public function start() : Void;
 	
 	/**
 	* Stops the line.  A stopped line should cease I/O activity.
@@ -126,7 +126,7 @@ package javax.sound.sampled;
 	* @see #flush()
 	* @see LineEvent
 	*/
-	@:overload @:public @:public public function stop() : Void;
+	@:overload @:public public function stop() : Void;
 	
 	/**
 	* Indicates whether the line is running.  The default is <code>false</code>.
@@ -138,7 +138,7 @@ package javax.sound.sampled;
 	* @see #start()
 	* @see #stop()
 	*/
-	@:overload @:public @:public public function isRunning() : Bool;
+	@:overload @:public public function isRunning() : Bool;
 	
 	/**
 	* Indicates whether the line is engaging in active I/O (such as playback
@@ -154,7 +154,7 @@ package javax.sound.sampled;
 	* @see LineEvent
 	* @see LineListener
 	*/
-	@:overload @:public @:public public function isActive() : Bool;
+	@:overload @:public public function isActive() : Bool;
 	
 	/**
 	* Obtains the current format (encoding, sample rate, number of channels,
@@ -173,7 +173,7 @@ package javax.sound.sampled;
 	* @return current audio data format
 	* @see AudioFormat
 	*/
-	@:overload @:public @:public public function getFormat() : javax.sound.sampled.AudioFormat;
+	@:overload @:public public function getFormat() : javax.sound.sampled.AudioFormat;
 	
 	/**
 	* Obtains the maximum number of bytes of data that will fit in the data line's
@@ -185,7 +185,7 @@ package javax.sound.sampled;
 	*
 	* @return the size of the buffer in bytes
 	*/
-	@:overload @:public @:public public function getBufferSize() : Int;
+	@:overload @:public public function getBufferSize() : Int;
 	
 	/**
 	* Obtains the number of bytes of data currently available to the
@@ -206,7 +206,7 @@ package javax.sound.sampled;
 	*
 	* @return the amount of data available, in bytes
 	*/
-	@:overload @:public @:public @:public public function available() : Int;
+	@:overload @:public public function available() : Int;
 	
 	/**
 	* Obtains the current position in the audio data, in sample frames.
@@ -218,7 +218,7 @@ package javax.sound.sampled;
 	* @return the number of frames already processed since the line was opened
 	* @see #getLongFramePosition()
 	*/
-	@:overload @:public @:public @:public @:public public function getFramePosition() : Int;
+	@:overload @:public public function getFramePosition() : Int;
 	
 	/**
 	* Obtains the current position in the audio data, in sample frames.
@@ -228,7 +228,7 @@ package javax.sound.sampled;
 	* @return the number of frames already processed since the line was opened
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:public @:public @:public @:public public function getLongFramePosition() : haxe.Int64;
+	@:require(java5) @:overload @:public public function getLongFramePosition() : haxe.Int64;
 	
 	/**
 	* Obtains the current position in the audio data, in microseconds.
@@ -241,7 +241,7 @@ package javax.sound.sampled;
 	*
 	* @return the number of microseconds of data processed since the line was opened
 	*/
-	@:overload @:public @:public @:public public function getMicrosecondPosition() : haxe.Int64;
+	@:overload @:public public function getMicrosecondPosition() : haxe.Int64;
 	
 	/**
 	* Obtains the current volume level for the line.  This level is a measure
@@ -253,7 +253,7 @@ package javax.sound.sampled;
 	* @return the current amplitude of the signal in this line, or
 	* <code>{@link AudioSystem#NOT_SPECIFIED}</code>
 	*/
-	@:overload @:public @:public public function getLevel() : Single;
+	@:overload @:public public function getLevel() : Single;
 	
 	
 }

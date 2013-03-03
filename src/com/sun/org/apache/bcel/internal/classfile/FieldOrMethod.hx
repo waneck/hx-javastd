@@ -159,7 +159,7 @@ extern class FieldOrMethod extends com.sun.org.apache.bcel.internal.classfile.Ac
 	*/
 	@:overload @:protected private function copy_(constant_pool : com.sun.org.apache.bcel.internal.classfile.ConstantPool) : com.sun.org.apache.bcel.internal.classfile.FieldOrMethod;
 	
-	@:overload @:public @:public public function accept(obj : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
+	@:overload @:public public function accept(obj : com.sun.org.apache.bcel.internal.classfile.Visitor) : Void;
 	
 	
 }

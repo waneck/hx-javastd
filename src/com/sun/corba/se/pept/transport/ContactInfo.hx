@@ -68,7 +68,7 @@ extern interface ContactInfo
 	* {@link com.sun.corba.se.pept.transport.Connection Connection}
 	* will be used for an invocation.
 	*/
-	@:overload @:public @:public public function isConnectionBased() : Bool;
+	@:overload @:public public function isConnectionBased() : Bool;
 	
 	/**
 	* Used to determine if the
@@ -84,7 +84,7 @@ extern interface ContactInfo
 	* {@link com.sun.corba.se.pept.transport.Connection Connection}s
 	* created by this <code>ContactInfo</code> should be cached.
 	*/
-	@:overload @:public @:public public function shouldCacheConnection() : Bool;
+	@:overload @:public public function shouldCacheConnection() : Bool;
 	
 	/**
 	* PEPt uses separate caches for each type of <code>ContactInfo</code>
@@ -92,7 +92,7 @@ extern interface ContactInfo
 	*
 	* @return {@link java.lang.String}
 	*/
-	@:overload @:public @:public public function getConnectionCacheType() : String;
+	@:overload @:public public function getConnectionCacheType() : String;
 	
 	/**
 	* Set the
@@ -132,7 +132,7 @@ extern interface ContactInfo
 	* @return
 	* {@link com.sun.corba.se.pept.transport.Connection Connection}
 	*/
-	@:overload @:public @:public public function createConnection() : com.sun.corba.se.pept.transport.Connection;
+	@:overload @:public public function createConnection() : com.sun.corba.se.pept.transport.Connection;
 	
 	/**
 	* Used to get a

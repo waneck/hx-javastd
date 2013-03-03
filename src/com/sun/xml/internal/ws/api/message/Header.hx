@@ -109,7 +109,7 @@ extern interface Header
 	* @return
 	*      this string must be interned.
 	*/
-	@:overload @:public @:public public function getNamespaceURI() : String;
+	@:overload @:public public function getNamespaceURI() : String;
 	
 	/**
 	* Gets the local name of this header element.
@@ -117,7 +117,7 @@ extern interface Header
 	* @return
 	*      this string must be interned.
 	*/
-	@:overload @:public @:public public function getLocalPart() : String;
+	@:overload @:public public function getLocalPart() : String;
 	
 	/**
 	* Gets the attribute value on the header element.
@@ -177,7 +177,7 @@ extern interface Header
 	* @return
 	*      must not null.
 	*/
-	@:overload @:public @:public public function readHeader() : javax.xml.stream.XMLStreamReader;
+	@:overload @:public public function readHeader() : javax.xml.stream.XMLStreamReader;
 	
 	/**
 	* Reads the header as a JAXB object by using the given unmarshaller.
@@ -209,7 +209,7 @@ extern interface Header
 	*      if the operation fails for some reason. This leaves the
 	*      writer to an undefined state.
 	*/
-	@:overload @:public @:public public function writeTo(w : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public public function writeTo(w : javax.xml.stream.XMLStreamWriter) : Void;
 	
 	/**
 	* Writes out the header to the given SOAPMessage.
@@ -223,7 +223,7 @@ extern interface Header
 	*      if the operation fails for some reason. This leaves the
 	*      writer to an undefined state.
 	*/
-	@:overload @:public @:public public function writeTo(saaj : javax.xml.soap.SOAPMessage) : Void;
+	@:overload @:public public function writeTo(saaj : javax.xml.soap.SOAPMessage) : Void;
 	
 	/**
 	* Writes out the header as SAX events.
@@ -250,7 +250,7 @@ extern interface Header
 	* @param errorHandler
 	*      The {@link ErrorHandler} that receives parsing errors.
 	*/
-	@:overload @:public @:public public function writeTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public public function writeTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler) : Void;
 	
 	/**
 	* Used to obtain value XYZ from a header that looks like

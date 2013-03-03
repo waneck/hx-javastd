@@ -87,7 +87,7 @@ extern class StreamSOAPCodec implements com.sun.xml.internal.ws.api.pipe.StreamS
 	*      null if the MIME type can't be determined by the <code>Codec</code>
 	*      implementation. Otherwise the MIME type is returned.
 	*/
-	@:overload @:public @:public public function getMimeType() : String;
+	@:overload @:public public function getMimeType() : String;
 	
 	
 }

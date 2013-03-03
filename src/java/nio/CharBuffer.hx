@@ -937,7 +937,7 @@ extern class CharBuffer extends java.nio.Buffer implements java.lang.Comparable<
 	* @throws ClassCastException if the specified object's type prevents it
 	*         from being compared to this object.
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function compareTo(o : Dynamic) : Int;
+	@:overload @:public public function compareTo(o : Dynamic) : Int;
 	
 	
 }

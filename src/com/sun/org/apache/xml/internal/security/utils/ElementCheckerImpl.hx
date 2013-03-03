@@ -8,7 +8,7 @@ extern class ElementCheckerImpl implements com.sun.org.apache.xml.internal.secur
 	*
 	* @throws XMLSecurityException
 	*/
-	@:overload @:public @:public public function guaranteeThatElementInCorrectSpace(expected : com.sun.org.apache.xml.internal.security.utils.ElementProxy, actual : org.w3c.dom.Element) : Void;
+	@:overload @:public public function guaranteeThatElementInCorrectSpace(expected : com.sun.org.apache.xml.internal.security.utils.ElementProxy, actual : org.w3c.dom.Element) : Void;
 	
 	
 }

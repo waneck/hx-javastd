@@ -28,9 +28,9 @@ extern interface IIOPAddress extends com.sun.corba.se.spi.ior.Writeable
 	/** IIOPAddress represents the host and port used to establish a
 	* TCP connection for an IIOP request.
 	*/
-	@:overload @:public @:public public function getHost() : String;
+	@:overload @:public public function getHost() : String;
 	
-	@:overload @:public @:public public function getPort() : Int;
+	@:overload @:public public function getPort() : Int;
 	
 	
 }

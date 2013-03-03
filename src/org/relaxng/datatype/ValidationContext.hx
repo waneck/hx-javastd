@@ -69,7 +69,7 @@ extern interface ValidationContext
 	* Returns the base URI of the context.  The null string may be returned
 	* if no base URI is known.
 	*/
-	@:overload @:public @:public public function getBaseUri() : String;
+	@:overload @:public public function getBaseUri() : String;
 	
 	/**
 	* Checks if an unparsed entity is declared with the

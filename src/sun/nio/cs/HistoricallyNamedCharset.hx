@@ -25,7 +25,7 @@ package sun.nio.cs;
 */
 extern interface HistoricallyNamedCharset
 {
-	@:overload @:public @:public public function historicalName() : String;
+	@:overload @:public public function historicalName() : String;
 	
 	
 }

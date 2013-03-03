@@ -34,7 +34,7 @@ extern interface Identifiable extends com.sun.corba.se.spi.ior.Writeable
 	/** Return the (type) identity of this entity.
 	* @return int
 	*/
-	@:overload @:public @:public @:public public function getId() : Int;
+	@:overload @:public public function getId() : Int;
 	
 	
 }

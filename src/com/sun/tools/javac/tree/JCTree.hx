@@ -384,7 +384,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	*
 	* @return the kind of this tree.
 	*/
-	@:overload @:public @:public @:public override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
+	@:overload @:public public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	
 }
@@ -490,7 +490,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	*
 	* @return the kind of this tree.
 	*/
-	@:overload @:public @:public @:public override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
+	@:overload @:public override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	/**
 	* Accept method used to implement the visitor pattern.  The
@@ -499,7 +499,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	* @param <R> result type of this operation.
 	* @param <D> type of additonal data.
 	*/
-	@:overload @:public @:public override public function accept<R, D>(visitor : com.sun.source.tree.TreeVisitor<R, D>, data : D) : R;
+	@:overload @:public override public function accept<R, D>(visitor : com.sun.source.tree.TreeVisitor<R, D>, data : D) : R;
 	
 	
 }
@@ -514,7 +514,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	*
 	* @return the kind of this tree.
 	*/
-	@:overload @:public @:public @:public override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
+	@:overload @:public override public function getKind() : com.sun.source.tree.Tree.Tree_Kind;
 	
 	/**
 	* Accept method used to implement the visitor pattern.  The
@@ -523,7 +523,7 @@ extern class JCTree implements com.sun.source.tree.Tree implements java.lang.Clo
 	* @param <R> result type of this operation.
 	* @param <D> type of additonal data.
 	*/
-	@:overload @:public @:public override public function accept<R, D>(visitor : com.sun.source.tree.TreeVisitor<R, D>, data : D) : R;
+	@:overload @:public override public function accept<R, D>(visitor : com.sun.source.tree.TreeVisitor<R, D>, data : D) : R;
 	
 	
 }

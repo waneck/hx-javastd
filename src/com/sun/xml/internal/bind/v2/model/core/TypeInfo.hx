@@ -31,12 +31,12 @@ extern interface TypeInfo<T, C> extends com.sun.xml.internal.bind.v2.model.annot
 	* @return
 	*      always non-null.
 	*/
-	@:overload @:public @:public @:public @:public public function getType() : T;
+	@:overload @:public public function getType() : T;
 	
 	/**
 	* True if this type is a valid target from a property annotated with {@link XmlIDREF}.
 	*/
-	@:overload @:public @:public @:public public function canBeReferencedByIDREF() : Bool;
+	@:overload @:public public function canBeReferencedByIDREF() : Bool;
 	
 	
 }

@@ -81,7 +81,7 @@ extern class MessageUpdatableContext implements javax.xml.ws.handler.MessageCont
 	* @throws IllegalArgumentException if some property of the specified key
 	*         or value prevents it from being stored in this map
 	*/
-	@:overload @:public @:public public function put(key : Dynamic, value : Dynamic) : Dynamic;
+	@:overload @:public public function put(key : Dynamic, value : Dynamic) : Dynamic;
 	
 	
 }

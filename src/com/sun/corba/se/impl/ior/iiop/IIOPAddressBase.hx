@@ -40,12 +40,12 @@ package com.sun.corba.se.impl.ior.iiop;
 	
 	@:overload @:public public function toString() : String;
 	
-	@:overload @:public @:public public function getPort() : Int;
+	@:overload @:public public function getPort() : Int;
 	
 	/** IIOPAddress represents the host and port used to establish a
 	* TCP connection for an IIOP request.
 	*/
-	@:overload @:public @:public public function getHost() : String;
+	@:overload @:public public function getHost() : String;
 	
 	
 }

@@ -30,7 +30,7 @@ extern interface WSDLObject
 	*
 	* This is useful when producing error messages.
 	*/
-	@:overload @:public @:public public function getLocation() : org.xml.sax.Locator;
+	@:overload @:public public function getLocation() : org.xml.sax.Locator;
 	
 	
 }

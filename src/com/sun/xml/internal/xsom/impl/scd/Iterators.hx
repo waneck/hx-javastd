@@ -45,7 +45,7 @@ extern class Iterators
 	* @return the next element in the iteration
 	* @throws NoSuchElementException if the iteration has no more elements
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
 	/**
 	* Returns {@code true} if the iteration has more elements.

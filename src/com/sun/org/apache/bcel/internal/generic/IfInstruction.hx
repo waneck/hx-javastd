@@ -75,7 +75,7 @@ extern class IfInstruction extends com.sun.org.apache.bcel.internal.generic.Bran
 	
 	/** @return how many words are consumed from stack
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public override public function consumeStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
+	@:overload @:public override public function consumeStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
 	
 	
 }

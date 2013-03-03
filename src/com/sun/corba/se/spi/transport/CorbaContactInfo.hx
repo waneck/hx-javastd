@@ -38,7 +38,7 @@ extern interface CorbaContactInfo extends com.sun.corba.se.pept.transport.Contac
 	
 	@:overload @:public public function getAddressingDisposition() : java.StdTypes.Int16;
 	
-	@:overload @:public @:public public function getMonitoringName() : String;
+	@:overload @:public public function getMonitoringName() : String;
 	
 	
 }

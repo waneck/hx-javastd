@@ -119,7 +119,7 @@ extern class AbstractCellEditor implements javax.swing.CellEditor implements jav
 	* Returns the value contained in the editor.
 	* @return the value contained in the editor
 	*/
-	@:overload @:public @:public public function getCellEditorValue() : Dynamic;
+	@:overload @:public public function getCellEditorValue() : Dynamic;
 	
 	
 }

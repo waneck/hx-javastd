@@ -71,7 +71,7 @@ extern class BindingsBase extends java.util.AbstractMap<String, Dynamic> impleme
 	* @throws ClassCastException if key is not String
 	* @throws IllegalArgumentException if key is empty String
 	*/
-	@:overload @:public @:public override public function containsKey(key : Dynamic) : Bool;
+	@:overload @:public override public function containsKey(key : Dynamic) : Bool;
 	
 	/**
 	* Returns the number of key-value mappings in this map.  If the
@@ -106,7 +106,7 @@ extern class BindingsBase extends java.util.AbstractMap<String, Dynamic> impleme
 	* @throws IllegalArgumentException if some property of the specified key
 	*         or value prevents it from being stored in this map
 	*/
-	@:overload @:public @:public public function put(key : Dynamic, value : Dynamic) : Dynamic;
+	@:overload @:public override public function put(key : Dynamic, value : Dynamic) : Dynamic;
 	
 	/**
 	* Removes all of the mappings from this map (optional operation).
@@ -115,7 +115,7 @@ extern class BindingsBase extends java.util.AbstractMap<String, Dynamic> impleme
 	* @throws UnsupportedOperationException if the <tt>clear</tt> operation
 	*         is not supported by this map
 	*/
-	@:overload @:public @:public override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	/**
 	* Returns a {@link Set} view of the mappings contained in this map.
@@ -187,7 +187,7 @@ extern class BindingsBase extends java.util.AbstractMap<String, Dynamic> impleme
 	*         map does not permit null values
 	* (<a href="Collection.html#optional-restrictions">optional</a>)
 	*/
-	@:overload @:public @:public override public function containsValue(value : Dynamic) : Bool;
+	@:overload @:public override public function containsValue(value : Dynamic) : Bool;
 	
 	
 }

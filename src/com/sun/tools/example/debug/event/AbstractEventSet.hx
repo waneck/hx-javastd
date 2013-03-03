@@ -179,7 +179,7 @@ extern class AbstractEventSet extends java.util.EventObject implements com.sun.j
 	* @throws IllegalArgumentException if some property of the specified element
 	*         prevents it from being added to this set
 	*/
-	@:overload @:public @:public public function add(e : Dynamic) : Bool;
+	@:overload @:public public function add(e : Dynamic) : Bool;
 	
 	
 }

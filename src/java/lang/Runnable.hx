@@ -63,7 +63,7 @@ package java.lang;
 	*
 	* @see     java.lang.Thread#run()
 	*/
-	@:overload @:public @:abstract @:public public function run() : Void;
+	@:overload @:public @:abstract public function run() : Void;
 	
 	
 }

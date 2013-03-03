@@ -162,7 +162,7 @@ extern interface Unmarshaller
 	*      If the Node parameter is null
 	* @see #unmarshal(org.w3c.dom.Node, Class)
 	*/
-	@:overload @:public @:public public function unmarshal(node : org.w3c.dom.Node) : Dynamic;
+	@:overload @:public public function unmarshal(node : org.w3c.dom.Node) : Dynamic;
 	
 	/**
 	* Unmarshal XML data by JAXB mapped <tt>declaredType</tt>
@@ -432,7 +432,7 @@ extern interface Unmarshaller
 	* @return the unmarshaller handler object
 	* @see UnmarshallerHandler
 	*/
-	@:overload @:public @:public public function getUnmarshallerHandler() : javax.xml.bind.UnmarshallerHandler;
+	@:overload @:public public function getUnmarshallerHandler() : javax.xml.bind.UnmarshallerHandler;
 	
 	/**
 	* Specifies whether or not the default validation mechanism of the

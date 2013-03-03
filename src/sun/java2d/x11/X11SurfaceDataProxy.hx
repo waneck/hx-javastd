@@ -41,7 +41,7 @@ extern class X11SurfaceDataProxy extends sun.java2d.SurfaceDataProxy implements 
 	* @return the field type of this <code>Transparency</code>, which is
 	*          either OPAQUE, BITMASK or TRANSLUCENT.
 	*/
-	@:overload @:public @:public public function getTransparency() : Int;
+	@:overload @:public public function getTransparency() : Int;
 	
 	
 }

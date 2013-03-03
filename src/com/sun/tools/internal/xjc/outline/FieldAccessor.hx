@@ -36,7 +36,7 @@ extern interface FieldAccessor
 	* @param $var
 	*      Variable whose type is {@link FieldOutline#getRawType()}
 	*/
-	@:overload @:public @:public public function toRawValue(block : com.sun.codemodel.internal.JBlock, $var : com.sun.codemodel.internal.JVar) : Void;
+	@:overload @:public public function toRawValue(block : com.sun.codemodel.internal.JBlock, $var : com.sun.codemodel.internal.JVar) : Void;
 	
 	/**
 	* Sets the value of the field from the specified expression.
@@ -57,7 +57,7 @@ extern interface FieldAccessor
 	*      The expression that evaluates to a value of the type
 	*      {@link FieldOutline#getRawType()}.
 	*/
-	@:overload @:public @:public public function fromRawValue(block : com.sun.codemodel.internal.JBlock, uniqueName : String, $var : com.sun.codemodel.internal.JExpression) : Void;
+	@:overload @:public public function fromRawValue(block : com.sun.codemodel.internal.JBlock, uniqueName : String, $var : com.sun.codemodel.internal.JExpression) : Void;
 	
 	/**
 	* Generates a code fragment to remove any "set" value

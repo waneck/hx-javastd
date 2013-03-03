@@ -43,7 +43,7 @@ package com.sun.xml.internal.xsom.impl;
 	* In case of <code>XSEmpty</code> component, this method
 	* returns null since there is no owner component.
 	*/
-	@:overload @:public @:public override public function getOwnerSchema() : com.sun.xml.internal.xsom.XSSchema;
+	@:overload @:public override public function getOwnerSchema() : com.sun.xml.internal.xsom.XSSchema;
 	
 	/**
 	* Evaluates a schema component designator against this schema component
@@ -60,15 +60,15 @@ package com.sun.xml.internal.xsom.impl;
 	*      null if the SCD didn't match anything. If the SCD matched more than one node,
 	*      the first one will be returned.
 	*/
-	@:overload @:public @:public override public function selectSingle(scd : String, nsContext : javax.xml.namespace.NamespaceContext) : com.sun.xml.internal.xsom.XSComponent;
+	@:overload @:public override public function selectSingle(scd : String, nsContext : javax.xml.namespace.NamespaceContext) : com.sun.xml.internal.xsom.XSComponent;
 	
 	/**
 	* Accepts a functor.
 	*/
-	@:overload @:public @:public override public function apply<T>(_function : com.sun.xml.internal.xsom.visitor.XSFunction<T>) : T;
+	@:overload @:public override public function apply<T>(_function : com.sun.xml.internal.xsom.visitor.XSFunction<T>) : T;
 	
 	/** Gets the annotation associated to this component, if any. */
-	@:overload @:public @:public override public function getAnnotation() : com.sun.xml.internal.xsom.XSAnnotation;
+	@:overload @:public override public function getAnnotation() : com.sun.xml.internal.xsom.XSAnnotation;
 	
 	/**
 	* Gets the {@link SchemaDocument} that indicates which document this component
@@ -81,12 +81,12 @@ package com.sun.xml.internal.xsom.impl;
 	*      For all other user-defined
 	*      components this method returns non-null, even if they are local.
 	*/
-	@:overload @:public @:public override public function getSourceDocument() : com.sun.xml.internal.xsom.parser.SchemaDocument;
+	@:overload @:public override public function getSourceDocument() : com.sun.xml.internal.xsom.parser.SchemaDocument;
 	
 	/**
 	* Accepts a visitor.
 	*/
-	@:overload @:public @:public override public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
+	@:overload @:public override public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
 	
 	/**
 	* Gets the foreign attributes on this schema component.
@@ -104,7 +104,7 @@ package com.sun.xml.internal.xsom.impl;
 	* @return
 	*      can be an empty list but never be null.
 	*/
-	@:overload @:public @:public override public function getForeignAttributes() : java.util.List<com.sun.xml.internal.xsom.ForeignAttributes>;
+	@:overload @:public override public function getForeignAttributes() : java.util.List<com.sun.xml.internal.xsom.ForeignAttributes>;
 	
 	/**
 	* Gets the foreign attribute of the given name, or null if not found.
@@ -115,14 +115,14 @@ package com.sun.xml.internal.xsom.impl;
 	*
 	* @see #getForeignAttributes()
 	*/
-	@:overload @:public @:public override public function getForeignAttribute(nsUri : String, localName : String) : String;
+	@:overload @:public override public function getForeignAttribute(nsUri : String, localName : String) : String;
 	
 	/**
 	* Gets the locator that indicates the source location where
 	* this component is created from, or null if no information is
 	* available.
 	*/
-	@:overload @:public @:public override public function getLocator() : org.xml.sax.Locator;
+	@:overload @:public override public function getLocator() : org.xml.sax.Locator;
 	
 	/**
 	* Works like {@link #getAnnotation()}, but allow a new empty {@link XSAnnotation} to be created
@@ -136,7 +136,7 @@ package com.sun.xml.internal.xsom.impl;
 	*      null if <tt>createIfNotExist==false</tt> and annotation didn't exist.
 	*      Otherwise non-null.
 	*/
-	@:overload @:public @:public override public function getAnnotation(createIfNotExist : Bool) : com.sun.xml.internal.xsom.XSAnnotation;
+	@:overload @:public override public function getAnnotation(createIfNotExist : Bool) : com.sun.xml.internal.xsom.XSAnnotation;
 	
 	/**
 	* Evaluates a schema component designator against this schema component
@@ -152,7 +152,7 @@ package com.sun.xml.internal.xsom.impl;
 	* @return
 	*      Can be empty but never null.
 	*/
-	@:overload @:public @:public override public function select(scd : String, nsContext : javax.xml.namespace.NamespaceContext) : java.util.Collection<com.sun.xml.internal.xsom.XSComponent>;
+	@:overload @:public override public function select(scd : String, nsContext : javax.xml.namespace.NamespaceContext) : java.util.Collection<com.sun.xml.internal.xsom.XSComponent>;
 	
 	/**
 	* Gets the root schema set that includes this component.
@@ -161,7 +161,7 @@ package com.sun.xml.internal.xsom.impl;
 	* In case of <code>XSEmpty</code> component, this method
 	* returns null since there is no owner component.
 	*/
-	@:overload @:public @:public override public function getRoot() : com.sun.xml.internal.xsom.XSSchemaSet;
+	@:overload @:public override public function getRoot() : com.sun.xml.internal.xsom.XSSchemaSet;
 	
 	
 }

@@ -33,7 +33,7 @@ extern interface AlgorithmMethod
 	*
 	* @return the algorithm URI of this <code>AlgorithmMethod</code>
 	*/
-	@:overload @:public @:public public function getAlgorithm() : String;
+	@:overload @:public public function getAlgorithm() : String;
 	
 	/**
 	* Returns the algorithm parameters of this <code>AlgorithmMethod</code>.

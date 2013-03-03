@@ -76,7 +76,7 @@ package sun.nio.ch;
 	
 	@:overload @:public @:final public function toString() : String;
 	
-	@:overload @:public @:public public function group() : sun.nio.ch.AsynchronousChannelGroupImpl;
+	@:overload @:public public function group() : sun.nio.ch.AsynchronousChannelGroupImpl;
 	
 	/**
 	* Invoked to notify channel that cancel has been invoked while holding

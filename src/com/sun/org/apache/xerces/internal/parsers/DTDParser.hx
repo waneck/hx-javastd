@@ -394,7 +394,7 @@ extern class DTDParser extends com.sun.org.apache.xerces.internal.parsers.XMLGra
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload @:public @:public public function ignoredCharacters(text : com.sun.org.apache.xerces.internal.xni.XMLString, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function ignoredCharacters(text : com.sun.org.apache.xerces.internal.xni.XMLString, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The separator between choices or sequences of a mixed or children
@@ -409,15 +409,15 @@ extern class DTDParser extends com.sun.org.apache.xerces.internal.parsers.XMLGra
 	* @see #SEPARATOR_CHOICE
 	* @see #SEPARATOR_SEQUENCE
 	*/
-	@:overload @:public @:public public function separator(separator : java.StdTypes.Int16, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function separator(separator : java.StdTypes.Int16, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
-	@:overload @:public @:public public function setDTDSource(source : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDSource) : Void;
+	@:overload @:public public function setDTDSource(source : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDSource) : Void;
 	
-	@:overload @:public @:public public function getDTDSource() : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDSource;
+	@:overload @:public public function getDTDSource() : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDSource;
 	
-	@:overload @:public @:public public function getDTDContentModelSource() : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDContentModelSource;
+	@:overload @:public public function getDTDContentModelSource() : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDContentModelSource;
 	
-	@:overload @:public @:public public function setDTDContentModelSource(source : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDContentModelSource) : Void;
+	@:overload @:public public function setDTDContentModelSource(source : com.sun.org.apache.xerces.internal.xni.parser.XMLDTDContentModelSource) : Void;
 	
 	/**
 	* This method notifies the end of a parameter entity. Parameter entity
@@ -429,7 +429,7 @@ extern class DTDParser extends com.sun.org.apache.xerces.internal.parsers.XMLGra
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload @:public @:public public function endParameterEntity(name : String, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endParameterEntity(name : String, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* This method notifies of the start of a parameter entity. The parameter
@@ -446,7 +446,7 @@ extern class DTDParser extends com.sun.org.apache.xerces.internal.parsers.XMLGra
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload @:public @:public public function startParameterEntity(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, encoding : String, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startParameterEntity(name : String, identifier : com.sun.org.apache.xerces.internal.xni.XMLResourceIdentifier, encoding : String, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of a content model.
@@ -456,7 +456,7 @@ extern class DTDParser extends com.sun.org.apache.xerces.internal.parsers.XMLGra
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload @:public @:public public function endContentModel(augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endContentModel(augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* A content model of ANY.
@@ -469,7 +469,7 @@ extern class DTDParser extends com.sun.org.apache.xerces.internal.parsers.XMLGra
 	* @see #empty
 	* @see #startGroup
 	*/
-	@:overload @:public @:public public function any(augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function any(augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The appearance of "#PCDATA" within a group signifying a
@@ -483,7 +483,7 @@ extern class DTDParser extends com.sun.org.apache.xerces.internal.parsers.XMLGra
 	*
 	* @see #startGroup
 	*/
-	@:overload @:public @:public public function pcdata(augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function pcdata(augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* A start of either a mixed or children content model. A mixed
@@ -499,7 +499,7 @@ extern class DTDParser extends com.sun.org.apache.xerces.internal.parsers.XMLGra
 	* @see #any
 	* @see #empty
 	*/
-	@:overload @:public @:public public function startGroup(augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startGroup(augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* A referenced element in a mixed or children content model.
@@ -510,7 +510,7 @@ extern class DTDParser extends com.sun.org.apache.xerces.internal.parsers.XMLGra
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload @:public @:public public function element(elementName : String, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function element(elementName : String, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* Notifies of the presence of a TextDecl line in an entity. If present,
@@ -526,7 +526,7 @@ extern class DTDParser extends com.sun.org.apache.xerces.internal.parsers.XMLGra
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload @:public @:public public function textDecl(version : String, encoding : String, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function textDecl(version : String, encoding : String, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The start of a content model. Depending on the type of the content
@@ -539,7 +539,7 @@ extern class DTDParser extends com.sun.org.apache.xerces.internal.parsers.XMLGra
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload @:public @:public public function startContentModel(elementName : String, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function startContentModel(elementName : String, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The end of a group for mixed or children content models.
@@ -549,7 +549,7 @@ extern class DTDParser extends com.sun.org.apache.xerces.internal.parsers.XMLGra
 	*
 	* @throws XNIException Thrown by handler to signal an error.
 	*/
-	@:overload @:public @:public public function endGroup(augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function endGroup(augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* A content model of EMPTY.
@@ -562,7 +562,7 @@ extern class DTDParser extends com.sun.org.apache.xerces.internal.parsers.XMLGra
 	* @see #any
 	* @see #startGroup
 	*/
-	@:overload @:public @:public public function empty(augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function empty(augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	/**
 	* The occurrence count for a child in a children content model or
@@ -579,7 +579,7 @@ extern class DTDParser extends com.sun.org.apache.xerces.internal.parsers.XMLGra
 	* @see #OCCURS_ZERO_OR_MORE
 	* @see #OCCURS_ONE_OR_MORE
 	*/
-	@:overload @:public @:public public function occurrence(occurrence : java.StdTypes.Int16, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
+	@:overload @:public public function occurrence(occurrence : java.StdTypes.Int16, augmentations : com.sun.org.apache.xerces.internal.xni.Augmentations) : Void;
 	
 	
 }

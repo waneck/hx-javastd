@@ -46,7 +46,7 @@ package javax.management.remote;
 	* @return the address of this object, or null if it
 	* does not have one.
 	*/
-	@:overload @:public @:public public function getAddress() : javax.management.remote.JMXServiceURL;
+	@:overload @:public public function getAddress() : javax.management.remote.JMXServiceURL;
 	
 	
 }

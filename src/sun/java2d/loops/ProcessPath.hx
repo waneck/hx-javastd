@@ -96,7 +96,7 @@ extern class ProcessPath
 }
 @:native('sun$java2d$loops$ProcessPath$EndSubPathHandler') extern interface ProcessPath_EndSubPathHandler
 {
-	@:overload @:public @:public public function processEndSubPath() : Void;
+	@:overload @:public public function processEndSubPath() : Void;
 	
 	
 }
@@ -106,7 +106,7 @@ extern class ProcessPath
 	
 	@:overload @:public @:abstract public function processFixedLine(x1 : Int, y1 : Int, x2 : Int, y2 : Int, pixelInfo : java.NativeArray<Int>, checkBounds : Bool, endSubPath : Bool) : Void;
 	
-	@:overload @:public @:public public function processEndSubPath() : Void;
+	@:overload @:public public function processEndSubPath() : Void;
 	
 	
 }

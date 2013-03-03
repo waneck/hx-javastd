@@ -94,7 +94,7 @@ package com.sun.org.apache.xml.internal.serializer;
 	* relevant in specifying which elements have their text to be output as
 	* CDATA sections.
 	*/
-	@:overload @:public @:public public function setCdataSectionElements(URI_and_localNames : java.util.Vector<Dynamic>) : Void;
+	@:overload @:public public function setCdataSectionElements(URI_and_localNames : java.util.Vector<Dynamic>) : Void;
 	
 	/** Set the value coming from the xsl:output doctype-public and doctype-system stylesheet properties
 	* @param system the system identifier to be used in the DOCTYPE declaration

@@ -215,7 +215,7 @@ package java.util;
 	* @throws IllegalArgumentException if some property of the specified element
 	*         prevents it from being added to this set
 	*/
-	@:overload @:public @:public public function add(e : E) : Bool;
+	@:overload @:public public function add(e : E) : Bool;
 	
 	/**
 	* Removes the specified element from this set if it is present

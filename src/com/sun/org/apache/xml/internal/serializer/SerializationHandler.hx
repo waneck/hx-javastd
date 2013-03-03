@@ -30,7 +30,7 @@ extern interface SerializationHandler extends com.sun.org.apache.xml.internal.se
 	* @see Serializer#asContentHandler()
 	* @see ToSAXHandler
 	*/
-	@:overload @:public @:public public function setContentHandler(ch : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function setContentHandler(ch : org.xml.sax.ContentHandler) : Void;
 	
 	@:overload @:public public function close() : Void;
 	
@@ -41,7 +41,7 @@ extern interface SerializationHandler extends com.sun.org.apache.xml.internal.se
 	* @param node the DOM node to be serialized.
 	* @throws IOException
 	*/
-	@:overload @:public @:public public function serialize(node : org.w3c.dom.Node) : Void;
+	@:overload @:public public function serialize(node : org.w3c.dom.Node) : Void;
 	
 	/**
 	* Turns special character escaping on/off.
@@ -52,7 +52,7 @@ extern interface SerializationHandler extends com.sun.org.apache.xml.internal.se
 	*
 	* @param escape true if escaping is to be set on.
 	*/
-	@:overload @:public @:public public function setEscaping(escape : Bool) : Bool;
+	@:overload @:public public function setEscaping(escape : Bool) : Bool;
 	
 	/**
 	* Set the number of spaces to indent for each indentation level.
@@ -85,7 +85,7 @@ extern interface SerializationHandler extends com.sun.org.apache.xml.internal.se
 	* flush any input that the serializer has which it has not yet sent as
 	* output.
 	*/
-	@:overload @:public @:public public function flushPending() : Void;
+	@:overload @:public public function flushPending() : Void;
 	
 	/**
 	* Default behavior is to expand DTD entities,

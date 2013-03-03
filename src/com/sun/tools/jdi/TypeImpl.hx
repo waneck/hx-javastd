@@ -40,7 +40,7 @@ extern class TypeImpl extends com.sun.tools.jdi.MirrorImpl implements com.sun.jd
 	*
 	* @return the {@link VirtualMachine} for which this mirror is a proxy.
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function virtualMachine() : com.sun.jdi.VirtualMachine;
+	@:overload @:public override public function virtualMachine() : com.sun.jdi.VirtualMachine;
 	
 	
 }

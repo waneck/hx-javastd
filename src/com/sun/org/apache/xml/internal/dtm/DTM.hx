@@ -39,7 +39,7 @@ extern interface DTM
 	* @param property a <code>String</code> value
 	* @param value an <code>Object</code> value
 	*/
-	@:overload @:public @:public public function setProperty(property : String, value : Dynamic) : Void;
+	@:overload @:public public function setProperty(property : String, value : Dynamic) : Void;
 	
 	/**
 	* This returns a stateless "traverser", that can navigate over an
@@ -49,7 +49,7 @@ extern interface DTM
 	*
 	* @return A DTMAxisIterator, or null if the givin axis isn't supported.
 	*/
-	@:overload @:public @:public public function getAxisTraverser(axis : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisTraverser;
+	@:overload @:public public function getAxisTraverser(axis : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisTraverser;
 	
 	/**
 	* This is a shortcut to the iterators that implement
@@ -61,7 +61,7 @@ extern interface DTM
 	*
 	* @return A DTMAxisIterator, or null if the givin axis isn't supported.
 	*/
-	@:overload @:public @:public public function getAxisIterator(axis : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public public function getAxisIterator(axis : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get an iterator that can navigate over an XPath Axis, predicated by
@@ -72,7 +72,7 @@ extern interface DTM
 	*
 	* @return A DTMAxisIterator, or null if the givin axis isn't supported.
 	*/
-	@:overload @:public @:public public function getTypedAxisIterator(axis : Int, type : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public public function getTypedAxisIterator(axis : Int, type : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Given a node handle, test if it has child nodes.
@@ -687,14 +687,14 @@ extern interface DTM
 	* transformation and the parse run simultaneously. Guidance to the
 	* DTMManager.
 	*/
-	@:overload @:public @:public public function needsTwoThreads() : Bool;
+	@:overload @:public public function needsTwoThreads() : Bool;
 	
 	/**
 	* Return this DTM's content handler, if it has one.
 	*
 	* @return null if this model doesn't respond to SAX events.
 	*/
-	@:overload @:public @:public public function getContentHandler() : org.xml.sax.ContentHandler;
+	@:overload @:public public function getContentHandler() : org.xml.sax.ContentHandler;
 	
 	/**
 	* Return this DTM's lexical handler, if it has one.
@@ -703,35 +703,35 @@ extern interface DTM
 	*
 	* @return null if this model doesn't respond to lexical SAX events.
 	*/
-	@:overload @:public @:public public function getLexicalHandler() : org.xml.sax.ext.LexicalHandler;
+	@:overload @:public public function getLexicalHandler() : org.xml.sax.ext.LexicalHandler;
 	
 	/**
 	* Return this DTM's EntityResolver, if it has one.
 	*
 	* @return null if this model doesn't respond to SAX entity ref events.
 	*/
-	@:overload @:public @:public public function getEntityResolver() : org.xml.sax.EntityResolver;
+	@:overload @:public public function getEntityResolver() : org.xml.sax.EntityResolver;
 	
 	/**
 	* Return this DTM's DTDHandler, if it has one.
 	*
 	* @return null if this model doesn't respond to SAX dtd events.
 	*/
-	@:overload @:public @:public public function getDTDHandler() : org.xml.sax.DTDHandler;
+	@:overload @:public public function getDTDHandler() : org.xml.sax.DTDHandler;
 	
 	/**
 	* Return this DTM's ErrorHandler, if it has one.
 	*
 	* @return null if this model doesn't respond to SAX error events.
 	*/
-	@:overload @:public @:public public function getErrorHandler() : org.xml.sax.ErrorHandler;
+	@:overload @:public public function getErrorHandler() : org.xml.sax.ErrorHandler;
 	
 	/**
 	* Return this DTM's DeclHandler, if it has one.
 	*
 	* @return null if this model doesn't respond to SAX Decl events.
 	*/
-	@:overload @:public @:public public function getDeclHandler() : org.xml.sax.ext.DeclHandler;
+	@:overload @:public public function getDeclHandler() : org.xml.sax.ext.DeclHandler;
 	
 	/**
 	* Append a child to "the end of the document". Please note that
@@ -768,7 +768,7 @@ extern interface DTM
 	* @return a <code>SourceLocator</code> value or null if no location
 	* is available
 	*/
-	@:overload @:public @:public public function getSourceLocatorFor(node : Int) : javax.xml.transform.SourceLocator;
+	@:overload @:public public function getSourceLocatorFor(node : Int) : javax.xml.transform.SourceLocator;
 	
 	/**
 	* As the DTM is registered with the DTMManager, this method

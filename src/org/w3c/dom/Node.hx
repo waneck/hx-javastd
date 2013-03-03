@@ -164,7 +164,7 @@ extern interface Node
 	/**
 	* The name of this node, depending on its type; see the table above.
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function getNodeName() : String;
+	@:overload @:public public function getNodeName() : String;
 	
 	/**
 	* The value of this node, depending on its type; see the table above.
@@ -175,7 +175,7 @@ extern interface Node
 	*   fit in a <code>DOMString</code> variable on the implementation
 	*   platform.
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function getNodeValue() : String;
+	@:overload @:public public function getNodeValue() : String;
 	
 	/**
 	* The value of this node, depending on its type; see the table above.
@@ -185,12 +185,12 @@ extern interface Node
 	*   NO_MODIFICATION_ALLOWED_ERR: Raised when the node is readonly and if
 	*   it is not defined to be <code>null</code>.
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function setNodeValue(nodeValue : String) : Void;
+	@:overload @:public public function setNodeValue(nodeValue : String) : Void;
 	
 	/**
 	* A code representing the type of the underlying object, as defined above.
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function getNodeType() : java.StdTypes.Int16;
+	@:overload @:public public function getNodeType() : java.StdTypes.Int16;
 	
 	/**
 	* The parent of this node. All nodes, except <code>Attr</code>,
@@ -200,44 +200,44 @@ extern interface Node
 	* tree, or if it has been removed from the tree, this is
 	* <code>null</code>.
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function getParentNode() : org.w3c.dom.Node;
+	@:overload @:public public function getParentNode() : org.w3c.dom.Node;
 	
 	/**
 	* A <code>NodeList</code> that contains all children of this node. If
 	* there are no children, this is a <code>NodeList</code> containing no
 	* nodes.
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function getChildNodes() : org.w3c.dom.NodeList;
+	@:overload @:public public function getChildNodes() : org.w3c.dom.NodeList;
 	
 	/**
 	* The first child of this node. If there is no such node, this returns
 	* <code>null</code>.
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function getFirstChild() : org.w3c.dom.Node;
+	@:overload @:public public function getFirstChild() : org.w3c.dom.Node;
 	
 	/**
 	* The last child of this node. If there is no such node, this returns
 	* <code>null</code>.
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function getLastChild() : org.w3c.dom.Node;
+	@:overload @:public public function getLastChild() : org.w3c.dom.Node;
 	
 	/**
 	* The node immediately preceding this node. If there is no such node,
 	* this returns <code>null</code>.
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function getPreviousSibling() : org.w3c.dom.Node;
+	@:overload @:public public function getPreviousSibling() : org.w3c.dom.Node;
 	
 	/**
 	* The node immediately following this node. If there is no such node,
 	* this returns <code>null</code>.
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function getNextSibling() : org.w3c.dom.Node;
+	@:overload @:public public function getNextSibling() : org.w3c.dom.Node;
 	
 	/**
 	* A <code>NamedNodeMap</code> containing the attributes of this node (if
 	* it is an <code>Element</code>) or <code>null</code> otherwise.
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function getAttributes() : org.w3c.dom.NamedNodeMap;
+	@:overload @:public public function getAttributes() : org.w3c.dom.NamedNodeMap;
 	
 	/**
 	* The <code>Document</code> object associated with this node. This is
@@ -248,7 +248,7 @@ extern interface Node
 	*
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function getOwnerDocument() : org.w3c.dom.Document;
+	@:overload @:public public function getOwnerDocument() : org.w3c.dom.Document;
 	
 	/**
 	* Inserts the node <code>newChild</code> before the existing child node
@@ -284,7 +284,7 @@ extern interface Node
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function insertBefore(newChild : org.w3c.dom.Node, refChild : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function insertBefore(newChild : org.w3c.dom.Node, refChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Replaces the child node <code>oldChild</code> with <code>newChild</code>
@@ -320,7 +320,7 @@ extern interface Node
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function replaceChild(newChild : org.w3c.dom.Node, oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function replaceChild(newChild : org.w3c.dom.Node, oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Removes the child node indicated by <code>oldChild</code> from the list
@@ -338,7 +338,7 @@ extern interface Node
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function removeChild(oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function removeChild(oldChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Adds the node <code>newChild</code> to the end of the list of children
@@ -366,14 +366,14 @@ extern interface Node
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function appendChild(newChild : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function appendChild(newChild : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	* Returns whether this node has any children.
 	* @return Returns <code>true</code> if this node has any children,
 	*   <code>false</code> otherwise.
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function hasChildNodes() : Bool;
+	@:overload @:public public function hasChildNodes() : Bool;
 	
 	/**
 	* Returns a duplicate of this node, i.e., serves as a generic copy
@@ -409,7 +409,7 @@ extern interface Node
 	*   itself (and its attributes, if it is an <code>Element</code>).
 	* @return The duplicate node.
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function cloneNode(deep : Bool) : org.w3c.dom.Node;
+	@:overload @:public public function cloneNode(deep : Bool) : org.w3c.dom.Node;
 	
 	/**
 	*  Puts all <code>Text</code> nodes in the full depth of the sub-tree
@@ -434,7 +434,7 @@ extern interface Node
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function normalize() : Void;
+	@:overload @:public public function normalize() : Void;
 	
 	/**
 	*  Tests whether the DOM implementation implements a specific feature and
@@ -446,7 +446,7 @@ extern interface Node
 	*
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function isSupported(feature : String, version : String) : Bool;
+	@:overload @:public public function isSupported(feature : String, version : String) : Bool;
 	
 	/**
 	* The namespace URI of this node, or <code>null</code> if it is
@@ -465,7 +465,7 @@ extern interface Node
 	*
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function getNamespaceURI() : String;
+	@:overload @:public public function getNamespaceURI() : String;
 	
 	/**
 	* The namespace prefix of this node, or <code>null</code> if it is
@@ -489,7 +489,7 @@ extern interface Node
 	*
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function getPrefix() : String;
+	@:overload @:public public function getPrefix() : String;
 	
 	/**
 	* The namespace prefix of this node, or <code>null</code> if it is
@@ -527,7 +527,7 @@ extern interface Node
 	*
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function setPrefix(prefix : String) : Void;
+	@:overload @:public public function setPrefix(prefix : String) : Void;
 	
 	/**
 	* Returns the local part of the qualified name of this node.
@@ -538,7 +538,7 @@ extern interface Node
 	*
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function getLocalName() : String;
+	@:overload @:public public function getLocalName() : String;
 	
 	/**
 	* Returns whether this node (if it is an element) has any attributes.
@@ -547,7 +547,7 @@ extern interface Node
 	*
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function hasAttributes() : Bool;
+	@:overload @:public public function hasAttributes() : Bool;
 	
 	/**
 	* The absolute base URI of this node or <code>null</code> if the
@@ -561,7 +561,7 @@ extern interface Node
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function getBaseURI() : String;
+	@:overload @:public public function getBaseURI() : String;
 	
 	/**
 	* Compares the reference node, i.e. the node on which this method is
@@ -578,7 +578,7 @@ extern interface Node
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function compareDocumentPosition(other : org.w3c.dom.Node) : java.StdTypes.Int16;
+	@:overload @:public public function compareDocumentPosition(other : org.w3c.dom.Node) : java.StdTypes.Int16;
 	
 	/**
 	* This attribute returns the text content of this node and its
@@ -628,7 +628,7 @@ extern interface Node
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function getTextContent() : String;
+	@:overload @:public public function getTextContent() : String;
 	
 	/**
 	* This attribute returns the text content of this node and its
@@ -676,7 +676,7 @@ extern interface Node
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function setTextContent(textContent : String) : Void;
+	@:overload @:public public function setTextContent(textContent : String) : Void;
 	
 	/**
 	* Returns whether this node is the same node as the given one.
@@ -693,7 +693,7 @@ extern interface Node
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function isSameNode(other : org.w3c.dom.Node) : Bool;
+	@:overload @:public public function isSameNode(other : org.w3c.dom.Node) : Bool;
 	
 	/**
 	* Look up the prefix associated to the given namespace URI, starting from
@@ -708,7 +708,7 @@ extern interface Node
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function lookupPrefix(namespaceURI : String) : String;
+	@:overload @:public public function lookupPrefix(namespaceURI : String) : String;
 	
 	/**
 	*  This method checks if the specified <code>namespaceURI</code> is the
@@ -720,7 +720,7 @@ extern interface Node
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function isDefaultNamespace(namespaceURI : String) : Bool;
+	@:overload @:public public function isDefaultNamespace(namespaceURI : String) : Bool;
 	
 	/**
 	* Look up the namespace URI associated to the given prefix, starting from
@@ -734,7 +734,7 @@ extern interface Node
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function lookupNamespaceURI(prefix : String) : String;
+	@:overload @:public public function lookupNamespaceURI(prefix : String) : String;
 	
 	/**
 	* Tests whether two nodes are equal.
@@ -800,7 +800,7 @@ extern interface Node
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function isEqualNode(arg : org.w3c.dom.Node) : Bool;
+	@:overload @:public public function isEqualNode(arg : org.w3c.dom.Node) : Bool;
 	
 	/**
 	*  This method returns a specialized object which implements the
@@ -825,7 +825,7 @@ extern interface Node
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function getFeature(feature : String, version : String) : Dynamic;
+	@:overload @:public public function getFeature(feature : String, version : String) : Dynamic;
 	
 	/**
 	* Associate an object to a key on this node. The object can later be
@@ -841,7 +841,7 @@ extern interface Node
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function setUserData(key : String, data : Dynamic, handler : org.w3c.dom.UserDataHandler) : Dynamic;
+	@:overload @:public public function setUserData(key : String, data : Dynamic, handler : org.w3c.dom.UserDataHandler) : Dynamic;
 	
 	/**
 	* Retrieves the object associated to a key on a this node. The object
@@ -853,7 +853,7 @@ extern interface Node
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function getUserData(key : String) : Dynamic;
+	@:overload @:public public function getUserData(key : String) : Dynamic;
 	
 	
 }

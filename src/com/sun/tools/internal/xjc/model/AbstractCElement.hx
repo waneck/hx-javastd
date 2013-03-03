@@ -50,7 +50,7 @@ package com.sun.tools.internal.xjc.model;
 	* @return
 	*      can be null.
 	*/
-	@:overload @:public @:public @:public override public function getUpstream() : com.sun.xml.internal.bind.v2.model.annotation.Locatable;
+	@:overload @:public override public function getUpstream() : com.sun.xml.internal.bind.v2.model.annotation.Locatable;
 	
 	/**
 	* Gets the element name of the class.
@@ -63,7 +63,7 @@ package com.sun.tools.internal.xjc.model;
 	/**
 	* True if this type is a valid target from a property annotated with {@link XmlIDREF}.
 	*/
-	@:overload @:public @:public @:public @:public override public function canBeReferencedByIDREF() : Bool;
+	@:overload @:public override public function canBeReferencedByIDREF() : Bool;
 	
 	/**
 	* If this model object is built from XML Schema,
@@ -81,14 +81,14 @@ package com.sun.tools.internal.xjc.model;
 	*
 	* @see NType#toType(Outline, Aspect)
 	*/
-	@:overload @:public @:public override public function toType(o : com.sun.tools.internal.xjc.outline.Outline, aspect : com.sun.tools.internal.xjc.outline.Aspect) : com.sun.codemodel.internal.JType;
+	@:overload @:public override public function toType(o : com.sun.tools.internal.xjc.outline.Outline, aspect : com.sun.tools.internal.xjc.outline.Aspect) : com.sun.codemodel.internal.JType;
 	
 	/**
 	* Gets the location object that this object points to.
 	*
 	* This operation could be inefficient and costly.
 	*/
-	@:overload @:public @:public @:public @:public override public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
+	@:overload @:public override public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
 	
 	/**
 	* Gets the underlying Java type that object represents.
@@ -96,7 +96,7 @@ package com.sun.tools.internal.xjc.model;
 	* @return
 	*      always non-null.
 	*/
-	@:overload @:public @:public @:public @:public @:public override public function getType() : Dynamic;
+	@:overload @:public override public function getType() : Dynamic;
 	
 	/**
 	* Gets the list of customizations attached to this model component.
@@ -107,7 +107,7 @@ package com.sun.tools.internal.xjc.model;
 	*
 	* @see Plugin#getCustomizationURIs()
 	*/
-	@:overload @:public @:public public function getCustomizations() : com.sun.tools.internal.xjc.model.CCustomizations;
+	@:overload @:public override public function getCustomizations() : com.sun.tools.internal.xjc.model.CCustomizations;
 	
 	/**
 	* If non-null, this element is only active inside the given scope.

@@ -127,23 +127,23 @@ extern class ExtendedTextLabel extends sun.font.TextLabel implements sun.font.Te
 	*/
 	@:overload @:public @:abstract public function applyJustificationDeltas(deltas : java.NativeArray<Single>, deltaStart : Int, flags : java.NativeArray<Bool>) : sun.font.TextLineComponent;
 	
-	@:overload @:public @:public override public function getLogicalBounds() : java.awt.geom.Rectangle2D;
+	@:overload @:public override public function getLogicalBounds() : java.awt.geom.Rectangle2D;
 	
-	@:overload @:public @:public override public function getVisualBounds() : java.awt.geom.Rectangle2D;
+	@:overload @:public override public function getVisualBounds() : java.awt.geom.Rectangle2D;
 	
-	@:overload @:public @:public override public function getItalicBounds() : java.awt.geom.Rectangle2D;
+	@:overload @:public override public function getItalicBounds() : java.awt.geom.Rectangle2D;
 	
-	@:overload @:public @:public public function getBaselineTransform() : java.awt.geom.AffineTransform;
+	@:overload @:public public function getBaselineTransform() : java.awt.geom.AffineTransform;
 	
-	@:overload @:public @:public public function getAdvance() : Single;
+	@:overload @:public public function getAdvance() : Single;
 	
-	@:overload @:public @:public override public function getOutline(x : Single, y : Single) : java.awt.Shape;
+	@:overload @:public override public function getOutline(x : Single, y : Single) : java.awt.Shape;
 	
-	@:overload @:public @:public public function isSimple() : Bool;
+	@:overload @:public public function isSimple() : Bool;
 	
-	@:overload @:public @:public public function getPixelBounds(frc : java.awt.font.FontRenderContext, x : Single, y : Single) : java.awt.Rectangle;
+	@:overload @:public public function getPixelBounds(frc : java.awt.font.FontRenderContext, x : Single, y : Single) : java.awt.Rectangle;
 	
-	@:overload @:public @:public override public function draw(g2d : java.awt.Graphics2D, x : Single, y : Single) : Void;
+	@:overload @:public override public function draw(g2d : java.awt.Graphics2D, x : Single, y : Single) : Void;
 	
 	
 }

@@ -201,7 +201,7 @@ extern class TransformService implements javax.xml.crypto.dsig.Transform
 	* @throws TransformException if an error occurs while executing the
 	*    transform
 	*/
-	@:overload @:public @:abstract @:public public function transform(data : javax.xml.crypto.Data, context : javax.xml.crypto.XMLCryptoContext, os : java.io.OutputStream) : javax.xml.crypto.Data;
+	@:overload @:public @:abstract public function transform(data : javax.xml.crypto.Data, context : javax.xml.crypto.XMLCryptoContext, os : java.io.OutputStream) : javax.xml.crypto.Data;
 	
 	/**
 	* Indicates whether a specified feature is supported.
@@ -224,7 +224,7 @@ extern class TransformService implements javax.xml.crypto.dsig.Transform
 	* @throws TransformException if an error occurs while executing the
 	*    transform
 	*/
-	@:overload @:public @:abstract @:public public function transform(data : javax.xml.crypto.Data, context : javax.xml.crypto.XMLCryptoContext) : javax.xml.crypto.Data;
+	@:overload @:public @:abstract public function transform(data : javax.xml.crypto.Data, context : javax.xml.crypto.XMLCryptoContext) : javax.xml.crypto.Data;
 	
 	/**
 	* Returns the algorithm-specific input parameters associated with this

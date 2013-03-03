@@ -57,7 +57,7 @@ package com.sun.xml.internal.bind.v2.model.impl;
 	* Note that when this is true, the class is bound to both an element
 	* and a type.
 	*/
-	@:overload @:public @:public override public function isElement() : Bool;
+	@:overload @:public public function isElement() : Bool;
 	
 	/**
 	* Gets the element name of the class, if the class is bound
@@ -66,7 +66,7 @@ package com.sun.xml.internal.bind.v2.model.impl;
 	* @return
 	*      non-null iff {@link #isElement()}.
 	*/
-	@:overload @:public @:public override public function getElementName() : javax.xml.namespace.QName;
+	@:overload @:public public function getElementName() : javax.xml.namespace.QName;
 	
 	/**
 	* Returns the {@link Element} aspect of this {@link ClassInfo}.
@@ -74,7 +74,7 @@ package com.sun.xml.internal.bind.v2.model.impl;
 	* @return
 	*      null if {@link #isElement()}==false, non-null if {@link #isElement()}==true.
 	*/
-	@:overload @:public @:public override public function asElement() : com.sun.xml.internal.bind.v2.model.core.Element<Dynamic, Dynamic>;
+	@:overload @:public public function asElement() : com.sun.xml.internal.bind.v2.model.core.Element<Dynamic, Dynamic>;
 	
 	
 }

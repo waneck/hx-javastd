@@ -37,7 +37,7 @@ extern class IdentifiableBase implements com.sun.corba.se.spi.ior.Identifiable i
 	/** Return the (type) identity of this entity.
 	* @return int
 	*/
-	@:overload @:public @:public @:public override public function getId() : Int;
+	@:overload @:public public function getId() : Int;
 	
 	@:overload @:public public function writeContents(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	

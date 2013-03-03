@@ -167,7 +167,7 @@ package java.util;
 	*         map does not permit null values
 	* (<a href="Collection.html#optional-restrictions">optional</a>)
 	*/
-	@:overload @:public @:public public function containsValue(value : Dynamic) : Bool;
+	@:overload @:public public function containsValue(value : Dynamic) : Bool;
 	
 	/**
 	* Returns the value to which the specified key is mapped,
@@ -220,7 +220,7 @@ package java.util;
 	* @throws IllegalArgumentException if some property of the specified key
 	*         or value prevents it from being stored in this map
 	*/
-	@:overload @:public @:public public function put(key : K, value : V) : V;
+	@:overload @:public public function put(key : K, value : V) : V;
 	
 	/**
 	* Removes the mapping for a key from this map if it is present
@@ -282,7 +282,7 @@ package java.util;
 	* @throws UnsupportedOperationException if the <tt>clear</tt> operation
 	*         is not supported by this map
 	*/
-	@:overload @:public @:public public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/**
 	* Returns a {@link Set} view of the keys contained in this map.

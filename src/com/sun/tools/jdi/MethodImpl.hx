@@ -123,7 +123,7 @@ extern class MethodImpl extends com.sun.tools.jdi.TypeComponentImpl implements c
 	*
 	* @return the {@link VirtualMachine} for which this mirror is a proxy.
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function virtualMachine() : com.sun.jdi.VirtualMachine;
+	@:overload @:public override public function virtualMachine() : com.sun.jdi.VirtualMachine;
 	
 	/**
 	* Returns a list containing each {@link LocalVariable} that is
@@ -209,7 +209,7 @@ extern class MethodImpl extends com.sun.tools.jdi.TypeComponentImpl implements c
 	* @throws ClassCastException if the specified object's type prevents it
 	*         from being compared to this object.
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function compareTo(o : Dynamic) : Int;
+	@:overload @:public public function compareTo(o : Dynamic) : Int;
 	
 	/**
 	* Gets the name of this type component.
@@ -344,7 +344,7 @@ extern class MethodImpl extends com.sun.tools.jdi.TypeComponentImpl implements c
 	* <cite>The Java&trade; Virtual Machine Specification</cite>
 	* in the <code>access_flag</code> tables for classes(section 4.1), fields(section 4.5), and methods(section 4.6).
 	*/
-	@:overload @:public @:public override public function modifiers() : Int;
+	@:overload @:public override public function modifiers() : Int;
 	
 	/**
 	* Returns a list containing each {@link LocalVariable} of a

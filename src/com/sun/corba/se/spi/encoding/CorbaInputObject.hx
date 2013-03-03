@@ -47,11 +47,11 @@ extern class CorbaInputObject extends com.sun.corba.se.impl.encoding.CDRInputStr
 	*
 	* @author Harold Carr
 */
-	@:overload @:public @:public override public function setMessageMediator(messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : Void;
+	@:overload @:public override public function setMessageMediator(messageMediator : com.sun.corba.se.pept.protocol.MessageMediator) : Void;
 	
-	@:overload @:public @:public override public function getMessageMediator() : com.sun.corba.se.pept.protocol.MessageMediator;
+	@:overload @:public override public function getMessageMediator() : com.sun.corba.se.pept.protocol.MessageMediator;
 	
-	@:overload @:public @:public override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

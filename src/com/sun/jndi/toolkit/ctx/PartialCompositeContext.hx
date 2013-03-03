@@ -188,7 +188,7 @@ extern class PartialCompositeContext implements javax.naming.Context implements 
 	*
 	* @since 1.3
 	*/
-	@:require(java3) @:overload @:public @:public public function getNameInNamespace() : String;
+	@:require(java3) @:overload @:public public function getNameInNamespace() : String;
 	
 	/**
 	* Retrieves the environment in effect for this context.
@@ -205,7 +205,7 @@ extern class PartialCompositeContext implements javax.naming.Context implements 
 	* @see #addToEnvironment(String, Object)
 	* @see #removeFromEnvironment(String)
 	*/
-	@:overload @:public @:public public function getEnvironment() : java.util.Hashtable<Dynamic, Dynamic>;
+	@:overload @:public public function getEnvironment() : java.util.Hashtable<Dynamic, Dynamic>;
 	
 	/**
 	* Closes this context.
@@ -218,7 +218,7 @@ extern class PartialCompositeContext implements javax.naming.Context implements 
 	*
 	* @throws  NamingException if a naming exception is encountered
 	*/
-	@:overload @:public @:public public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	/**
 	* Adds a new environment property to the environment of this
@@ -236,7 +236,7 @@ extern class PartialCompositeContext implements javax.naming.Context implements 
 	* @see #getEnvironment()
 	* @see #removeFromEnvironment(String)
 	*/
-	@:overload @:public @:public public function addToEnvironment(propName : String, propVal : Dynamic) : Dynamic;
+	@:overload @:public public function addToEnvironment(propName : String, propVal : Dynamic) : Dynamic;
 	
 	/**
 	* Removes an environment property from the environment of this
@@ -252,7 +252,7 @@ extern class PartialCompositeContext implements javax.naming.Context implements 
 	* @see #getEnvironment()
 	* @see #addToEnvironment(String, Object)
 	*/
-	@:overload @:public @:public public function removeFromEnvironment(propName : String) : Dynamic;
+	@:overload @:public public function removeFromEnvironment(propName : String) : Dynamic;
 	
 	
 }

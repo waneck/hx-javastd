@@ -25,7 +25,7 @@ package com.sun.corba.se.spi.ior;
 */
 extern interface WriteContents
 {
-	@:overload @:public @:public public function writeContents(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
+	@:overload @:public public function writeContents(os : org.omg.CORBA_2_3.portable.OutputStream) : Void;
 	
 	
 }

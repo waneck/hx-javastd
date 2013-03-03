@@ -373,7 +373,7 @@ extern class ValidatorHandler implements org.xml.sax.ContentHandler
 	*            wrapping another exception
 	* @see #endDocument
 	*/
-	@:overload @:public @:public @:public override public function startDocument() : Void;
+	@:overload @:public public function startDocument() : Void;
 	
 	/**
 	* Begin the scope of a prefix-URI Namespace mapping.
@@ -413,7 +413,7 @@ extern class ValidatorHandler implements org.xml.sax.ContentHandler
 	* @see #endPrefixMapping
 	* @see #startElement
 	*/
-	@:overload @:public @:public @:public @:public override public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload @:public public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
 	/**
 	* Receive notification of a skipped entity.
@@ -440,7 +440,7 @@ extern class ValidatorHandler implements org.xml.sax.ContentHandler
 	* @throws org.xml.sax.SAXException any SAX exception, possibly
 	*            wrapping another exception
 	*/
-	@:overload @:public @:public @:public @:public override public function skippedEntity(name : String) : Void;
+	@:overload @:public public function skippedEntity(name : String) : Void;
 	
 	/**
 	* Receive an object for locating the origin of SAX document events.
@@ -469,7 +469,7 @@ extern class ValidatorHandler implements org.xml.sax.ContentHandler
 	*                any SAX document event
 	* @see org.xml.sax.Locator
 	*/
-	@:overload @:public @:public @:public override public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
 	/**
 	* Receive notification of the beginning of an element.
@@ -535,7 +535,7 @@ extern class ValidatorHandler implements org.xml.sax.ContentHandler
 	* @see org.xml.sax.Attributes
 	* @see org.xml.sax.helpers.AttributesImpl
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public override public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Receive notification of character data.
@@ -580,7 +580,7 @@ extern class ValidatorHandler implements org.xml.sax.ContentHandler
 	* @see #ignorableWhitespace
 	* @see org.xml.sax.Locator
 	*/
-	@:overload @:public @:public @:public @:public @:public override public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notification of a processing instruction.
@@ -604,7 +604,7 @@ extern class ValidatorHandler implements org.xml.sax.ContentHandler
 	* @throws org.xml.sax.SAXException any SAX exception, possibly
 	*            wrapping another exception
 	*/
-	@:overload @:public @:public @:public @:public override public function processingInstruction(target : String, data : String) : Void;
+	@:overload @:public public function processingInstruction(target : String, data : String) : Void;
 	
 	/**
 	* End the scope of a prefix-URI mapping.
@@ -622,7 +622,7 @@ extern class ValidatorHandler implements org.xml.sax.ContentHandler
 	* @see #startPrefixMapping
 	* @see #endElement
 	*/
-	@:overload @:public @:public @:public @:public override public function endPrefixMapping(prefix : String) : Void;
+	@:overload @:public public function endPrefixMapping(prefix : String) : Void;
 	
 	/**
 	* Receive notification of the end of an element.
@@ -645,7 +645,7 @@ extern class ValidatorHandler implements org.xml.sax.ContentHandler
 	* @throws org.xml.sax.SAXException any SAX exception, possibly
 	*            wrapping another exception
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public override public function endElement(uri : String, localName : String, qName : String) : Void;
+	@:overload @:public public function endElement(uri : String, localName : String, qName : String) : Void;
 	
 	/**
 	* Receive notification of ignorable whitespace in element content.
@@ -672,7 +672,7 @@ extern class ValidatorHandler implements org.xml.sax.ContentHandler
 	*            wrapping another exception
 	* @see #characters
 	*/
-	@:overload @:public @:public @:public @:public override public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notification of the end of a document.
@@ -695,7 +695,7 @@ extern class ValidatorHandler implements org.xml.sax.ContentHandler
 	*            wrapping another exception
 	* @see #startDocument
 	*/
-	@:overload @:public @:public @:public @:public override public function endDocument() : Void;
+	@:overload @:public public function endDocument() : Void;
 	
 	
 }

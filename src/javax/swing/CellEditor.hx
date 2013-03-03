@@ -59,7 +59,7 @@ extern interface CellEditor
 	* Returns the value contained in the editor.
 	* @return the value contained in the editor
 	*/
-	@:overload @:public @:public public function getCellEditorValue() : Dynamic;
+	@:overload @:public public function getCellEditorValue() : Dynamic;
 	
 	/**
 	* Asks the editor if it can start editing using <code>anEvent</code>.

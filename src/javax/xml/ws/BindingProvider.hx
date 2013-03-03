@@ -75,7 +75,7 @@ extern interface BindingProvider
 	*
 	* @since JAX-WS 2.1
 	*/
-	@:require(java1) @:overload @:public @:public public function getEndpointReference() : javax.xml.ws.EndpointReference;
+	@:require(java1) @:overload @:public public function getEndpointReference() : javax.xml.ws.EndpointReference;
 	
 	/**
 	* Returns the <code>EndpointReference</code> associated with
@@ -96,7 +96,7 @@ extern interface BindingProvider
 	*
 	* @since JAX-WS 2.1
 	*/
-	@:require(java1) @:overload @:public @:public public function getEndpointReference<T : javax.xml.ws.EndpointReference>(clazz : Class<T>) : T;
+	@:require(java1) @:overload @:public public function getEndpointReference<T : javax.xml.ws.EndpointReference>(clazz : Class<T>) : T;
 	
 	
 }

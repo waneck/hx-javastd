@@ -85,7 +85,7 @@ extern class InputMethodAdapter implements java.awt.im.spi.InputMethod
 	* @param context the input method context for this input method
 	* @exception NullPointerException if <code>context</code> is null
 	*/
-	@:overload @:public @:public public function setInputMethodContext(context : java.awt.im.spi.InputMethodContext) : Void;
+	@:overload @:public public function setInputMethodContext(context : java.awt.im.spi.InputMethodContext) : Void;
 	
 	/**
 	* Returns the current input locale. Might return null in exceptional cases.
@@ -99,7 +99,7 @@ extern class InputMethodAdapter implements java.awt.im.spi.InputMethod
 	*
 	* @return the current input locale, or null
 	*/
-	@:overload @:public @:public public function getLocale() : java.util.Locale;
+	@:overload @:public public function getLocale() : java.util.Locale;
 	
 	/**
 	* Returns a control object from this input method, or null. A
@@ -115,7 +115,7 @@ extern class InputMethodAdapter implements java.awt.im.spi.InputMethod
 	*
 	* @return a control object from this input method, or null
 	*/
-	@:overload @:public @:public public function getControlObject() : Dynamic;
+	@:overload @:public public function getControlObject() : Dynamic;
 	
 	/**
 	* Sets the subsets of the Unicode character set that this input method
@@ -132,7 +132,7 @@ extern class InputMethodAdapter implements java.awt.im.spi.InputMethod
 	* @param subsets the subsets of the Unicode character set from which
 	* characters may be input
 	*/
-	@:overload @:public @:public public function setCharacterSubsets(subsets : java.NativeArray<java.lang.Character.Character_Subset>) : Void;
+	@:overload @:public public function setCharacterSubsets(subsets : java.NativeArray<java.lang.Character.Character_Subset>) : Void;
 	
 	/**
 	* Dispatches the event to the input method. If input method support is
@@ -153,7 +153,7 @@ extern class InputMethodAdapter implements java.awt.im.spi.InputMethod
 	* @param event the event being dispatched to the input method
 	* @exception NullPointerException if <code>event</code> is null
 	*/
-	@:overload @:public @:public public function dispatchEvent(event : java.awt.AWTEvent) : Void;
+	@:overload @:public public function dispatchEvent(event : java.awt.AWTEvent) : Void;
 	
 	/**
 	* Closes or hides all windows opened by this input method instance or
@@ -167,7 +167,7 @@ extern class InputMethodAdapter implements java.awt.im.spi.InputMethod
 	* </ul>
 	* The method is only called when the input method is inactive.
 	*/
-	@:overload @:public @:public public function hideWindows() : Void;
+	@:overload @:public public function hideWindows() : Void;
 	
 	/**
 	* Releases the resources used by this input method.
@@ -179,7 +179,7 @@ extern class InputMethodAdapter implements java.awt.im.spi.InputMethod
 	* The method is only called when the input method is inactive.
 	* No method of this interface is called on this instance after dispose.
 	*/
-	@:overload @:public @:public public function dispose() : Void;
+	@:overload @:public public function dispose() : Void;
 	
 	/**
 	* Attempts to set the input locale. If the input method supports the
@@ -200,7 +200,7 @@ extern class InputMethodAdapter implements java.awt.im.spi.InputMethod
 	* @return whether the specified locale is supported
 	* @exception NullPointerException if <code>locale</code> is null
 	*/
-	@:overload @:public @:public public function setLocale(locale : java.util.Locale) : Bool;
+	@:overload @:public public function setLocale(locale : java.util.Locale) : Bool;
 	
 	/**
 	* Determines whether this input method is enabled.
@@ -222,7 +222,7 @@ extern class InputMethodAdapter implements java.awt.im.spi.InputMethod
 	* support checking whether it is enabled for composition
 	* @see #setCompositionEnabled
 	*/
-	@:overload @:public @:public public function isCompositionEnabled() : Bool;
+	@:overload @:public public function isCompositionEnabled() : Bool;
 	
 	/**
 	* Activates the input method for immediate input processing.
@@ -241,7 +241,7 @@ extern class InputMethodAdapter implements java.awt.im.spi.InputMethod
 	* The method is only called when the input method is inactive.
 	* A newly instantiated input method is assumed to be inactive.
 	*/
-	@:overload @:public @:public public function activate() : Void;
+	@:overload @:public public function activate() : Void;
 	
 	/**
 	* Deactivates the input method.
@@ -272,7 +272,7 @@ extern class InputMethodAdapter implements java.awt.im.spi.InputMethod
 	*
 	* @param isTemporary whether the focus change is temporary
 	*/
-	@:overload @:public @:public public function deactivate(isTemporary : Bool) : Void;
+	@:overload @:public public function deactivate(isTemporary : Bool) : Void;
 	
 	/**
 	* Notifies the input method that a client component has been
@@ -283,7 +283,7 @@ extern class InputMethodAdapter implements java.awt.im.spi.InputMethod
 	* <p>
 	* The method is only called when the input method is inactive.
 	*/
-	@:overload @:public @:public public function removeNotify() : Void;
+	@:overload @:public public function removeNotify() : Void;
 	
 	/**
 	* Ends any input composition that may currently be going on in this
@@ -307,7 +307,7 @@ extern class InputMethodAdapter implements java.awt.im.spi.InputMethod
 	*     {@link java.awt.im.InputContext#selectInputMethod InputContext.selectInputMethod}.
 	* </ul>
 	*/
-	@:overload @:public @:public public function endComposition() : Void;
+	@:overload @:public public function endComposition() : Void;
 	
 	/**
 	* Enables or disables this input method for composition,
@@ -344,7 +344,7 @@ extern class InputMethodAdapter implements java.awt.im.spi.InputMethod
 	* support the enabling/disabling operation
 	* @see #isCompositionEnabled
 	*/
-	@:overload @:public @:public public function setCompositionEnabled(enable : Bool) : Void;
+	@:overload @:public public function setCompositionEnabled(enable : Bool) : Void;
 	
 	
 }

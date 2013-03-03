@@ -51,7 +51,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public @:public override public function insert_double(value : Float) : Void;
+	@:overload @:public override public function insert_double(value : Float) : Void;
 	
 	/**
 	* Inserts a TypeCode object into the DynAny.
@@ -59,7 +59,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public @:public override public function insert_typecode(value : org.omg.CORBA.TypeCode) : Void;
+	@:overload @:public override public function insert_typecode(value : org.omg.CORBA.TypeCode) : Void;
 	
 	/**
 	* Extracts the integer value from this DynAny. The IDL long data type is mapped to the Java int data type.
@@ -69,7 +69,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	*/
-	@:overload @:public @:public override public function get_long() : Int;
+	@:overload @:public override public function get_long() : Int;
 	
 	/**
 	* Inserts the Any value contained in the parameter DynAny into the Any represented by this DynAny.
@@ -77,7 +77,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public @:public override public function insert_dyn_any(value : org.omg.DynamicAny.DynAny) : Void;
+	@:overload @:public override public function insert_dyn_any(value : org.omg.DynamicAny.DynAny) : Void;
 	
 	/**
 	* Initializes the value associated with a DynAny object with the value contained in an any.
@@ -95,7 +95,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public @:public override public function insert_octet(value : java.StdTypes.Int8) : Void;
+	@:overload @:public override public function insert_octet(value : java.StdTypes.Int8) : Void;
 	
 	/**
 	* Creates a <code>Request</code> instance for use in the
@@ -105,7 +105,7 @@ package com.sun.corba.se.impl.dynamicany;
 	*                        <code>Request</code> instance
 	* @return the newly-created <code>Request</code> instance
 	*/
-	@:overload @:public @:public @:public override public function _request(operation : String) : org.omg.CORBA.Request;
+	@:overload @:public override public function _request(operation : String) : org.omg.CORBA.Request;
 	
 	/**
 	* Inserts an integer value into the DynAny. The IDL ulong data type is mapped to the Java int data type.
@@ -113,7 +113,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public @:public override public function insert_ulong(value : Int) : Void;
+	@:overload @:public override public function insert_ulong(value : Int) : Void;
 	
 	/**
 	* Inserts a string value into the DynAny.
@@ -122,7 +122,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	* @exception InvalidValue if the string inserted is longer than the bound of a bounded string
 	*/
-	@:overload @:public @:public override public function insert_wstring(value : String) : Void;
+	@:overload @:public override public function insert_wstring(value : String) : Void;
 	
 	/**
 	* Returns the number of components of a DynAny.
@@ -139,7 +139,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* <LI>For DynFixed and DynEnum, the operation returns zero.
 	* </UL>
 	*/
-	@:overload @:public @:public override public function component_count() : Int;
+	@:overload @:public override public function component_count() : Int;
 	
 	/**
 	* Inserts a long value into the DynAny.
@@ -148,7 +148,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public @:public override public function insert_ulonglong(value : haxe.Int64) : Void;
+	@:overload @:public override public function insert_ulonglong(value : haxe.Int64) : Void;
 	
 	/**
 	* Extracts the boolean value from this DynAny.
@@ -158,7 +158,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	*/
-	@:overload @:public @:public override public function get_boolean() : Bool;
+	@:overload @:public override public function get_boolean() : Bool;
 	
 	/**
 	* Extracts a Serializable object from this DynAny.
@@ -169,7 +169,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	*/
-	@:overload @:public @:public override public function get_val() : java.io.Serializable;
+	@:overload @:public override public function get_val() : java.io.Serializable;
 	
 	/**
 	* Compares two DynAny values for equality.
@@ -187,7 +187,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public @:public override public function insert_ushort(value : java.StdTypes.Int16) : Void;
+	@:overload @:public override public function insert_ushort(value : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Returns the DynAny for the component at the current position.
@@ -207,7 +207,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception TypeMismatch If called on a DynAny that cannot have components,
 	* such as a DynEnum or an empty exception
 	*/
-	@:overload @:public @:public override public function current_component() : org.omg.DynamicAny.DynAny;
+	@:overload @:public override public function current_component() : org.omg.DynamicAny.DynAny;
 	
 	/**
 	* Returns the <code>Policy</code> object of the specified type
@@ -221,7 +221,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* ORB or because a policy object of that type is not associated with this
 	* Object
 	*/
-	@:overload @:public @:public @:public override public function _get_policy(policy_type : Int) : org.omg.CORBA.Policy;
+	@:overload @:public override public function _get_policy(policy_type : Int) : org.omg.CORBA.Policy;
 	
 	/**
 	* Inserts a short value into the DynAny.
@@ -229,7 +229,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public @:public override public function insert_short(value : java.StdTypes.Int16) : Void;
+	@:overload @:public override public function insert_short(value : java.StdTypes.Int16) : Void;
 	
 	/**
 	* Signals that the caller is done using this object reference, so
@@ -237,7 +237,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* released. Note that the object implementation is not involved in
 	* this operation, and other references to the same object are not affected.
 	*/
-	@:overload @:public @:public @:public override public function _release() : Void;
+	@:overload @:public override public function _release() : Void;
 	
 	/**
 	* Initializes the value associated with a DynAny object with the value
@@ -259,7 +259,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	*/
-	@:overload @:public @:public override public function get_string() : String;
+	@:overload @:public override public function get_string() : String;
 	
 	/**
 	* Extracts the float value from this DynAny.
@@ -269,12 +269,12 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	*/
-	@:overload @:public @:public override public function get_float() : Single;
+	@:overload @:public override public function get_float() : Single;
 	
 	/**
 	* Is equivalent to seek(0).
 	*/
-	@:overload @:public @:public override public function rewind() : Void;
+	@:overload @:public override public function rewind() : Void;
 	
 	/**
 	* Creates an any value from a DynAny object.
@@ -294,7 +294,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* no component and returns false. Passing a non-negative index value for a DynAny that does not
 	* have a component at the corresponding position sets the current position to -1 and returns false.
 	*/
-	@:overload @:public @:public override public function seek(index : Int) : Bool;
+	@:overload @:public override public function seek(index : Int) : Bool;
 	
 	/**
 	* Creates a <code>Request</code> instance initialized with the
@@ -322,7 +322,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @see ExceptionList
 	* @see ContextList
 	*/
-	@:overload @:public @:public @:public override public function _create_request(ctx : org.omg.CORBA.Context, operation : String, arg_list : org.omg.CORBA.NVList, result : org.omg.CORBA.NamedValue, exclist : org.omg.CORBA.ExceptionList, ctxlist : org.omg.CORBA.ContextList) : org.omg.CORBA.Request;
+	@:overload @:public override public function _create_request(ctx : org.omg.CORBA.Context, operation : String, arg_list : org.omg.CORBA.NVList, result : org.omg.CORBA.NamedValue, exclist : org.omg.CORBA.ExceptionList, ctxlist : org.omg.CORBA.ContextList) : org.omg.CORBA.Request;
 	
 	/**
 	* Extracts the char value from this DynAny.
@@ -332,7 +332,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	*/
-	@:overload @:public @:public override public function get_char() : java.StdTypes.Char16;
+	@:overload @:public override public function get_char() : java.StdTypes.Char16;
 	
 	/**
 	* Extracts the string value from this DynAny.
@@ -342,7 +342,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* that is not equivalent to the requested type.
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public @:public override public function get_wstring() : String;
+	@:overload @:public override public function get_wstring() : String;
 	
 	/**
 	* Creates a <code>Request</code> instance initialized with the
@@ -362,7 +362,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @see NVList
 	* @see NamedValue
 	*/
-	@:overload @:public @:public @:public override public function _create_request(ctx : org.omg.CORBA.Context, operation : String, arg_list : org.omg.CORBA.NVList, result : org.omg.CORBA.NamedValue) : org.omg.CORBA.Request;
+	@:overload @:public override public function _create_request(ctx : org.omg.CORBA.Context, operation : String, arg_list : org.omg.CORBA.NVList, result : org.omg.CORBA.NamedValue) : org.omg.CORBA.Request;
 	
 	/**
 	* Destroys a DynAny object.
@@ -387,7 +387,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public @:public override public function insert_val(value : java.io.Serializable) : Void;
+	@:overload @:public override public function insert_val(value : java.io.Serializable) : Void;
 	
 	/**
 	* Extracts the reference to a CORBA Object from this DynAny.
@@ -397,7 +397,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	*/
-	@:overload @:public @:public override public function get_reference() : org.omg.CORBA.Object;
+	@:overload @:public override public function get_reference() : org.omg.CORBA.Object;
 	
 	/**
 	* Returns the TypeCode associated with this DynAny object.
@@ -418,7 +418,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	*/
-	@:overload @:public @:public override public function get_ulong() : Int;
+	@:overload @:public override public function get_ulong() : Int;
 	
 	/**
 	* Inserts an integer value into the DynAny. The IDL long data type is mapped to the Java int data type.
@@ -426,7 +426,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public @:public override public function insert_long(value : Int) : Void;
+	@:overload @:public override public function insert_long(value : Int) : Void;
 	
 	/**
 	* Extracts the byte value from this DynAny. The IDL octet data type is mapped to the Java byte data type.
@@ -436,7 +436,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	*/
-	@:overload @:public @:public override public function get_octet() : java.StdTypes.Int8;
+	@:overload @:public override public function get_octet() : java.StdTypes.Int8;
 	
 	/**
 	* Returns a new <code>Object</code> with the given policies
@@ -454,7 +454,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @return a new <code>Object</code> with the given policies replacing
 	*         or added to those in this <code>Object</code>
 	*/
-	@:overload @:public @:public @:public override public function _set_policy_override(policies : java.NativeArray<org.omg.CORBA.Policy>, set_add : org.omg.CORBA.SetOverrideType) : org.omg.CORBA.Object;
+	@:overload @:public override public function _set_policy_override(policies : java.NativeArray<org.omg.CORBA.Policy>, set_add : org.omg.CORBA.SetOverrideType) : org.omg.CORBA.Object;
 	
 	/**
 	* Creates a new DynAny object whose value is a deep copy of the DynAny on which it is invoked.
@@ -473,7 +473,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	*/
-	@:overload @:public @:public override public function get_wchar() : java.StdTypes.Char16;
+	@:overload @:public override public function get_wchar() : java.StdTypes.Char16;
 	
 	/**
 	* Advances the current position to the next component.
@@ -481,7 +481,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* A false return value leaves the current position at -1.
 	* Invoking next on a DynAny without components leaves the current position at -1 and returns false.
 	*/
-	@:overload @:public @:public override public function next() : Bool;
+	@:overload @:public override public function next() : Bool;
 	
 	/**
 	* Obtains an <code>InterfaceDef</code> for the object implementation
@@ -494,7 +494,7 @@ package com.sun.corba.se.impl.dynamicany;
 	*         which provides type information about the object referred to by
 	*         this object reference
 	*/
-	@:overload @:public @:public @:public override public function _get_interface_def() : org.omg.CORBA.Object;
+	@:overload @:public override public function _get_interface_def() : org.omg.CORBA.Object;
 	
 	/**
 	* Inserts a float value into the DynAny.
@@ -502,7 +502,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public @:public override public function insert_float(value : Single) : Void;
+	@:overload @:public override public function insert_float(value : Single) : Void;
 	
 	/**
 	* Inserts an Any value into the Any represented by this DynAny.
@@ -510,7 +510,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public @:public override public function insert_any(value : org.omg.CORBA.Any) : Void;
+	@:overload @:public override public function insert_any(value : org.omg.CORBA.Any) : Void;
 	
 	/**
 	* Extracts the TypeCode object from this DynAny.
@@ -520,7 +520,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	*/
-	@:overload @:public @:public override public function get_typecode() : org.omg.CORBA.TypeCode;
+	@:overload @:public override public function get_typecode() : org.omg.CORBA.TypeCode;
 	
 	/**
 	* Returns an ORB-internal identifier for this object reference.
@@ -536,7 +536,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @param maximum the upper bound on the hash value returned by the ORB
 	* @return the ORB-internal hash identifier for this object reference
 	*/
-	@:overload @:public @:public @:public override public function _hash(maximum : Int) : Int;
+	@:overload @:public override public function _hash(maximum : Int) : Int;
 	
 	/**
 	* Determines whether the two object references are equivalent,
@@ -553,7 +553,7 @@ package com.sun.corba.se.impl.dynamicany;
 	*         object references are distinct, not necessarily that
 	*         they reference distinct objects.
 	*/
-	@:overload @:public @:public @:public override public function _is_equivalent(other : org.omg.CORBA.Object) : Bool;
+	@:overload @:public override public function _is_equivalent(other : org.omg.CORBA.Object) : Bool;
 	
 	/**
 	* Retrieves the <code>DomainManagers</code> of this object.
@@ -566,7 +566,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* default each object is associated with at least one domain manager at
 	* creation.
 	*/
-	@:overload @:public @:public @:public override public function _get_domain_managers() : java.NativeArray<org.omg.CORBA.DomainManager>;
+	@:overload @:public override public function _get_domain_managers() : java.NativeArray<org.omg.CORBA.DomainManager>;
 	
 	/**
 	* Inserts a long value into the DynAny. The IDL long long data type is mapped to the Java long data type.
@@ -574,7 +574,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public @:public override public function insert_longlong(value : haxe.Int64) : Void;
+	@:overload @:public override public function insert_longlong(value : haxe.Int64) : Void;
 	
 	/**
 	* Checks whether this object is an instance of a class that
@@ -585,7 +585,7 @@ package com.sun.corba.se.impl.dynamicany;
 	*         of a class that implements the interface;
 	*         <code>false</code> otherwise
 	*/
-	@:overload @:public @:public @:public override public function _is_a(repositoryIdentifier : String) : Bool;
+	@:overload @:public override public function _is_a(repositoryIdentifier : String) : Bool;
 	
 	/**
 	* Determines whether the server object for this object reference has been
@@ -593,7 +593,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @return <code>true</code> if the ORB knows authoritatively that the
 	*         server object does not exist; <code>false</code> otherwise
 	*/
-	@:overload @:public @:public @:public override public function _non_existent() : Bool;
+	@:overload @:public override public function _non_existent() : Bool;
 	
 	/**
 	* Inserts a reference to a CORBA object into the DynAny.
@@ -601,7 +601,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public @:public override public function insert_reference(value : org.omg.CORBA.Object) : Void;
+	@:overload @:public override public function insert_reference(value : org.omg.CORBA.Object) : Void;
 	
 	/**
 	* Extracts the long value from this DynAny.
@@ -612,7 +612,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	*/
-	@:overload @:public @:public override public function get_ulonglong() : haxe.Int64;
+	@:overload @:public override public function get_ulonglong() : haxe.Int64;
 	
 	/**
 	* Extracts the short value from this DynAny.
@@ -622,7 +622,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	*/
-	@:overload @:public @:public override public function get_short() : java.StdTypes.Int16;
+	@:overload @:public override public function get_short() : java.StdTypes.Int16;
 	
 	/**
 	* Inserts a boolean value into the DynAny.
@@ -630,7 +630,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public @:public override public function insert_boolean(value : Bool) : Void;
+	@:overload @:public override public function insert_boolean(value : Bool) : Void;
 	
 	/**
 	* Inserts a string value into the DynAny.
@@ -640,7 +640,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception InvalidValue if the string inserted is longer than the bound of a bounded string
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public @:public override public function insert_string(value : String) : Void;
+	@:overload @:public override public function insert_string(value : String) : Void;
 	
 	/**
 	* Returns a duplicate of this CORBA object reference.
@@ -657,7 +657,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @return a duplicate of this object reference or this object reference
 	*         itself
 	*/
-	@:overload @:public @:public @:public override public function _duplicate() : org.omg.CORBA.Object;
+	@:overload @:public override public function _duplicate() : org.omg.CORBA.Object;
 	
 	/**
 	* Inserts a char value into the DynAny. The IDL wchar data type is mapped to the Java char data type.
@@ -665,7 +665,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public @:public override public function insert_wchar(value : java.StdTypes.Char16) : Void;
+	@:overload @:public override public function insert_wchar(value : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Extracts the Any value contained in the Any represented by this DynAny and returns it wrapped
@@ -676,7 +676,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	*/
-	@:overload @:public @:public override public function get_dyn_any() : org.omg.DynamicAny.DynAny;
+	@:overload @:public override public function get_dyn_any() : org.omg.DynamicAny.DynAny;
 	
 	/**
 	* Extracts an Any value contained in the Any represented by this DynAny.
@@ -686,7 +686,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	*/
-	@:overload @:public @:public override public function get_any() : org.omg.CORBA.Any;
+	@:overload @:public override public function get_any() : org.omg.CORBA.Any;
 	
 	/**
 	* Inserts a char value into the DynAny.
@@ -694,7 +694,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	*/
-	@:overload @:public @:public override public function insert_char(value : java.StdTypes.Char16) : Void;
+	@:overload @:public override public function insert_char(value : java.StdTypes.Char16) : Void;
 	
 	/**
 	* Extracts the short value from this DynAny. The IDL ushort data type is mapped to the Java short data type.
@@ -704,7 +704,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	*/
-	@:overload @:public @:public override public function get_ushort() : java.StdTypes.Int16;
+	@:overload @:public override public function get_ushort() : java.StdTypes.Int16;
 	
 	/**
 	* Extracts the long value from this DynAny. The IDL long long data type is mapped to the Java long data type.
@@ -714,7 +714,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	*/
-	@:overload @:public @:public override public function get_longlong() : haxe.Int64;
+	@:overload @:public override public function get_longlong() : haxe.Int64;
 	
 	/**
 	* Extracts the double value from this DynAny.
@@ -724,7 +724,7 @@ package com.sun.corba.se.impl.dynamicany;
 	* @exception TypeMismatch if called on a DynAny whose current component itself has components
 	* @exception InvalidValue if this DynAny has components but has a current position of -1
 	*/
-	@:overload @:public @:public override public function get_double() : Float;
+	@:overload @:public override public function get_double() : Float;
 	
 	
 }

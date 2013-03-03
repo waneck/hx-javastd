@@ -244,7 +244,7 @@ extern class SelectableChannel extends java.nio.channels.spi.AbstractInterruptib
 	*
 	* @return <tt>true</tt> if, and only if, this channel is open
 	*/
-	@:overload @:public @:public @:public override public function isOpen() : Bool;
+	@:overload @:public override public function isOpen() : Bool;
 	
 	/**
 	* Closes this channel.
@@ -263,7 +263,7 @@ extern class SelectableChannel extends java.nio.channels.spi.AbstractInterruptib
 	*
 	* @throws  IOException  If an I/O error occurs
 	*/
-	@:overload @:public @:public @:public override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

@@ -940,7 +940,7 @@ extern class FileChannel extends java.nio.channels.spi.AbstractInterruptibleChan
 	*
 	* @return <tt>true</tt> if, and only if, this channel is open
 	*/
-	@:overload @:public @:public override public function isOpen() : Bool;
+	@:overload @:public override public function isOpen() : Bool;
 	
 	/**
 	* Closes this channel.
@@ -959,7 +959,7 @@ extern class FileChannel extends java.nio.channels.spi.AbstractInterruptibleChan
 	*
 	* @throws  IOException  If an I/O error occurs
 	*/
-	@:overload @:public @:public override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

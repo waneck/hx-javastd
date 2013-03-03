@@ -206,7 +206,7 @@ extern class X509ExtendedTrustManager implements javax.net.ssl.X509TrustManager
 	* @return a non-null (possibly empty) array of acceptable
 	*          CA issuer certificates.
 	*/
-	@:overload @:public @:public @:public public function getAcceptedIssuers() : java.NativeArray<java.security.cert.X509Certificate>;
+	@:overload @:public public function getAcceptedIssuers() : java.NativeArray<java.security.cert.X509Certificate>;
 	
 	/**
 	* Given the partial or complete certificate chain provided by the
@@ -231,7 +231,7 @@ extern class X509ExtendedTrustManager implements javax.net.ssl.X509TrustManager
 	* @throws CertificateException if the certificate chain is not trusted
 	*         by this TrustManager.
 	*/
-	@:overload @:public @:public @:public public function checkServerTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>, authType : String) : Void;
+	@:overload @:public public function checkServerTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>, authType : String) : Void;
 	
 	/**
 	* Given the partial or complete certificate chain provided by the
@@ -251,7 +251,7 @@ extern class X509ExtendedTrustManager implements javax.net.ssl.X509TrustManager
 	* @throws CertificateException if the certificate chain is not trusted
 	*         by this TrustManager.
 	*/
-	@:overload @:public @:public @:public public function checkClientTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>, authType : String) : Void;
+	@:overload @:public public function checkClientTrusted(chain : java.NativeArray<java.security.cert.X509Certificate>, authType : String) : Void;
 	
 	
 }

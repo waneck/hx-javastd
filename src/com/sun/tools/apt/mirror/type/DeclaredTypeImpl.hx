@@ -64,7 +64,7 @@ package com.sun.tools.apt.mirror.type;
 	*
 	* @param v the visitor operating on this type
 	*/
-	@:overload @:public @:public override public function accept(v : com.sun.mirror.util.TypeVisitor) : Void;
+	@:overload @:public override public function accept(v : com.sun.mirror.util.TypeVisitor) : Void;
 	
 	
 }

@@ -72,7 +72,7 @@ extern class ValidationErrorHandler implements org.xml.sax.ErrorHandler
 	*            wrapping another exception.
 	* @see org.xml.sax.SAXParseException
 	*/
-	@:overload @:public @:abstract @:public public function error(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public @:abstract public function error(exception : org.xml.sax.SAXParseException) : Void;
 	
 	/**
 	* Receive notification of a non-recoverable error.
@@ -102,7 +102,7 @@ extern class ValidationErrorHandler implements org.xml.sax.ErrorHandler
 	*            wrapping another exception.
 	* @see org.xml.sax.SAXParseException
 	*/
-	@:overload @:public @:abstract @:public public function fatalError(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public @:abstract public function fatalError(exception : org.xml.sax.SAXParseException) : Void;
 	
 	/**
 	* Receive notification of a warning.
@@ -125,7 +125,7 @@ extern class ValidationErrorHandler implements org.xml.sax.ErrorHandler
 	*            wrapping another exception.
 	* @see org.xml.sax.SAXParseException
 	*/
-	@:overload @:public @:abstract @:public public function warning(exception : org.xml.sax.SAXParseException) : Void;
+	@:overload @:public @:abstract public function warning(exception : org.xml.sax.SAXParseException) : Void;
 	
 	
 }

@@ -45,7 +45,7 @@ extern interface DeclHandler
 	* @param model The content model as a normalized string.
 	* @exception SAXException The application may raise an exception.
 	*/
-	@:overload @:public @:abstract @:public public function elementDecl(name : String, model : String) : Void;
+	@:overload @:public @:abstract public function elementDecl(name : String, model : String) : Void;
 	
 	/**
 	* Report an attribute type declaration.
@@ -72,7 +72,7 @@ extern interface DeclHandler
 	*        or null if there is none.
 	* @exception SAXException The application may raise an exception.
 	*/
-	@:overload @:public @:abstract @:public public function attributeDecl(eName : String, aName : String, type : String, mode : String, value : String) : Void;
+	@:overload @:public @:abstract public function attributeDecl(eName : String, aName : String, type : String, mode : String, value : String) : Void;
 	
 	/**
 	* Report an internal entity declaration.
@@ -88,7 +88,7 @@ extern interface DeclHandler
 	* @see #externalEntityDecl
 	* @see org.xml.sax.DTDHandler#unparsedEntityDecl
 	*/
-	@:overload @:public @:abstract @:public public function internalEntityDecl(name : String, value : String) : Void;
+	@:overload @:public @:abstract public function internalEntityDecl(name : String, value : String) : Void;
 	
 	/**
 	* Report a parsed external entity declaration.
@@ -108,7 +108,7 @@ extern interface DeclHandler
 	* @see #internalEntityDecl
 	* @see org.xml.sax.DTDHandler#unparsedEntityDecl
 	*/
-	@:overload @:public @:abstract @:public public function externalEntityDecl(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public @:abstract public function externalEntityDecl(name : String, publicId : String, systemId : String) : Void;
 	
 	
 }

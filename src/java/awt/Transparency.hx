@@ -34,7 +34,7 @@ extern interface Transparency
 	* @return the field type of this <code>Transparency</code>, which is
 	*          either OPAQUE, BITMASK or TRANSLUCENT.
 	*/
-	@:overload @:public @:public public function getTransparency() : Int;
+	@:overload @:public public function getTransparency() : Int;
 	
 	
 }

@@ -57,7 +57,7 @@ package com.sun.org.apache.xml.internal.serializer;
 	* @param chars the character data
 	* @throws SAXException
 	*/
-	@:overload @:public @:public public function characters(chars : String) : Void;
+	@:overload @:public public function characters(chars : String) : Void;
 	
 	/**
 	* This method is used to notify of a character event, but passing the data
@@ -79,7 +79,7 @@ package com.sun.org.apache.xml.internal.serializer;
 	* @param elemName the fully qualified element name.
 	* @throws SAXException
 	*/
-	@:overload @:public @:public public function endElement(elemName : String) : Void;
+	@:overload @:public public function endElement(elemName : String) : Void;
 	
 	/**
 	* This method is used to notify that an element is starting.
@@ -94,14 +94,14 @@ package com.sun.org.apache.xml.internal.serializer;
 	*
 	* @throws SAXException
 	*/
-	@:overload @:public @:public public function startElement(uri : String, localName : String, qName : String) : Void;
+	@:overload @:public public function startElement(uri : String, localName : String, qName : String) : Void;
 	
 	/**
 	* This method is used to notify of the start of an element
 	* @param qName the fully qualified name of the element
 	* @throws SAXException
 	*/
-	@:overload @:public @:public public function startElement(qName : String) : Void;
+	@:overload @:public public function startElement(qName : String) : Void;
 	
 	/**
 	* This method is used to notify that a prefix mapping is to start, but
@@ -136,7 +136,7 @@ package com.sun.org.apache.xml.internal.serializer;
 	* before seen mapping for the element.
 	* @throws SAXException
 	*/
-	@:overload @:public @:public public function startPrefixMapping(prefix : String, uri : String, shouldFlush : Bool) : Bool;
+	@:overload @:public public function startPrefixMapping(prefix : String, uri : String, shouldFlush : Bool) : Bool;
 	
 	/**
 	* Notify of an entity reference.
@@ -199,7 +199,7 @@ package com.sun.org.apache.xml.internal.serializer;
 	* @param value the attribute value
 	* @param flags a bitwise flag
 	*/
-	@:overload @:public @:public public function addUniqueAttribute(qName : String, value : String, flags : Int) : Void;
+	@:overload @:public public function addUniqueAttribute(qName : String, value : String, flags : Int) : Void;
 	
 	/**
 	* Add an attribute from an xsl:attribute element.

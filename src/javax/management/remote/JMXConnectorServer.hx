@@ -242,7 +242,7 @@ extern class JMXConnectorServer extends javax.management.NotificationBroadcaster
 	* are omitted from this map.  If there are no serializable
 	* attributes, the returned map is empty.
 	*/
-	@:overload @:public @:public public function getAttributes() : java.util.Map<String, Dynamic>;
+	@:overload @:public public function getAttributes() : java.util.Map<String, Dynamic>;
 	
 	/**
 	* <p>Deactivates the connector server, that is, stops listening for
@@ -279,7 +279,7 @@ extern class JMXConnectorServer extends javax.management.NotificationBroadcaster
 	* closed except possibly those that generated exceptions when the
 	* server attempted to close them.
 	*/
-	@:overload @:public @:public public function stop() : Void;
+	@:overload @:public public function stop() : Void;
 	
 	/**
 	* <p>Activates the connector server, that is, starts listening for
@@ -294,7 +294,7 @@ extern class JMXConnectorServer extends javax.management.NotificationBroadcaster
 	* @exception IllegalStateException if the connector server has
 	* not been attached to an MBean server.
 	*/
-	@:overload @:public @:public public function start() : Void;
+	@:overload @:public public function start() : Void;
 	
 	/**
 	* <p>The address of this object.</p>
@@ -302,7 +302,7 @@ extern class JMXConnectorServer extends javax.management.NotificationBroadcaster
 	* @return the address of this object, or null if it
 	* does not have one.
 	*/
-	@:overload @:public @:public public function getAddress() : javax.management.remote.JMXServiceURL;
+	@:overload @:public public function getAddress() : javax.management.remote.JMXServiceURL;
 	
 	/**
 	* <p>Determines whether the connector server is active.  A connector
@@ -313,7 +313,7 @@ extern class JMXConnectorServer extends javax.management.NotificationBroadcaster
 	*
 	* @return true if the connector server is active.
 	*/
-	@:overload @:public @:public public function isActive() : Bool;
+	@:overload @:public public function isActive() : Bool;
 	
 	
 }

@@ -29,7 +29,7 @@ extern interface Translet
 	*/
 	@:overload @:public public function transform(document : com.sun.org.apache.xalan.internal.xsltc.DOM, handler : com.sun.org.apache.xml.internal.serializer.SerializationHandler) : Void;
 	
-	@:overload @:public @:public public function transform(document : com.sun.org.apache.xalan.internal.xsltc.DOM, handlers : java.NativeArray<com.sun.org.apache.xml.internal.serializer.SerializationHandler>) : Void;
+	@:overload @:public public function transform(document : com.sun.org.apache.xalan.internal.xsltc.DOM, handlers : java.NativeArray<com.sun.org.apache.xml.internal.serializer.SerializationHandler>) : Void;
 	
 	@:overload @:public public function transform(document : com.sun.org.apache.xalan.internal.xsltc.DOM, iterator : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator, handler : com.sun.org.apache.xml.internal.serializer.SerializationHandler) : Void;
 	

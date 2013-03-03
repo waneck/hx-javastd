@@ -244,7 +244,7 @@ extern class AbstractTableModel implements javax.swing.table.TableModel implemen
 	* @return the number of columns in the model
 	* @see #getRowCount
 	*/
-	@:overload @:public @:public public function getColumnCount() : Int;
+	@:overload @:public public function getColumnCount() : Int;
 	
 	/**
 	* Returns the value for the cell at <code>columnIndex</code> and
@@ -254,7 +254,7 @@ extern class AbstractTableModel implements javax.swing.table.TableModel implemen
 	* @param   columnIndex     the column whose value is to be queried
 	* @return  the value Object at the specified cell
 	*/
-	@:overload @:public @:public public function getValueAt(rowIndex : Int, columnIndex : Int) : Dynamic;
+	@:overload @:public public function getValueAt(rowIndex : Int, columnIndex : Int) : Dynamic;
 	
 	/**
 	* Returns the number of rows in the model. A
@@ -265,7 +265,7 @@ extern class AbstractTableModel implements javax.swing.table.TableModel implemen
 	* @return the number of rows in the model
 	* @see #getColumnCount
 	*/
-	@:overload @:public @:public public function getRowCount() : Int;
+	@:overload @:public public function getRowCount() : Int;
 	
 	
 }

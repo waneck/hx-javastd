@@ -104,7 +104,7 @@ package org.xml.sax;
 	*                any SAX document event
 	* @see org.xml.sax.Locator
 	*/
-	@:overload @:public @:public public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
+	@:overload @:public public function setDocumentLocator(locator : org.xml.sax.Locator) : Void;
 	
 	/**
 	* Receive notification of the beginning of a document.
@@ -117,7 +117,7 @@ package org.xml.sax;
 	*            wrapping another exception
 	* @see #endDocument
 	*/
-	@:overload @:public @:public public function startDocument() : Void;
+	@:overload @:public public function startDocument() : Void;
 	
 	/**
 	* Receive notification of the end of a document.
@@ -140,7 +140,7 @@ package org.xml.sax;
 	*            wrapping another exception
 	* @see #startDocument
 	*/
-	@:overload @:public @:public @:public public function endDocument() : Void;
+	@:overload @:public public function endDocument() : Void;
 	
 	/**
 	* Begin the scope of a prefix-URI Namespace mapping.
@@ -180,7 +180,7 @@ package org.xml.sax;
 	* @see #endPrefixMapping
 	* @see #startElement
 	*/
-	@:overload @:public @:public @:public public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload @:public public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
 	/**
 	* End the scope of a prefix-URI mapping.
@@ -198,7 +198,7 @@ package org.xml.sax;
 	* @see #startPrefixMapping
 	* @see #endElement
 	*/
-	@:overload @:public @:public @:public public function endPrefixMapping(prefix : String) : Void;
+	@:overload @:public public function endPrefixMapping(prefix : String) : Void;
 	
 	/**
 	* Receive notification of the beginning of an element.
@@ -264,7 +264,7 @@ package org.xml.sax;
 	* @see org.xml.sax.Attributes
 	* @see org.xml.sax.helpers.AttributesImpl
 	*/
-	@:overload @:public @:public @:public @:public @:public public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Receive notification of the end of an element.
@@ -287,7 +287,7 @@ package org.xml.sax;
 	* @throws org.xml.sax.SAXException any SAX exception, possibly
 	*            wrapping another exception
 	*/
-	@:overload @:public @:public @:public @:public @:public public function endElement(uri : String, localName : String, qName : String) : Void;
+	@:overload @:public public function endElement(uri : String, localName : String, qName : String) : Void;
 	
 	/**
 	* Receive notification of character data.
@@ -332,7 +332,7 @@ package org.xml.sax;
 	* @see #ignorableWhitespace
 	* @see org.xml.sax.Locator
 	*/
-	@:overload @:public @:public @:public @:public public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notification of ignorable whitespace in element content.
@@ -359,7 +359,7 @@ package org.xml.sax;
 	*            wrapping another exception
 	* @see #characters
 	*/
-	@:overload @:public @:public @:public public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notification of a processing instruction.
@@ -383,7 +383,7 @@ package org.xml.sax;
 	* @throws org.xml.sax.SAXException any SAX exception, possibly
 	*            wrapping another exception
 	*/
-	@:overload @:public @:public @:public public function processingInstruction(target : String, data : String) : Void;
+	@:overload @:public public function processingInstruction(target : String, data : String) : Void;
 	
 	/**
 	* Receive notification of a skipped entity.
@@ -410,7 +410,7 @@ package org.xml.sax;
 	* @throws org.xml.sax.SAXException any SAX exception, possibly
 	*            wrapping another exception
 	*/
-	@:overload @:public @:public @:public public function skippedEntity(name : String) : Void;
+	@:overload @:public public function skippedEntity(name : String) : Void;
 	
 	
 }

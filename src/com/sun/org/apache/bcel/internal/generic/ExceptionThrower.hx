@@ -77,7 +77,7 @@ package com.sun.org.apache.bcel.internal.generic;
 */
 extern interface ExceptionThrower
 {
-	@:overload @:public @:public public function getExceptions() : java.NativeArray<Class<Dynamic>>;
+	@:overload @:public public function getExceptions() : java.NativeArray<Class<Dynamic>>;
 	
 	
 }

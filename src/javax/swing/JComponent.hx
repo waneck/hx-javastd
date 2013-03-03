@@ -2421,7 +2421,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @param c the new Color for the foreground
 	* @see #getForeground
 	*/
-	@:overload @:public @:public @:public override public function setForeground(c : java.awt.Color) : Void;
+	@:overload @:public override public function setForeground(c : java.awt.Color) : Void;
 	
 	/**
 	* Returns the location of the object on the screen.
@@ -2431,7 +2431,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see #getBounds
 	* @see #getLocation
 	*/
-	@:overload @:public @:public @:public override public function getLocationOnScreen() : java.awt.Point;
+	@:overload @:public override public function getLocationOnScreen() : java.awt.Point;
 	
 	/**
 	* Sets the background color of this object.
@@ -2439,7 +2439,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @param c the new Color for the background
 	* @see #setBackground
 	*/
-	@:overload @:public @:public @:public override public function setBackground(c : java.awt.Color) : Void;
+	@:overload @:public override public function setBackground(c : java.awt.Color) : Void;
 	
 	/**
 	* Sets the enabled state of the object.
@@ -2447,7 +2447,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @param b if true, enables this object; otherwise, disables it
 	* @see #isEnabled
 	*/
-	@:overload @:public @:public @:public override public function setEnabled(b : Bool) : Void;
+	@:overload @:public override public function setEnabled(b : Bool) : Void;
 	
 	/**
 	* Gets the background color of this object.
@@ -2456,7 +2456,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* otherwise, null
 	* @see #setBackground
 	*/
-	@:overload @:public @:public @:public override public function getBackground() : java.awt.Color;
+	@:overload @:public override public function getBackground() : java.awt.Color;
 	
 	/**
 	* Gets the bounds of this object in the form of a Rectangle object.
@@ -2467,7 +2467,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* this object is not on the screen.
 	* @see #contains
 	*/
-	@:overload @:public @:public @:public override public function getBounds() : java.awt.Rectangle;
+	@:overload @:public override public function getBounds() : java.awt.Rectangle;
 	
 	/**
 	* Sets the Cursor of this object.
@@ -2475,7 +2475,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @param cursor  the new Cursor for the object
 	* @see #getCursor
 	*/
-	@:overload @:public @:public @:public override public function setCursor(cursor : java.awt.Cursor) : Void;
+	@:overload @:public override public function setCursor(cursor : java.awt.Cursor) : Void;
 	
 	/**
 	* Sets the bounds of this object in the form of a Rectangle object.
@@ -2485,7 +2485,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @param r rectangle indicating this component's bounds
 	* @see #getBounds
 	*/
-	@:overload @:public @:public @:public override public function setBounds(r : java.awt.Rectangle) : Void;
+	@:overload @:public override public function setBounds(r : java.awt.Rectangle) : Void;
 	
 	/**
 	* Removes the specified focus listener so it no longer receives focus
@@ -2494,7 +2494,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @param l the focus listener
 	* @see #addFocusListener
 	*/
-	@:overload @:public @:public @:public override public function removeFocusListener(l : java.awt.event.FocusListener) : Void;
+	@:overload @:public override public function removeFocusListener(l : java.awt.event.FocusListener) : Void;
 	
 	/**
 	* Determines if the object is showing.  This is determined by checking
@@ -2505,7 +2505,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	*
 	* @return true if object is showing; otherwise, false
 	*/
-	@:overload @:public @:public @:public override public function isShowing() : Bool;
+	@:overload @:public override public function isShowing() : Bool;
 	
 	/**
 	* Gets the foreground color of this object.
@@ -2514,14 +2514,14 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* otherwise, null
 	* @see #setForeground
 	*/
-	@:overload @:public @:public @:public override public function getForeground() : java.awt.Color;
+	@:overload @:public override public function getForeground() : java.awt.Color;
 	
 	/**
 	* Sets the location of the object relative to the parent.
 	* @param p the new position for the top-left corner
 	* @see #getLocation
 	*/
-	@:overload @:public @:public @:public override public function setLocation(p : java.awt.Point) : Void;
+	@:overload @:public override public function setLocation(p : java.awt.Point) : Void;
 	
 	/**
 	* Adds the specified focus listener to receive focus events from this
@@ -2530,7 +2530,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @param l the focus listener
 	* @see #removeFocusListener
 	*/
-	@:overload @:public @:public @:public override public function addFocusListener(l : java.awt.event.FocusListener) : Void;
+	@:overload @:public override public function addFocusListener(l : java.awt.event.FocusListener) : Void;
 	
 	/**
 	* Requests focus for this object.  If this object cannot accept focus,
@@ -2538,7 +2538,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* focus.
 	* @see #isFocusTraversable
 	*/
-	@:overload @:public @:public @:public override public function requestFocus() : Void;
+	@:overload @:public override public function requestFocus() : Void;
 	
 	/**
 	* Gets the FontMetrics of this object.
@@ -2547,7 +2547,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @return the FontMetrics, if supported, the object; otherwise, null
 	* @see #getFont
 	*/
-	@:overload @:public @:public @:public override public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
+	@:overload @:public override public function getFontMetrics(f : java.awt.Font) : java.awt.FontMetrics;
 	
 	/**
 	* Checks whether the specified point is within this object's bounds,
@@ -2558,7 +2558,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @return true if object contains Point; otherwise false
 	* @see #getBounds
 	*/
-	@:overload @:public @:public @:public override public function contains(p : java.awt.Point) : Bool;
+	@:overload @:public override public function contains(p : java.awt.Point) : Bool;
 	
 	/**
 	* Returns whether this object can accept focus or not.   Objects that
@@ -2571,7 +2571,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see AccessibleState#FOCUSED
 	* @see AccessibleStateSet
 	*/
-	@:overload @:public @:public @:public override public function isFocusTraversable() : Bool;
+	@:overload @:public override public function isFocusTraversable() : Bool;
 	
 	/**
 	* Sets the Font of this object.
@@ -2579,7 +2579,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @param f the new Font for the object
 	* @see #getFont
 	*/
-	@:overload @:public @:public @:public override public function setFont(f : java.awt.Font) : Void;
+	@:overload @:public override public function setFont(f : java.awt.Font) : Void;
 	
 	/**
 	* Gets the Font of this object.
@@ -2587,7 +2587,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @return the Font,if supported, for the object; otherwise, null
 	* @see #setFont
 	*/
-	@:overload @:public @:public @:public override public function getFont() : java.awt.Font;
+	@:overload @:public override public function getFont() : java.awt.Font;
 	
 	/**
 	* Determines if the object is enabled.  Objects that are enabled
@@ -2600,7 +2600,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see AccessibleState#ENABLED
 	* @see AccessibleStateSet
 	*/
-	@:overload @:public @:public @:public override public function isEnabled() : Bool;
+	@:overload @:public override public function isEnabled() : Bool;
 	
 	/**
 	* Gets the location of the object relative to the parent in the form
@@ -2613,7 +2613,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see #getBounds
 	* @see #getLocationOnScreen
 	*/
-	@:overload @:public @:public @:public override public function getLocation() : java.awt.Point;
+	@:overload @:public override public function getLocation() : java.awt.Point;
 	
 	/**
 	* Returns the Accessible child, if one exists, contained at the local
@@ -2623,7 +2623,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @return the Accessible, if it exists, at the specified location;
 	* otherwise null
 	*/
-	@:overload @:public @:public @:public override public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
+	@:overload @:public override public function getAccessibleAt(p : java.awt.Point) : javax.accessibility.Accessible;
 	
 	/**
 	* Gets the Cursor of this object.
@@ -2631,7 +2631,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @return the Cursor, if supported, of the object; otherwise, null
 	* @see #setCursor
 	*/
-	@:overload @:public @:public @:public override public function getCursor() : java.awt.Cursor;
+	@:overload @:public override public function getCursor() : java.awt.Cursor;
 	
 	/**
 	* Determines if the object is visible.  Note: this means that the
@@ -2648,7 +2648,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @see AccessibleState#VISIBLE
 	* @see AccessibleStateSet
 	*/
-	@:overload @:public @:public @:public override public function isVisible() : Bool;
+	@:overload @:public override public function isVisible() : Bool;
 	
 	/**
 	* Sets the visible state of the object.
@@ -2656,7 +2656,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @param b if true, shows this object; otherwise, hides it
 	* @see #isVisible
 	*/
-	@:overload @:public @:public @:public override public function setVisible(b : Bool) : Void;
+	@:overload @:public override public function setVisible(b : Bool) : Void;
 	
 	/**
 	* Resizes this object so that it has width and height.
@@ -2664,7 +2664,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* @param d The dimension specifying the new size of the object.
 	* @see #getSize
 	*/
-	@:overload @:public @:public @:public override public function setSize(d : java.awt.Dimension) : Void;
+	@:overload @:public override public function setSize(d : java.awt.Dimension) : Void;
 	
 	/**
 	* Returns the size of this object in the form of a Dimension object.
@@ -2676,7 +2676,7 @@ extern class JComponent extends java.awt.Container implements java.io.Serializab
 	* null if this object is not on the screen
 	* @see #setSize
 	*/
-	@:overload @:public @:public @:public override public function getSize() : java.awt.Dimension;
+	@:overload @:public override public function getSize() : java.awt.Dimension;
 	
 	
 }

@@ -541,7 +541,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	*          traverses the geometry of the <code>Shape</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:public @:public @:public public function getPathIterator(at : java.awt.geom.AffineTransform) : java.awt.geom.PathIterator;
+	@:require(java2) @:overload @:public public function getPathIterator(at : java.awt.geom.AffineTransform) : java.awt.geom.PathIterator;
 	
 	/**
 	* Returns a high precision and more accurate bounding box of
@@ -586,7 +586,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see #getBounds
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:public @:public @:public @:public @:public @:public public function getBounds2D() : java.awt.geom.Rectangle2D;
+	@:require(java2) @:overload @:public public function getBounds2D() : java.awt.geom.Rectangle2D;
 	
 	
 }
@@ -1004,7 +1004,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see #SEG_CUBICTO
 	* @see #SEG_CLOSE
 	*/
-	@:overload @:public @:public public function currentSegment(coords : java.NativeArray<Float>) : Int;
+	@:overload @:public public function currentSegment(coords : java.NativeArray<Float>) : Int;
 	
 	/**
 	* Returns the coordinates and type of the current path segment in
@@ -1027,7 +1027,7 @@ extern class Path2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see #SEG_CUBICTO
 	* @see #SEG_CLOSE
 	*/
-	@:overload @:public @:public public function currentSegment(coords : java.NativeArray<Single>) : Int;
+	@:overload @:public public function currentSegment(coords : java.NativeArray<Single>) : Int;
 	
 	
 }

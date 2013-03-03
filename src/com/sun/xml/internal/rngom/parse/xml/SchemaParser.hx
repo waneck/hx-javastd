@@ -66,7 +66,7 @@ package com.sun.xml.internal.rngom.parse.xml;
 	* Returns the base URI of the context.  The null string may be returned
 	* if no base URI is known.
 	*/
-	@:overload @:public @:public override public function getBaseUri() : String;
+	@:overload @:public override public function getBaseUri() : String;
 	
 	/**
 	* Checks if an unparsed entity is declared with the
@@ -197,7 +197,7 @@ package com.sun.xml.internal.rngom.parse.xml;
 	* @see org.xml.sax.Attributes
 	* @see org.xml.sax.helpers.AttributesImpl
 	*/
-	@:overload @:public @:public @:public @:public @:public public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Receive notification of character data.
@@ -242,7 +242,7 @@ package com.sun.xml.internal.rngom.parse.xml;
 	* @see #ignorableWhitespace
 	* @see org.xml.sax.Locator
 	*/
-	@:overload @:public @:public @:public @:public public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Receive notification of the end of an element.
@@ -265,7 +265,7 @@ package com.sun.xml.internal.rngom.parse.xml;
 	* @throws org.xml.sax.SAXException any SAX exception, possibly
 	*            wrapping another exception
 	*/
-	@:overload @:public @:public @:public @:public @:public public function endElement(uri : String, localName : String, qName : String) : Void;
+	@:overload @:public public function endElement(uri : String, localName : String, qName : String) : Void;
 	
 	
 }

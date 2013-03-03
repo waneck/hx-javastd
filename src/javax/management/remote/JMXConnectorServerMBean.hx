@@ -38,7 +38,7 @@ extern interface JMXConnectorServerMBean
 	* @exception IllegalStateException if the connector server has
 	* not been attached to an MBean server.
 	*/
-	@:overload @:public @:public public function start() : Void;
+	@:overload @:public public function start() : Void;
 	
 	/**
 	* <p>Deactivates the connector server, that is, stops listening for
@@ -75,7 +75,7 @@ extern interface JMXConnectorServerMBean
 	* closed except possibly those that generated exceptions when the
 	* server attempted to close them.
 	*/
-	@:overload @:public @:public public function stop() : Void;
+	@:overload @:public public function stop() : Void;
 	
 	/**
 	* <p>Determines whether the connector server is active.  A connector
@@ -86,7 +86,7 @@ extern interface JMXConnectorServerMBean
 	*
 	* @return true if the connector server is active.
 	*/
-	@:overload @:public @:public public function isActive() : Bool;
+	@:overload @:public public function isActive() : Bool;
 	
 	/**
 	* <p>Inserts an object that intercepts requests for the MBean server
@@ -161,7 +161,7 @@ extern interface JMXConnectorServerMBean
 	* are omitted from this map.  If there are no serializable
 	* attributes, the returned map is empty.
 	*/
-	@:overload @:public @:public public function getAttributes() : java.util.Map<String, Dynamic>;
+	@:overload @:public public function getAttributes() : java.util.Map<String, Dynamic>;
 	
 	/**
 	* <p>Returns a client stub for this connector server.  A client

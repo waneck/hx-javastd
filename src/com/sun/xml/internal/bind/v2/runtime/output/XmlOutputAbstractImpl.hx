@@ -98,7 +98,7 @@ extern class XmlOutputAbstractImpl implements com.sun.xml.internal.bind.v2.runti
 	*      (such as '&amp;' or '>')
 	* @param needsSeparatingWhitespace
 	*/
-	@:overload @:public @:public public function text(value : com.sun.xml.internal.bind.v2.runtime.output.Pcdata, needsSeparatingWhitespace : Bool) : Void;
+	@:overload @:public public function text(value : com.sun.xml.internal.bind.v2.runtime.output.Pcdata, needsSeparatingWhitespace : Bool) : Void;
 	
 	/**
 	* Writes XML text with character escaping, if necessary.
@@ -108,7 +108,7 @@ extern class XmlOutputAbstractImpl implements com.sun.xml.internal.bind.v2.runti
 	*      (such as '&amp;' or '>')
 	* @param needsSeparatingWhitespace
 	*/
-	@:overload @:public @:public public function text(value : String, needsSeparatingWhitespace : Bool) : Void;
+	@:overload @:public public function text(value : String, needsSeparatingWhitespace : Bool) : Void;
 	
 	
 }

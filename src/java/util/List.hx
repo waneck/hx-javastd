@@ -112,14 +112,14 @@ package java.util;
 	*
 	* @return the number of elements in this list
 	*/
-	@:overload @:public @:public public function size() : Int;
+	@:overload @:public public function size() : Int;
 	
 	/**
 	* Returns <tt>true</tt> if this list contains no elements.
 	*
 	* @return <tt>true</tt> if this list contains no elements
 	*/
-	@:overload @:public @:public @:public public function isEmpty() : Bool;
+	@:overload @:public public function isEmpty() : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if this list contains the specified element.
@@ -136,14 +136,14 @@ package java.util;
 	*         list does not permit null elements
 	* (<a href="Collection.html#optional-restrictions">optional</a>)
 	*/
-	@:overload @:public @:public public function contains(o : Dynamic) : Bool;
+	@:overload @:public public function contains(o : Dynamic) : Bool;
 	
 	/**
 	* Returns an iterator over the elements in this list in proper sequence.
 	*
 	* @return an iterator over the elements in this list in proper sequence
 	*/
-	@:overload @:public @:public public function iterator() : java.util.Iterator<E>;
+	@:overload @:public public function iterator() : java.util.Iterator<E>;
 	
 	/**
 	* Returns an array containing all of the elements in this list in proper
@@ -161,7 +161,7 @@ package java.util;
 	*         sequence
 	* @see Arrays#asList(Object[])
 	*/
-	@:overload @:public @:public @:public public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public public function toArray() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns an array containing all of the elements in this list in
@@ -201,7 +201,7 @@ package java.util;
 	*         this list
 	* @throws NullPointerException if the specified array is null
 	*/
-	@:overload @:public @:public @:public public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
 	/**
 	* Appends the specified element to the end of this list (optional
@@ -225,7 +225,7 @@ package java.util;
 	* @throws IllegalArgumentException if some property of this element
 	*         prevents it from being added to this list
 	*/
-	@:overload @:public @:public public function add(e : E) : Bool;
+	@:overload @:public public function add(e : E) : Bool;
 	
 	/**
 	* Removes the first occurrence of the specified element from this list,
@@ -248,7 +248,7 @@ package java.util;
 	* @throws UnsupportedOperationException if the <tt>remove</tt> operation
 	*         is not supported by this list
 	*/
-	@:overload @:public @:public @:public public function remove(o : Dynamic) : Bool;
+	@:overload @:public public function remove(o : Dynamic) : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if this list contains all of the elements of the
@@ -268,7 +268,7 @@ package java.util;
 	*         or if the specified collection is null
 	* @see #contains(Object)
 	*/
-	@:overload @:public @:public @:public public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Appends all of the elements in the specified collection to the end of
@@ -291,7 +291,7 @@ package java.util;
 	*         specified collection prevents it from being added to this list
 	* @see #add(Object)
 	*/
-	@:overload @:public @:public @:public public function addAll(c : java.util.Collection<E>) : Bool;
+	@:overload @:public public function addAll(c : java.util.Collection<E>) : Bool;
 	
 	/**
 	* Inserts all of the elements in the specified collection into this
@@ -320,7 +320,7 @@ package java.util;
 	* @throws IndexOutOfBoundsException if the index is out of range
 	*         (<tt>index &lt; 0 || index &gt; size()</tt>)
 	*/
-	@:overload @:public @:public public function addAll(index : Int, c : java.util.Collection<E>) : Bool;
+	@:overload @:public public function addAll(index : Int, c : java.util.Collection<E>) : Bool;
 	
 	/**
 	* Removes from this list all of its elements that are contained in the
@@ -340,7 +340,7 @@ package java.util;
 	* @see #remove(Object)
 	* @see #contains(Object)
 	*/
-	@:overload @:public @:public @:public public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Retains only the elements in this list that are contained in the
@@ -362,7 +362,7 @@ package java.util;
 	* @see #remove(Object)
 	* @see #contains(Object)
 	*/
-	@:overload @:public @:public @:public public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Removes all of the elements from this list (optional operation).
@@ -371,7 +371,7 @@ package java.util;
 	* @throws UnsupportedOperationException if the <tt>clear</tt> operation
 	*         is not supported by this list
 	*/
-	@:overload @:public @:public public function clear() : Void;
+	@:overload @:public public function clear() : Void;
 	
 	/**
 	* Returns the element at the specified position in this list.
@@ -401,7 +401,7 @@ package java.util;
 	* @throws IndexOutOfBoundsException if the index is out of range
 	*         (<tt>index &lt; 0 || index &gt;= size()</tt>)
 	*/
-	@:overload @:public @:public public function set(index : Int, element : E) : E;
+	@:overload @:public public function set(index : Int, element : E) : E;
 	
 	/**
 	* Inserts the specified element at the specified position in this list
@@ -422,7 +422,7 @@ package java.util;
 	* @throws IndexOutOfBoundsException if the index is out of range
 	*         (<tt>index &lt; 0 || index &gt; size()</tt>)
 	*/
-	@:overload @:public @:public public function add(index : Int, element : E) : Void;
+	@:overload @:public public function add(index : Int, element : E) : Void;
 	
 	/**
 	* Removes the element at the specified position in this list (optional
@@ -437,7 +437,7 @@ package java.util;
 	* @throws IndexOutOfBoundsException if the index is out of range
 	*         (<tt>index &lt; 0 || index &gt;= size()</tt>)
 	*/
-	@:overload @:public @:public public function remove(index : Int) : E;
+	@:overload @:public public function remove(index : Int) : E;
 	
 	/**
 	* Returns the index of the first occurrence of the specified element
@@ -456,7 +456,7 @@ package java.util;
 	*         list does not permit null elements
 	*         (<a href="Collection.html#optional-restrictions">optional</a>)
 	*/
-	@:overload @:public @:public public function indexOf(o : Dynamic) : Int;
+	@:overload @:public public function indexOf(o : Dynamic) : Int;
 	
 	/**
 	* Returns the index of the last occurrence of the specified element
@@ -475,7 +475,7 @@ package java.util;
 	*         list does not permit null elements
 	*         (<a href="Collection.html#optional-restrictions">optional</a>)
 	*/
-	@:overload @:public @:public public function lastIndexOf(o : Dynamic) : Int;
+	@:overload @:public public function lastIndexOf(o : Dynamic) : Int;
 	
 	/**
 	* Returns a list iterator over the elements in this list (in proper
@@ -484,7 +484,7 @@ package java.util;
 	* @return a list iterator over the elements in this list (in proper
 	*         sequence)
 	*/
-	@:overload @:public @:public public function listIterator() : java.util.ListIterator<E>;
+	@:overload @:public public function listIterator() : java.util.ListIterator<E>;
 	
 	/**
 	* Returns a list iterator over the elements in this list (in proper
@@ -501,7 +501,7 @@ package java.util;
 	* @throws IndexOutOfBoundsException if the index is out of range
 	*         ({@code index < 0 || index > size()})
 	*/
-	@:overload @:public @:public public function listIterator(index : Int) : java.util.ListIterator<E>;
+	@:overload @:public public function listIterator(index : Int) : java.util.ListIterator<E>;
 	
 	/**
 	* Returns a view of the portion of this list between the specified
@@ -537,7 +537,7 @@ package java.util;
 	*         (<tt>fromIndex &lt; 0 || toIndex &gt; size ||
 	*         fromIndex &gt; toIndex</tt>)
 	*/
-	@:overload @:public @:public public function subList(fromIndex : Int, toIndex : Int) : java.util.List<E>;
+	@:overload @:public public function subList(fromIndex : Int, toIndex : Int) : java.util.List<E>;
 	
 	
 }

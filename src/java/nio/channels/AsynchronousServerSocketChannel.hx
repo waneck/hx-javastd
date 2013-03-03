@@ -224,7 +224,7 @@ extern class AsynchronousServerSocketChannel implements java.nio.channels.Asynch
 	*
 	* @see java.net.StandardSocketOptions
 	*/
-	@:overload @:public @:public public function getOption<T>(name : java.net.SocketOption<T>) : T;
+	@:overload @:public public function getOption<T>(name : java.net.SocketOption<T>) : T;
 	
 	/**
 	* Returns a set of the socket options supported by this channel.
@@ -234,7 +234,7 @@ extern class AsynchronousServerSocketChannel implements java.nio.channels.Asynch
 	*
 	* @return  A set of the socket options supported by this channel
 	*/
-	@:overload @:public @:public public function supportedOptions() : java.util.Set<java.net.SocketOption<Dynamic>>;
+	@:overload @:public public function supportedOptions() : java.util.Set<java.net.SocketOption<Dynamic>>;
 	
 	/**
 	* Returns the socket address that this channel's socket is bound to, or
@@ -252,14 +252,14 @@ extern class AsynchronousServerSocketChannel implements java.nio.channels.Asynch
 	* @throws  IOException
 	*          If an I/O error occurs
 	*/
-	@:overload @:public @:public public function getLocalAddress() : java.net.SocketAddress;
+	@:overload @:public public function getLocalAddress() : java.net.SocketAddress;
 	
 	/**
 	* Tells whether or not this channel is open.  </p>
 	*
 	* @return <tt>true</tt> if, and only if, this channel is open
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public public function isOpen() : Bool;
+	@:overload @:public public function isOpen() : Bool;
 	
 	/**
 	* Closes this channel.
@@ -278,7 +278,7 @@ extern class AsynchronousServerSocketChannel implements java.nio.channels.Asynch
 	*
 	* @throws  IOException  If an I/O error occurs
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public public function close() : Void;
+	@:overload @:public public function close() : Void;
 	
 	
 }

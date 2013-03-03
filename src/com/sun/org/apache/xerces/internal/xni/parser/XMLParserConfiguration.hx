@@ -56,7 +56,7 @@ extern interface XMLParserConfiguration extends com.sun.org.apache.xerces.intern
 	* @param featureIds An array of the additional feature identifiers
 	*                   to be recognized.
 	*/
-	@:overload @:public @:public public function addRecognizedFeatures(featureIds : java.NativeArray<String>) : Void;
+	@:overload @:public public function addRecognizedFeatures(featureIds : java.NativeArray<String>) : Void;
 	
 	/**
 	* Sets the state of a feature. This method is called by the parser
@@ -78,7 +78,7 @@ extern interface XMLParserConfiguration extends com.sun.org.apache.xerces.intern
 	* @throws XMLConfigurationException Thrown if there is a configuration
 	*                                   error.
 	*/
-	@:overload @:public @:public public function getFeature(featureId : String) : Bool;
+	@:overload @:public public function getFeature(featureId : String) : Bool;
 	
 	/**
 	* Allows a parser to add parser specific properties to be recognized
@@ -87,7 +87,7 @@ extern interface XMLParserConfiguration extends com.sun.org.apache.xerces.intern
 	* @param propertyIds An array of the additional property identifiers
 	*                    to be recognized.
 	*/
-	@:overload @:public @:public public function addRecognizedProperties(propertyIds : java.NativeArray<String>) : Void;
+	@:overload @:public public function addRecognizedProperties(propertyIds : java.NativeArray<String>) : Void;
 	
 	/**
 	* Sets the value of a property. This method is called by the parser
@@ -109,7 +109,7 @@ extern interface XMLParserConfiguration extends com.sun.org.apache.xerces.intern
 	* @throws XMLConfigurationException Thrown if there is a configuration
 	*                                   error.
 	*/
-	@:overload @:public @:public public function getProperty(propertyId : String) : Dynamic;
+	@:overload @:public public function getProperty(propertyId : String) : Dynamic;
 	
 	/**
 	* Sets the error handler.

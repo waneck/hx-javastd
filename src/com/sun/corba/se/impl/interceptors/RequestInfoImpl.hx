@@ -428,7 +428,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* @return a duplicate of this object reference or this object reference
 	*         itself
 	*/
-	@:overload @:public @:public @:public override public function _duplicate() : org.omg.CORBA.Object;
+	@:overload @:public override public function _duplicate() : org.omg.CORBA.Object;
 	
 	/**
 	* Returns a new <code>Object</code> with the given policies
@@ -446,7 +446,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* @return a new <code>Object</code> with the given policies replacing
 	*         or added to those in this <code>Object</code>
 	*/
-	@:overload @:public @:public @:public override public function _set_policy_override(policies : java.NativeArray<org.omg.CORBA.Policy>, set_add : org.omg.CORBA.SetOverrideType) : org.omg.CORBA.Object;
+	@:overload @:public override public function _set_policy_override(policies : java.NativeArray<org.omg.CORBA.Policy>, set_add : org.omg.CORBA.SetOverrideType) : org.omg.CORBA.Object;
 	
 	/**
 	* Returns the <code>Policy</code> object of the specified type
@@ -460,7 +460,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* ORB or because a policy object of that type is not associated with this
 	* Object
 	*/
-	@:overload @:public @:public @:public override public function _get_policy(policy_type : Int) : org.omg.CORBA.Policy;
+	@:overload @:public override public function _get_policy(policy_type : Int) : org.omg.CORBA.Policy;
 	
 	/**
 	* Signals that the caller is done using this object reference, so
@@ -468,7 +468,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* released. Note that the object implementation is not involved in
 	* this operation, and other references to the same object are not affected.
 	*/
-	@:overload @:public @:public @:public override public function _release() : Void;
+	@:overload @:public override public function _release() : Void;
 	
 	/**
 	* Obtains an <code>InterfaceDef</code> for the object implementation
@@ -481,7 +481,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	*         which provides type information about the object referred to by
 	*         this object reference
 	*/
-	@:overload @:public @:public @:public override public function _get_interface_def() : org.omg.CORBA.Object;
+	@:overload @:public override public function _get_interface_def() : org.omg.CORBA.Object;
 	
 	/**
 	* Returns an ORB-internal identifier for this object reference.
@@ -497,7 +497,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* @param maximum the upper bound on the hash value returned by the ORB
 	* @return the ORB-internal hash identifier for this object reference
 	*/
-	@:overload @:public @:public @:public override public function _hash(maximum : Int) : Int;
+	@:overload @:public override public function _hash(maximum : Int) : Int;
 	
 	/**
 	* Determines whether the two object references are equivalent,
@@ -514,7 +514,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	*         object references are distinct, not necessarily that
 	*         they reference distinct objects.
 	*/
-	@:overload @:public @:public @:public override public function _is_equivalent(other : org.omg.CORBA.Object) : Bool;
+	@:overload @:public override public function _is_equivalent(other : org.omg.CORBA.Object) : Bool;
 	
 	/**
 	* Retrieves the <code>DomainManagers</code> of this object.
@@ -527,7 +527,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* default each object is associated with at least one domain manager at
 	* creation.
 	*/
-	@:overload @:public @:public @:public override public function _get_domain_managers() : java.NativeArray<org.omg.CORBA.DomainManager>;
+	@:overload @:public override public function _get_domain_managers() : java.NativeArray<org.omg.CORBA.DomainManager>;
 	
 	/**
 	* Creates a <code>Request</code> instance for use in the
@@ -537,7 +537,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	*                        <code>Request</code> instance
 	* @return the newly-created <code>Request</code> instance
 	*/
-	@:overload @:public @:public @:public override public function _request(operation : String) : org.omg.CORBA.Request;
+	@:overload @:public override public function _request(operation : String) : org.omg.CORBA.Request;
 	
 	/**
 	* Creates a <code>Request</code> instance initialized with the
@@ -565,7 +565,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* @see ExceptionList
 	* @see ContextList
 	*/
-	@:overload @:public @:public @:public override public function _create_request(ctx : org.omg.CORBA.Context, operation : String, arg_list : org.omg.CORBA.NVList, result : org.omg.CORBA.NamedValue, exclist : org.omg.CORBA.ExceptionList, ctxlist : org.omg.CORBA.ContextList) : org.omg.CORBA.Request;
+	@:overload @:public override public function _create_request(ctx : org.omg.CORBA.Context, operation : String, arg_list : org.omg.CORBA.NVList, result : org.omg.CORBA.NamedValue, exclist : org.omg.CORBA.ExceptionList, ctxlist : org.omg.CORBA.ContextList) : org.omg.CORBA.Request;
 	
 	/**
 	* Checks whether this object is an instance of a class that
@@ -576,7 +576,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	*         of a class that implements the interface;
 	*         <code>false</code> otherwise
 	*/
-	@:overload @:public @:public @:public override public function _is_a(repositoryIdentifier : String) : Bool;
+	@:overload @:public override public function _is_a(repositoryIdentifier : String) : Bool;
 	
 	/**
 	* Determines whether the server object for this object reference has been
@@ -584,7 +584,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* @return <code>true</code> if the ORB knows authoritatively that the
 	*         server object does not exist; <code>false</code> otherwise
 	*/
-	@:overload @:public @:public @:public override public function _non_existent() : Bool;
+	@:overload @:public override public function _non_existent() : Bool;
 	
 	/**
 	* Creates a <code>Request</code> instance initialized with the
@@ -604,7 +604,7 @@ extern class RequestInfoImpl extends org.omg.CORBA.LocalObject implements org.om
 	* @see NVList
 	* @see NamedValue
 	*/
-	@:overload @:public @:public @:public override public function _create_request(ctx : org.omg.CORBA.Context, operation : String, arg_list : org.omg.CORBA.NVList, result : org.omg.CORBA.NamedValue) : org.omg.CORBA.Request;
+	@:overload @:public override public function _create_request(ctx : org.omg.CORBA.Context, operation : String, arg_list : org.omg.CORBA.NVList, result : org.omg.CORBA.NamedValue) : org.omg.CORBA.Request;
 	
 	
 }

@@ -159,7 +159,7 @@ package com.sun.tools.jdi;
 	*
 	* @return the {@link VirtualMachine} for which this mirror is a proxy.
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function virtualMachine() : com.sun.jdi.VirtualMachine;
+	@:overload @:public override public function virtualMachine() : com.sun.jdi.VirtualMachine;
 	
 	
 }
@@ -340,7 +340,7 @@ package com.sun.tools.jdi;
 	*
 	* @return the {@link VirtualMachine} for which this mirror is a proxy.
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function virtualMachine() : com.sun.jdi.VirtualMachine;
+	@:overload @:public override public function virtualMachine() : com.sun.jdi.VirtualMachine;
 	
 	/**
 	* Returns a value which describes the threads to suspend when the

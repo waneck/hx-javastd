@@ -110,7 +110,7 @@ extern class QNameMap<V>
 	* @return the next element in the iteration
 	* @throws NoSuchElementException if the iteration has no more elements
 	*/
-	@:overload @:public @:public @:public @:public @:public public function next() : E;
+	@:overload @:public public function next() : E;
 	
 	
 }

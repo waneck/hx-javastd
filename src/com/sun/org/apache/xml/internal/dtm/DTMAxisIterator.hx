@@ -31,7 +31,7 @@ extern interface DTMAxisIterator extends java.lang.Cloneable
 	*
 	* @return The next node handle in the iteration, or END.
 	*/
-	@:overload @:public @:public public function next() : Int;
+	@:overload @:public public function next() : Int;
 	
 	/**
 	* Resets the iterator to the last start node.
@@ -55,12 +55,12 @@ extern interface DTMAxisIterator extends java.lang.Cloneable
 	/**
 	* Remembers the current node for the next call to gotoMark().
 	*/
-	@:overload @:public @:public public function setMark() : Void;
+	@:overload @:public public function setMark() : Void;
 	
 	/**
 	* Restores the current node remembered by setMark().
 	*/
-	@:overload @:public @:public public function gotoMark() : Void;
+	@:overload @:public public function gotoMark() : Void;
 	
 	/**
 	* Set start to END should 'close' the iterator,
@@ -70,7 +70,7 @@ extern interface DTMAxisIterator extends java.lang.Cloneable
 	*
 	* @return A DTMAxisIterator set to the start of the iteration.
 	*/
-	@:overload @:public @:public public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
+	@:overload @:public public function setStartNode(node : Int) : com.sun.org.apache.xml.internal.dtm.DTMAxisIterator;
 	
 	/**
 	* Get start to END should 'close' the iterator,

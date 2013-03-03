@@ -216,7 +216,7 @@ extern class OGLSurfaceData extends sun.java2d.SurfaceData implements sun.java2d
 	*
 	* @return true if the surface is known to be lost, false otherwise
 	*/
-	@:overload @:public @:public override public function isSurfaceLost() : Bool;
+	@:overload @:public override public function isSurfaceLost() : Bool;
 	
 	/**
 	* Returns a pointer to the native surface data associated with this
@@ -225,7 +225,7 @@ extern class OGLSurfaceData extends sun.java2d.SurfaceData implements sun.java2d
 	*
 	* @return pointer to the native surface's data
 	*/
-	@:overload @:public @:public override public function getNativeOps() : haxe.Int64;
+	@:overload @:public override public function getNativeOps() : haxe.Int64;
 	
 	/**
 	* Returns whether the pipeline considers this surface valid. A surface
@@ -233,7 +233,7 @@ extern class OGLSurfaceData extends sun.java2d.SurfaceData implements sun.java2d
 	*
 	* @return true if valid, false otherwise
 	*/
-	@:overload @:public @:public override public function isValid() : Bool;
+	@:overload @:public override public function isValid() : Bool;
 	
 	/**
 	* Returns the requested bounds of the destination surface. The real bounds
@@ -242,12 +242,12 @@ extern class OGLSurfaceData extends sun.java2d.SurfaceData implements sun.java2d
 	*
 	* @return Rectangle representing java surface's bounds
 	*/
-	@:overload @:public @:public override public function getBounds() : java.awt.Rectangle;
+	@:overload @:public override public function getBounds() : java.awt.Rectangle;
 	
 	/**
 	* Marks this surface dirty.
 	*/
-	@:overload @:public @:public override public function markDirty() : Void;
+	@:overload @:public override public function markDirty() : Void;
 	
 	
 }

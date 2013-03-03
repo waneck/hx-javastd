@@ -303,7 +303,7 @@ extern class AbstractTranslet implements com.sun.org.apache.xalan.internal.xsltc
 	
 	@:overload @:public public function newDocument(uri : String, qname : String) : org.w3c.dom.Document;
 	
-	@:overload @:public @:public public function transform(document : com.sun.org.apache.xalan.internal.xsltc.DOM, handlers : java.NativeArray<com.sun.org.apache.xml.internal.serializer.SerializationHandler>) : Void;
+	@:overload @:public public function transform(document : com.sun.org.apache.xalan.internal.xsltc.DOM, handlers : java.NativeArray<com.sun.org.apache.xml.internal.serializer.SerializationHandler>) : Void;
 	
 	
 }

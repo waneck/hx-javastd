@@ -161,7 +161,7 @@ extern class AbstractAction implements javax.swing.Action implements java.lang.C
 	/**
 	* Invoked when an action occurs.
 	*/
-	@:overload @:public @:public @:public public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }

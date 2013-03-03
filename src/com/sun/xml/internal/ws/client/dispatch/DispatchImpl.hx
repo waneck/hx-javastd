@@ -106,7 +106,7 @@ extern class DispatchImpl<T> extends com.sun.xml.internal.ws.client.Stub impleme
 	*
 	* @since JAX-WS 2.1
 	*/
-	@:require(java1) @:overload @:public @:public override public function getEndpointReference() : javax.xml.ws.EndpointReference;
+	@:require(java1) @:overload @:public override public function getEndpointReference() : javax.xml.ws.EndpointReference;
 	
 	/**
 	* Get the Binding for this binding provider.
@@ -146,7 +146,7 @@ extern class DispatchImpl<T> extends com.sun.xml.internal.ws.client.Stub impleme
 	*
 	* @since JAX-WS 2.1
 	*/
-	@:require(java1) @:overload @:public @:public override public function getEndpointReference<T : javax.xml.ws.EndpointReference>(clazz : Class<T>) : T;
+	@:require(java1) @:overload @:public override public function getEndpointReference<T : javax.xml.ws.EndpointReference>(clazz : Class<T>) : T;
 	
 	
 }

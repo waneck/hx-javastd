@@ -50,7 +50,7 @@ extern interface Connector
 	*
 	* @return the {@link Transport} used by this connector.
 	*/
-	@:overload @:public @:public public function transport() : com.sun.jdi.connect.Transport;
+	@:overload @:public public function transport() : com.sun.jdi.connect.Transport;
 	
 	/**
 	* Returns the arguments accepted by this Connector and their

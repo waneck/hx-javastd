@@ -40,14 +40,14 @@ extern class GlobalEntity extends com.sun.tools.internal.ws.wsdl.framework.Entit
 	
 	@:overload @:public public function getDefining() : com.sun.tools.internal.ws.wsdl.framework.Defining;
 	
-	@:overload @:public @:public override public function getLocator() : org.xml.sax.Locator;
+	@:overload @:public override public function getLocator() : org.xml.sax.Locator;
 	
 	/**
 	* Interface implemented by classes that are mappable to XML elements.
 	*
 	* @author WS Development Team
 	*/
-	@:overload @:public @:public @:public override public function getElementName() : javax.xml.namespace.QName;
+	@:overload @:public override public function getElementName() : javax.xml.namespace.QName;
 	
 	
 }

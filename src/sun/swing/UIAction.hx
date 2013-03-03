@@ -55,7 +55,7 @@ extern class UIAction implements javax.swing.Action
 	/**
 	* Invoked when an action occurs.
 	*/
-	@:overload @:public @:public @:public public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
+	@:overload @:public public function actionPerformed(e : java.awt.event.ActionEvent) : Void;
 	
 	
 }

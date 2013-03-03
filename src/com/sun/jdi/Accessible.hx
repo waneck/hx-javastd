@@ -44,7 +44,7 @@ package com.sun.jdi;
 	* <cite>The Java&trade; Virtual Machine Specification</cite>
 	* in the <code>access_flag</code> tables for classes(section 4.1), fields(section 4.5), and methods(section 4.6).
 	*/
-	@:overload @:public @:public public function modifiers() : Int;
+	@:overload @:public public function modifiers() : Int;
 	
 	/**
 	* Determines if this object mirrors a private item.

@@ -59,7 +59,7 @@ package sun.security.pkcs11;
 	*
 	* @return the primary encoding format of the key.
 	*/
-	@:overload @:public @:public public function getFormat() : String;
+	@:overload @:public public function getFormat() : String;
 	
 	
 }

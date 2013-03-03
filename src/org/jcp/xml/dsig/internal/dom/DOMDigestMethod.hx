@@ -45,7 +45,7 @@ extern class DOMDigestMethod extends org.jcp.xml.dsig.internal.dom.DOMStructure 
 	*    <code>false</code> otherwise
 	* @throws NullPointerException if <code>feature</code> is <code>null</code>
 	*/
-	@:overload @:public @:public override public function isFeatureSupported(feature : String) : Bool;
+	@:overload @:public override public function isFeatureSupported(feature : String) : Bool;
 	
 	/**
 	* Returns the algorithm URI of this <code>AlgorithmMethod</code>.

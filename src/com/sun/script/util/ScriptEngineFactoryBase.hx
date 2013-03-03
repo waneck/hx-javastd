@@ -61,7 +61,7 @@ package com.sun.script.util;
 	*  calls to the <code>getMethodCallSyntax</code> and <code>getOutputStatement</code> methods.
 	*  @return The Program
 	*/
-	@:overload @:public @:public public function getProgram(statements : java.NativeArray<String>) : String;
+	@:overload @:public public function getProgram(statements : java.NativeArray<String>) : String;
 	
 	/**
 	* Returns an immutable list of filename extensions, which generally identify scripts
@@ -70,7 +70,7 @@ package com.sun.script.util;
 	* <code>getEngineByExtension</code> method.
 	* @return The list of extensions.
 	*/
-	@:overload @:public @:public public function getExtensions() : java.util.List<String>;
+	@:overload @:public public function getExtensions() : java.util.List<String>;
 	
 	/**
 	* Returns an immutable list of mimetypes, associated with scripts that
@@ -79,7 +79,7 @@ package com.sun.script.util;
 	* <code>getEngineByMimetype</code> method.
 	* @return The list of mime types.
 	*/
-	@:overload @:public @:public public function getMimeTypes() : java.util.List<String>;
+	@:overload @:public public function getMimeTypes() : java.util.List<String>;
 	
 	/**
 	* Returns an instance of the <code>ScriptEngine</code> associated with this
@@ -88,7 +88,7 @@ package com.sun.script.util;
 	*
 	* @return A new <code>ScriptEngine</code> instance.
 	*/
-	@:overload @:public @:public public function getScriptEngine() : javax.script.ScriptEngine;
+	@:overload @:public public function getScriptEngine() : javax.script.ScriptEngine;
 	
 	/**
 	* Returns a String that can be used as a statement to display the specified String  using
@@ -106,7 +106,7 @@ package com.sun.script.util;
 	*
 	*
 	*/
-	@:overload @:public @:public public function getOutputStatement(toDisplay : String) : String;
+	@:overload @:public public function getOutputStatement(toDisplay : String) : String;
 	
 	/**
 	* Returns the value of an attribute whose meaning may be implementation-specific.
@@ -148,7 +148,7 @@ package com.sun.script.util;
 	* value is assigned to the key.
 	*
 	*/
-	@:overload @:public @:public public function getParameter(key : String) : Dynamic;
+	@:overload @:public public function getParameter(key : String) : Dynamic;
 	
 	/**
 	* Returns a String which can be used to invoke a method of a  Java object using the syntax
@@ -186,7 +186,7 @@ package com.sun.script.util;
 	*
 	* @return The String used to invoke the method in the syntax of the scripting language.
 	*/
-	@:overload @:public @:public public function getMethodCallSyntax(obj : String, m : String, args : java.NativeArray<String>) : String;
+	@:overload @:public public function getMethodCallSyntax(obj : String, m : String, args : java.NativeArray<String>) : String;
 	
 	/**
 	* Returns an immutable list of  short names for the <code>ScriptEngine</code>, which may be used to
@@ -194,7 +194,7 @@ package com.sun.script.util;
 	* For instance, an implementation based on the Mozilla Rhino Javascript engine might
 	* return list containing {&quot;javascript&quot;, &quot;rhino&quot;}.
 	*/
-	@:overload @:public @:public public function getNames() : java.util.List<String>;
+	@:overload @:public public function getNames() : java.util.List<String>;
 	
 	
 }

@@ -142,7 +142,7 @@ extern class Select extends com.sun.org.apache.bcel.internal.generic.BranchInstr
 	
 	/** @return how many words are produced on stack
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public override public function produceStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
+	@:overload @:public override public function produceStack(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : Int;
 	
 	
 }

@@ -91,7 +91,7 @@ extern class BindingImpl implements com.sun.xml.internal.ws.api.WSBinding
 	*          avoid any overriding of a pre-configured handler
 	*          chain.
 	*/
-	@:overload @:public @:public public function setHandlerChain(chain : java.util.List<javax.xml.ws.handler.Handler<Dynamic>>) : Void;
+	@:overload @:public public function setHandlerChain(chain : java.util.List<javax.xml.ws.handler.Handler<Dynamic>>) : Void;
 	
 	
 }

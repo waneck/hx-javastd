@@ -648,7 +648,7 @@ extern class AsynchronousFileChannel implements java.nio.channels.AsynchronousCh
 	*
 	* @return <tt>true</tt> if, and only if, this channel is open
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public public function isOpen() : Bool;
+	@:overload @:public public function isOpen() : Bool;
 	
 	/**
 	* Closes this channel.

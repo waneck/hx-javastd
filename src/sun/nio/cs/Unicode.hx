@@ -29,7 +29,7 @@ package sun.nio.cs;
 	
 	@:overload @:public override public function contains(cs : java.nio.charset.Charset) : Bool;
 	
-	@:overload @:public @:public public function historicalName() : String;
+	@:overload @:public public function historicalName() : String;
 	
 	
 }

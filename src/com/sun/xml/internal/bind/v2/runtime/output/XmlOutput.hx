@@ -80,7 +80,7 @@ extern interface XmlOutput
 	*      (such as '&amp;' or '>')
 	* @param needsSeparatingWhitespace
 	*/
-	@:overload @:public @:public public function text(value : String, needsSeparatingWhitespace : Bool) : Void;
+	@:overload @:public public function text(value : String, needsSeparatingWhitespace : Bool) : Void;
 	
 	/**
 	* Writes XML text with character escaping, if necessary.
@@ -90,7 +90,7 @@ extern interface XmlOutput
 	*      (such as '&amp;' or '>')
 	* @param needsSeparatingWhitespace
 	*/
-	@:overload @:public @:public public function text(value : com.sun.xml.internal.bind.v2.runtime.output.Pcdata, needsSeparatingWhitespace : Bool) : Void;
+	@:overload @:public public function text(value : com.sun.xml.internal.bind.v2.runtime.output.Pcdata, needsSeparatingWhitespace : Bool) : Void;
 	
 	
 }

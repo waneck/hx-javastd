@@ -184,7 +184,7 @@ extern class WSDLModelerBase implements com.sun.tools.internal.ws.processor.mode
 	*
 	* @exception ModelerException
 	*/
-	@:overload @:public @:public public function buildModel() : com.sun.tools.internal.ws.processor.model.Model;
+	@:overload @:public public function buildModel() : com.sun.tools.internal.ws.processor.model.Model;
 	
 	
 }

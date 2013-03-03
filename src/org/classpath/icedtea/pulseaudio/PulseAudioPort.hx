@@ -64,7 +64,7 @@ exception statement from your version.
 	* @return <code>true</code> if at least one control of the specified type is
 	* supported, otherwise <code>false</code>.
 	*/
-	@:overload @:public @:public @:public override public function isControlSupported(control : javax.sound.sampled.Control.Control_Type) : Bool;
+	@:overload @:public override public function isControlSupported(control : javax.sound.sampled.Control.Control_Type) : Bool;
 	
 	/**
 	* Obtains the set of controls associated with this line.
@@ -73,7 +73,7 @@ exception statement from your version.
 	* @return the array of controls
 	* @see #getControl
 	*/
-	@:overload @:public @:public @:public override public function getControls() : java.NativeArray<javax.sound.sampled.Control>;
+	@:overload @:public override public function getControls() : java.NativeArray<javax.sound.sampled.Control>;
 	
 	/**
 	* Obtains a control of the specified type,
@@ -86,7 +86,7 @@ exception statement from your version.
 	* @see #getControls
 	* @see #isControlSupported(Control.Type control)
 	*/
-	@:overload @:public @:public @:public override public function getControl(control : javax.sound.sampled.Control.Control_Type) : javax.sound.sampled.Control;
+	@:overload @:public override public function getControl(control : javax.sound.sampled.Control.Control_Type) : javax.sound.sampled.Control;
 	
 	/**
 	* Check if a line is open
@@ -104,14 +104,14 @@ exception statement from your version.
 	* @see LineListener#update
 	* @see LineEvent
 	*/
-	@:overload @:public @:public @:public override public function addLineListener(listener : javax.sound.sampled.LineListener) : Void;
+	@:overload @:public override public function addLineListener(listener : javax.sound.sampled.LineListener) : Void;
 	
 	/**
 	* Removes the specified listener from this line's list of listeners.
 	* @param listener listener to remove
 	* @see #addLineListener
 	*/
-	@:overload @:public @:public @:public override public function removeLineListener(listener : javax.sound.sampled.LineListener) : Void;
+	@:overload @:public override public function removeLineListener(listener : javax.sound.sampled.LineListener) : Void;
 	
 	
 }

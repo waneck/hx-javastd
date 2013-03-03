@@ -72,12 +72,12 @@ extern class RuntimeBuiltinLeafInfoImpl<T> extends com.sun.xml.internal.bind.v2.
 	* Note that when this is true, the class is bound to both an element
 	* and a type.
 	*/
-	@:overload @:public @:public override public function isElement() : Bool;
+	@:overload @:public override public function isElement() : Bool;
 	
 	/**
 	* True if this type is a valid target from a property annotated with {@link XmlIDREF}.
 	*/
-	@:overload @:public @:public @:public override public function canBeReferencedByIDREF() : Bool;
+	@:overload @:public override public function canBeReferencedByIDREF() : Bool;
 	
 	/**
 	* Converts the lexical representation to a value object.
@@ -98,7 +98,7 @@ extern class RuntimeBuiltinLeafInfoImpl<T> extends com.sun.xml.internal.bind.v2.
 	*
 	* This operation could be inefficient and costly.
 	*/
-	@:overload @:public @:public @:public override public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
+	@:overload @:public override public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
 	
 	/**
 	* Sends the result of the {@link #print(Object)} operation
@@ -144,7 +144,7 @@ extern class RuntimeBuiltinLeafInfoImpl<T> extends com.sun.xml.internal.bind.v2.
 	* @return
 	*      can be null.
 	*/
-	@:overload @:public @:public override public function getUpstream() : com.sun.xml.internal.bind.v2.model.annotation.Locatable;
+	@:overload @:public override public function getUpstream() : com.sun.xml.internal.bind.v2.model.annotation.Locatable;
 	
 	/**
 	* Gets the element name of the class, if the class is bound
@@ -153,7 +153,7 @@ extern class RuntimeBuiltinLeafInfoImpl<T> extends com.sun.xml.internal.bind.v2.
 	* @return
 	*      non-null iff {@link #isElement()}.
 	*/
-	@:overload @:public @:public override public function getElementName() : javax.xml.namespace.QName;
+	@:overload @:public override public function getElementName() : javax.xml.namespace.QName;
 	
 	/**
 	* Returns the {@link Element} aspect of this {@link ClassInfo}.
@@ -161,7 +161,7 @@ extern class RuntimeBuiltinLeafInfoImpl<T> extends com.sun.xml.internal.bind.v2.
 	* @return
 	*      null if {@link #isElement()}==false, non-null if {@link #isElement()}==true.
 	*/
-	@:overload @:public @:public override public function asElement() : com.sun.xml.internal.bind.v2.model.core.Element<T, Dynamic>;
+	@:overload @:public override public function asElement() : com.sun.xml.internal.bind.v2.model.core.Element<T, Dynamic>;
 	
 	/**
 	* Sends the result of the {@link #print(Object)} operation
@@ -176,7 +176,7 @@ extern class RuntimeBuiltinLeafInfoImpl<T> extends com.sun.xml.internal.bind.v2.
 	* @return
 	*      always non-null.
 	*/
-	@:overload @:public @:public @:public @:public override public function getType() : T;
+	@:overload @:public override public function getType() : T;
 	
 	
 }

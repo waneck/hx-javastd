@@ -273,7 +273,7 @@ extern class AbstractRegionPainter implements javax.swing.Painter<javax.swing.JC
 	* @param width width of the area to paint.
 	* @param height height of the area to paint.
 	*/
-	@:overload @:public @:public public function paint(g : java.awt.Graphics2D, object : Dynamic, width : Int, height : Int) : Void;
+	@:overload @:public public function paint(g : java.awt.Graphics2D, object : Dynamic, width : Int, height : Int) : Void;
 	
 	
 }

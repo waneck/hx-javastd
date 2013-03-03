@@ -137,7 +137,7 @@ extern interface SOAPHeader extends javax.xml.soap.SOAPElement
 	* @exception UnsupportedOperationException if this is a SOAP 1.1 Header.
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public public function addNotUnderstoodHeaderElement(name : javax.xml.namespace.QName) : javax.xml.soap.SOAPHeaderElement;
+	@:require(java3) @:overload @:public public function addNotUnderstoodHeaderElement(name : javax.xml.namespace.QName) : javax.xml.soap.SOAPHeaderElement;
 	
 	/**
 	* Creates a new Upgrade <code>SOAPHeaderElement</code> object initialized

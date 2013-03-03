@@ -719,14 +719,14 @@ extern class SerializerBase implements com.sun.org.apache.xml.internal.serialize
 	* @see #externalEntityDecl
 	* @see org.xml.sax.DTDHandler#unparsedEntityDecl
 	*/
-	@:overload @:public @:abstract @:public public function internalEntityDecl(name : String, value : String) : Void;
+	@:overload @:public @:abstract public function internalEntityDecl(name : String, value : String) : Void;
 	
 	/**
 	* Returns the output format properties for this serializer.
 	*
 	* @return The output format key/value pairs in use.
 	*/
-	@:overload @:public @:public public function getOutputFormat() : java.util.Properties;
+	@:overload @:public public function getOutputFormat() : java.util.Properties;
 	
 	/**
 	* Receive notification of the beginning of an element.
@@ -792,7 +792,7 @@ extern class SerializerBase implements com.sun.org.apache.xml.internal.serialize
 	* @see org.xml.sax.Attributes
 	* @see org.xml.sax.helpers.AttributesImpl
 	*/
-	@:overload @:public @:public @:public @:public public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Receive notification of character data.
@@ -837,7 +837,7 @@ extern class SerializerBase implements com.sun.org.apache.xml.internal.serialize
 	* @see #ignorableWhitespace
 	* @see org.xml.sax.Locator
 	*/
-	@:overload @:public @:public @:public public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function characters(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Get the output stream where the events will be serialized to.
@@ -845,14 +845,14 @@ extern class SerializerBase implements com.sun.org.apache.xml.internal.serialize
 	* @return reference to the result stream, or null if only a writer was
 	* set.
 	*/
-	@:overload @:public @:public public function getOutputStream() : java.io.OutputStream;
+	@:overload @:public public function getOutputStream() : java.io.OutputStream;
 	
 	/**
 	* Flush any pending events currently queued up in the serializer. This will
 	* flush any input that the serializer has which it has not yet sent as
 	* output.
 	*/
-	@:overload @:public @:public public function flushPending() : Void;
+	@:overload @:public public function flushPending() : Void;
 	
 	/**
 	* This method is used to notify that an element has ended. Unlike the
@@ -866,7 +866,7 @@ extern class SerializerBase implements com.sun.org.apache.xml.internal.serialize
 	* @param elemName the fully qualified element name.
 	* @throws SAXException
 	*/
-	@:overload @:public @:public public function endElement(elemName : String) : Void;
+	@:overload @:public public function endElement(elemName : String) : Void;
 	
 	/**
 	* Report the end of a CDATA section.
@@ -874,7 +874,7 @@ extern class SerializerBase implements com.sun.org.apache.xml.internal.serialize
 	* @exception SAXException The application may raise an exception.
 	* @see #startCDATA
 	*/
-	@:overload @:public @:abstract @:public public function endCDATA() : Void;
+	@:overload @:public @:abstract public function endCDATA() : Void;
 	
 	/**
 	* Receive notification of the end of an element.
@@ -897,7 +897,7 @@ extern class SerializerBase implements com.sun.org.apache.xml.internal.serialize
 	* @throws org.xml.sax.SAXException any SAX exception, possibly
 	*            wrapping another exception
 	*/
-	@:overload @:public @:public @:public @:public public function endElement(uri : String, localName : String, qName : String) : Void;
+	@:overload @:public public function endElement(uri : String, localName : String, qName : String) : Void;
 	
 	/**
 	* This method is used to notify that an element is starting.
@@ -912,7 +912,7 @@ extern class SerializerBase implements com.sun.org.apache.xml.internal.serialize
 	*
 	* @throws SAXException
 	*/
-	@:overload @:public @:public public function startElement(uri : String, localName : String, qName : String) : Void;
+	@:overload @:public public function startElement(uri : String, localName : String, qName : String) : Void;
 	
 	/**
 	* This method is used to notify that a prefix maping is to start, which can
@@ -927,7 +927,7 @@ extern class SerializerBase implements com.sun.org.apache.xml.internal.serialize
 	* before seen mapping for the element.
 	* @throws SAXException
 	*/
-	@:overload @:public @:public public function startPrefixMapping(prefix : String, uri : String, shouldFlush : Bool) : Bool;
+	@:overload @:public public function startPrefixMapping(prefix : String, uri : String, shouldFlush : Bool) : Bool;
 	
 	/**
 	* Receive notification of a processing instruction.
@@ -951,14 +951,14 @@ extern class SerializerBase implements com.sun.org.apache.xml.internal.serialize
 	* @throws org.xml.sax.SAXException any SAX exception, possibly
 	*            wrapping another exception
 	*/
-	@:overload @:public @:public @:public public function processingInstruction(target : String, data : String) : Void;
+	@:overload @:public public function processingInstruction(target : String, data : String) : Void;
 	
 	/**
 	* This method is used to notify of the start of an element
 	* @param qName the fully qualified name of the element
 	* @throws SAXException
 	*/
-	@:overload @:public @:public public function startElement(qName : String) : Void;
+	@:overload @:public public function startElement(qName : String) : Void;
 	
 	/**
 	* Set the SAX Content handler that the serializer sends its output to. This
@@ -967,7 +967,7 @@ extern class SerializerBase implements com.sun.org.apache.xml.internal.serialize
 	* @see Serializer#asContentHandler()
 	* @see ToSAXHandler
 	*/
-	@:overload @:public @:public public function setContentHandler(ch : org.xml.sax.ContentHandler) : Void;
+	@:overload @:public public function setContentHandler(ch : org.xml.sax.ContentHandler) : Void;
 	
 	/**
 	* Report the beginning of some internal and external XML entities.
@@ -1018,7 +1018,7 @@ extern class SerializerBase implements com.sun.org.apache.xml.internal.serialize
 	* @see org.xml.sax.ext.DeclHandler#internalEntityDecl
 	* @see org.xml.sax.ext.DeclHandler#externalEntityDecl
 	*/
-	@:overload @:public @:abstract @:public public function startEntity(name : String) : Void;
+	@:overload @:public @:abstract public function startEntity(name : String) : Void;
 	
 	/**
 	* Receive notification of ignorable whitespace in element content.
@@ -1045,7 +1045,7 @@ extern class SerializerBase implements com.sun.org.apache.xml.internal.serialize
 	*            wrapping another exception
 	* @see #characters
 	*/
-	@:overload @:public @:public @:public public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public public function ignorableWhitespace(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Specifies an output stream to which the document should be
@@ -1060,7 +1060,7 @@ extern class SerializerBase implements com.sun.org.apache.xml.internal.serialize
 	*
 	* @param output The output stream
 	*/
-	@:overload @:public @:public public function setOutputStream(output : java.io.OutputStream) : Void;
+	@:overload @:public public function setOutputStream(output : java.io.OutputStream) : Void;
 	
 	/**
 	* Notify that the serializer should take this DOM node as input to be
@@ -1069,7 +1069,7 @@ extern class SerializerBase implements com.sun.org.apache.xml.internal.serialize
 	* @param node the DOM node to be serialized.
 	* @throws IOException
 	*/
-	@:overload @:public @:public public function serialize(node : org.w3c.dom.Node) : Void;
+	@:overload @:public public function serialize(node : org.w3c.dom.Node) : Void;
 	
 	/**
 	* This method is used to notify of a character event, but passing the data
@@ -1077,7 +1077,7 @@ extern class SerializerBase implements com.sun.org.apache.xml.internal.serialize
 	* @param chars the character data
 	* @throws SAXException
 	*/
-	@:overload @:public @:public public function characters(chars : String) : Void;
+	@:overload @:public public function characters(chars : String) : Void;
 	
 	/**
 	* Report an element type declaration.
@@ -1095,7 +1095,7 @@ extern class SerializerBase implements com.sun.org.apache.xml.internal.serialize
 	* @param model The content model as a normalized string.
 	* @exception SAXException The application may raise an exception.
 	*/
-	@:overload @:public @:abstract @:public public function elementDecl(name : String, model : String) : Void;
+	@:overload @:public @:abstract public function elementDecl(name : String, model : String) : Void;
 	
 	/**
 	* Report a parsed external entity declaration.
@@ -1115,7 +1115,7 @@ extern class SerializerBase implements com.sun.org.apache.xml.internal.serialize
 	* @see #internalEntityDecl
 	* @see org.xml.sax.DTDHandler#unparsedEntityDecl
 	*/
-	@:overload @:public @:abstract @:public public function externalEntityDecl(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public @:abstract public function externalEntityDecl(name : String, publicId : String, systemId : String) : Void;
 	
 	/**
 	* Report an XML comment anywhere in the document.
@@ -1131,7 +1131,7 @@ extern class SerializerBase implements com.sun.org.apache.xml.internal.serialize
 	* @param length The number of characters to use from the array.
 	* @exception SAXException The application may raise an exception.
 	*/
-	@:overload @:public @:abstract @:public public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
+	@:overload @:public @:abstract public function comment(ch : java.NativeArray<java.StdTypes.Char16>, start : Int, length : Int) : Void;
 	
 	/**
 	* Begin the scope of a prefix-URI Namespace mapping.
@@ -1171,7 +1171,7 @@ extern class SerializerBase implements com.sun.org.apache.xml.internal.serialize
 	* @see #endPrefixMapping
 	* @see #startElement
 	*/
-	@:overload @:public @:public @:public public function startPrefixMapping(prefix : String, uri : String) : Void;
+	@:overload @:public public function startPrefixMapping(prefix : String, uri : String) : Void;
 	
 	/**
 	* Receive notification of a skipped entity.
@@ -1198,7 +1198,7 @@ extern class SerializerBase implements com.sun.org.apache.xml.internal.serialize
 	* @throws org.xml.sax.SAXException any SAX exception, possibly
 	*            wrapping another exception
 	*/
-	@:overload @:public @:public @:public public function skippedEntity(name : String) : Void;
+	@:overload @:public public function skippedEntity(name : String) : Void;
 	
 	/**
 	* End the scope of a prefix-URI mapping.
@@ -1216,7 +1216,7 @@ extern class SerializerBase implements com.sun.org.apache.xml.internal.serialize
 	* @see #startPrefixMapping
 	* @see #endElement
 	*/
-	@:overload @:public @:public @:public public function endPrefixMapping(prefix : String) : Void;
+	@:overload @:public public function endPrefixMapping(prefix : String) : Void;
 	
 	/**
 	* Report the start of DTD declarations, if any.
@@ -1256,7 +1256,7 @@ extern class SerializerBase implements com.sun.org.apache.xml.internal.serialize
 	* @see #endDTD
 	* @see #startEntity
 	*/
-	@:overload @:public @:abstract @:public public function startDTD(name : String, publicId : String, systemId : String) : Void;
+	@:overload @:public @:abstract public function startDTD(name : String, publicId : String, systemId : String) : Void;
 	
 	/**
 	* Report an attribute type declaration.
@@ -1283,7 +1283,7 @@ extern class SerializerBase implements com.sun.org.apache.xml.internal.serialize
 	*        or null if there is none.
 	* @exception SAXException The application may raise an exception.
 	*/
-	@:overload @:public @:abstract @:public public function attributeDecl(eName : String, aName : String, type : String, mode : String, value : String) : Void;
+	@:overload @:public @:abstract public function attributeDecl(eName : String, aName : String, type : String, mode : String, value : String) : Void;
 	
 	/**
 	* Add a unique attribute to the current element.
@@ -1296,7 +1296,7 @@ extern class SerializerBase implements com.sun.org.apache.xml.internal.serialize
 	* @param value the attribute value
 	* @param flags a bitwise flag
 	*/
-	@:overload @:public @:public public function addUniqueAttribute(qName : String, value : String, flags : Int) : Void;
+	@:overload @:public public function addUniqueAttribute(qName : String, value : String, flags : Int) : Void;
 	
 	/**
 	* Report the end of DTD declarations.
@@ -1308,7 +1308,7 @@ extern class SerializerBase implements com.sun.org.apache.xml.internal.serialize
 	* @exception SAXException The application may raise an exception.
 	* @see #startDTD
 	*/
-	@:overload @:public @:abstract @:public public function endDTD() : Void;
+	@:overload @:public @:abstract public function endDTD() : Void;
 	
 	/**
 	* Receive notification of the end of a document.
@@ -1331,7 +1331,7 @@ extern class SerializerBase implements com.sun.org.apache.xml.internal.serialize
 	*            wrapping another exception
 	* @see #startDocument
 	*/
-	@:overload @:public @:public @:public public function endDocument() : Void;
+	@:overload @:public public function endDocument() : Void;
 	
 	/**
 	* Sets the value coming from the xsl:output cdata-section-elements
@@ -1347,7 +1347,7 @@ extern class SerializerBase implements com.sun.org.apache.xml.internal.serialize
 	* relevant in specifying which elements have their text to be output as
 	* CDATA sections.
 	*/
-	@:overload @:public @:public public function setCdataSectionElements(URI_and_localNames : java.util.Vector<Dynamic>) : Void;
+	@:overload @:public public function setCdataSectionElements(URI_and_localNames : java.util.Vector<Dynamic>) : Void;
 	
 	/**
 	* Turns special character escaping on/off.
@@ -1358,7 +1358,7 @@ extern class SerializerBase implements com.sun.org.apache.xml.internal.serialize
 	*
 	* @param escape true if escaping is to be set on.
 	*/
-	@:overload @:public @:public public function setEscaping(escape : Bool) : Bool;
+	@:overload @:public public function setEscaping(escape : Bool) : Bool;
 	
 	/**
 	* Report the start of a CDATA section.
@@ -1371,7 +1371,7 @@ extern class SerializerBase implements com.sun.org.apache.xml.internal.serialize
 	* @exception SAXException The application may raise an exception.
 	* @see #endCDATA
 	*/
-	@:overload @:public @:abstract @:public public function startCDATA() : Void;
+	@:overload @:public @:abstract public function startCDATA() : Void;
 	
 	/**
 	* Specifies a writer to which the document should be serialized.
@@ -1386,14 +1386,14 @@ extern class SerializerBase implements com.sun.org.apache.xml.internal.serialize
 	*
 	* @param writer The output writer stream
 	*/
-	@:overload @:public @:public public function setWriter(writer : java.io.Writer) : Void;
+	@:overload @:public public function setWriter(writer : java.io.Writer) : Void;
 	
 	/**
 	* Get the character stream where the events will be serialized to.
 	*
 	* @return Reference to the result Writer, or null.
 	*/
-	@:overload @:public @:public public function getWriter() : java.io.Writer;
+	@:overload @:public public function getWriter() : java.io.Writer;
 	
 	/**
 	* Specifies an output format for this serializer. It the
@@ -1426,7 +1426,7 @@ extern class SerializerBase implements com.sun.org.apache.xml.internal.serialize
 	*
 	* @param format The output format to use, as a set of key/value pairs.
 	*/
-	@:overload @:public @:public public function setOutputFormat(format : java.util.Properties) : Void;
+	@:overload @:public public function setOutputFormat(format : java.util.Properties) : Void;
 	
 	
 }

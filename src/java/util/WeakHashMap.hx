@@ -260,7 +260,7 @@ extern class WeakHashMap<K, V> extends java.util.AbstractMap<K, V> implements ja
 	* @return the next element in the iteration
 	* @throws NoSuchElementException if the iteration has no more elements
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public public function next() : Dynamic;
+	@:overload @:public public function next() : Dynamic;
 	
 	
 }

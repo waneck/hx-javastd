@@ -97,7 +97,7 @@ package com.sun.tools.internal.xjc.generator.bean.field;
 	*      Evaluates to an object, and the field on this object
 	*      will be accessed.
 	*/
-	@:overload @:public @:public public function create(targetObject : com.sun.codemodel.internal.JExpression) : com.sun.tools.internal.xjc.outline.FieldAccessor;
+	@:overload @:public public function create(targetObject : com.sun.codemodel.internal.JExpression) : com.sun.tools.internal.xjc.outline.FieldAccessor;
 	
 	/**
 	* Gets the type of the "raw value".
@@ -110,7 +110,7 @@ package com.sun.tools.internal.xjc.generator.bean.field;
 	* This type allows the client of the outline to generate code
 	* to set/get values from a property.
 	*/
-	@:overload @:public @:public public function getRawType() : com.sun.codemodel.internal.JType;
+	@:overload @:public public function getRawType() : com.sun.codemodel.internal.JType;
 	
 	
 }
@@ -149,7 +149,7 @@ package com.sun.tools.internal.xjc.generator.bean.field;
 	*      The expression that evaluates to a value of the type
 	*      {@link FieldOutline#getRawType()}.
 	*/
-	@:overload @:public @:public public function fromRawValue(block : com.sun.codemodel.internal.JBlock, uniqueName : String, $var : com.sun.codemodel.internal.JExpression) : Void;
+	@:overload @:public public function fromRawValue(block : com.sun.codemodel.internal.JBlock, uniqueName : String, $var : com.sun.codemodel.internal.JExpression) : Void;
 	
 	/**
 	* Return an expression that evaluates to true only when
@@ -172,7 +172,7 @@ package com.sun.tools.internal.xjc.generator.bean.field;
 	* @param $var
 	*      Variable whose type is {@link FieldOutline#getRawType()}
 	*/
-	@:overload @:public @:public public function toRawValue(block : com.sun.codemodel.internal.JBlock, $var : com.sun.codemodel.internal.JVar) : Void;
+	@:overload @:public public function toRawValue(block : com.sun.codemodel.internal.JBlock, $var : com.sun.codemodel.internal.JVar) : Void;
 	
 	/**
 	* Generates a code fragment to remove any "set" value

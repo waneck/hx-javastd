@@ -75,7 +75,7 @@ extern class AbstractHeaderImpl implements com.sun.xml.internal.ws.api.message.H
 	* @return
 	*      this string must be interned.
 	*/
-	@:overload @:public @:public public function getNamespaceURI() : String;
+	@:overload @:public public function getNamespaceURI() : String;
 	
 	/**
 	* Reads the header as a {@link XMLStreamReader}.
@@ -105,7 +105,7 @@ extern class AbstractHeaderImpl implements com.sun.xml.internal.ws.api.message.H
 	* @return
 	*      must not null.
 	*/
-	@:overload @:public @:public public function readHeader() : javax.xml.stream.XMLStreamReader;
+	@:overload @:public public function readHeader() : javax.xml.stream.XMLStreamReader;
 	
 	/**
 	* Writes out the header as a fragment.
@@ -114,7 +114,7 @@ extern class AbstractHeaderImpl implements com.sun.xml.internal.ws.api.message.H
 	*      if the operation fails for some reason. This leaves the
 	*      writer to an undefined state.
 	*/
-	@:overload @:public @:public public function writeTo(w : javax.xml.stream.XMLStreamWriter) : Void;
+	@:overload @:public public function writeTo(w : javax.xml.stream.XMLStreamWriter) : Void;
 	
 	/**
 	* Writes out the header to the given SOAPMessage.
@@ -128,7 +128,7 @@ extern class AbstractHeaderImpl implements com.sun.xml.internal.ws.api.message.H
 	*      if the operation fails for some reason. This leaves the
 	*      writer to an undefined state.
 	*/
-	@:overload @:public @:public public function writeTo(saaj : javax.xml.soap.SOAPMessage) : Void;
+	@:overload @:public public function writeTo(saaj : javax.xml.soap.SOAPMessage) : Void;
 	
 	/**
 	* Gets the local name of this header element.
@@ -136,7 +136,7 @@ extern class AbstractHeaderImpl implements com.sun.xml.internal.ws.api.message.H
 	* @return
 	*      this string must be interned.
 	*/
-	@:overload @:public @:public public function getLocalPart() : String;
+	@:overload @:public public function getLocalPart() : String;
 	
 	/**
 	* Writes out the header as SAX events.
@@ -163,7 +163,7 @@ extern class AbstractHeaderImpl implements com.sun.xml.internal.ws.api.message.H
 	* @param errorHandler
 	*      The {@link ErrorHandler} that receives parsing errors.
 	*/
-	@:overload @:public @:public public function writeTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler) : Void;
+	@:overload @:public public function writeTo(contentHandler : org.xml.sax.ContentHandler, errorHandler : org.xml.sax.ErrorHandler) : Void;
 	
 	/**
 	* Gets the attribute value on the header element.

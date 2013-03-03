@@ -131,7 +131,7 @@ package java.lang;
 	* @throws ClassCastException if the specified object's type prevents it
 	*         from being compared to this object.
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function compareTo(o : T) : Int;
+	@:overload @:public public function compareTo(o : T) : Int;
 	
 	
 }

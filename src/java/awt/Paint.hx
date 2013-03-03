@@ -74,7 +74,7 @@ extern interface Paint extends java.awt.Transparency
 	* @see AffineTransform
 	* @see RenderingHints
 	*/
-	@:overload @:public @:public public function createContext(cm : java.awt.image.ColorModel, deviceBounds : java.awt.Rectangle, userBounds : java.awt.geom.Rectangle2D, xform : java.awt.geom.AffineTransform, hints : java.awt.RenderingHints) : java.awt.PaintContext;
+	@:overload @:public public function createContext(cm : java.awt.image.ColorModel, deviceBounds : java.awt.Rectangle, userBounds : java.awt.geom.Rectangle2D, xform : java.awt.geom.AffineTransform, hints : java.awt.RenderingHints) : java.awt.PaintContext;
 	
 	
 }

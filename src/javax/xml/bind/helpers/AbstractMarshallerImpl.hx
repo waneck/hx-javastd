@@ -204,7 +204,7 @@ extern class AbstractMarshallerImpl implements javax.xml.bind.Marshaller
 	* @throws IllegalArgumentException
 	*      If any of the method parameters are null
 	*/
-	@:overload @:public @:public public function marshal(jaxbElement : Dynamic, result : javax.xml.transform.Result) : Void;
+	@:overload @:public public function marshal(jaxbElement : Dynamic, result : javax.xml.transform.Result) : Void;
 	
 	
 }

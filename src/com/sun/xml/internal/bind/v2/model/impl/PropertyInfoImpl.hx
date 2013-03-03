@@ -99,7 +99,7 @@ package com.sun.xml.internal.bind.v2.model.impl;
 	* @return
 	*      always non-null.
 	*/
-	@:overload @:public @:public public function kind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
+	@:overload @:public public function kind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
 	
 	/**
 	* List of {@link TypeInfo}s that this property references.
@@ -151,7 +151,7 @@ package com.sun.xml.internal.bind.v2.model.impl;
 	* @throws ClassCastException if the specified object's type prevents it
 	*         from being compared to this object.
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function compareTo(o : T) : Int;
+	@:overload @:public public function compareTo(o : T) : Int;
 	
 	
 }

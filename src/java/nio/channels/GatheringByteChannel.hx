@@ -99,7 +99,7 @@ extern interface GatheringByteChannel extends java.nio.channels.WritableByteChan
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload @:public @:public public function write(srcs : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int) : haxe.Int64;
+	@:overload @:public public function write(srcs : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int) : haxe.Int64;
 	
 	/**
 	* Writes a sequence of bytes to this channel from the given buffers.
@@ -134,7 +134,7 @@ extern interface GatheringByteChannel extends java.nio.channels.WritableByteChan
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload @:public @:public public function write(srcs : java.NativeArray<java.nio.ByteBuffer>) : haxe.Int64;
+	@:overload @:public public function write(srcs : java.NativeArray<java.nio.ByteBuffer>) : haxe.Int64;
 	
 	
 }

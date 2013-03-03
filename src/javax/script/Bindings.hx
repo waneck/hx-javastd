@@ -65,7 +65,7 @@ extern interface Bindings extends java.util.Map<String, Dynamic>
 	* @throws ClassCastException if key is not String
 	* @throws IllegalArgumentException if key is empty String
 	*/
-	@:overload @:public @:public public function containsKey(key : Dynamic) : Bool;
+	@:overload @:public public function containsKey(key : Dynamic) : Bool;
 	
 	/**
 	* Returns the value to which this map maps the specified key.  Returns

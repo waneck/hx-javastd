@@ -71,14 +71,14 @@ package com.sun.xml.internal.bind.v2.model.impl;
 	/**
 	* True if this type is a valid target from a property annotated with {@link XmlIDREF}.
 	*/
-	@:overload @:public @:public @:public override public function canBeReferencedByIDREF() : Bool;
+	@:overload @:public public function canBeReferencedByIDREF() : Bool;
 	
 	/**
 	* Gets the location object that this object points to.
 	*
 	* This operation could be inefficient and costly.
 	*/
-	@:overload @:public @:public @:public override public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
+	@:overload @:public public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
 	
 	/**
 	* Gets the underlying Java type that object represents.
@@ -86,7 +86,7 @@ package com.sun.xml.internal.bind.v2.model.impl;
 	* @return
 	*      always non-null.
 	*/
-	@:overload @:public @:public @:public @:public override public function getType() : Dynamic;
+	@:overload @:public public function getType() : Dynamic;
 	
 	
 }

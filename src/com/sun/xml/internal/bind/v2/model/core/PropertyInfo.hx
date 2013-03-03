@@ -77,7 +77,7 @@ extern interface PropertyInfo<T, C> extends com.sun.xml.internal.bind.v2.model.a
 	* @return
 	*      always non-null.
 	*/
-	@:overload @:public @:public public function kind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
+	@:overload @:public public function kind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
 	
 	/**
 	* @return

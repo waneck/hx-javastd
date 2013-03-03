@@ -42,7 +42,7 @@ extern class NamingContextPOA extends org.omg.PortableServer.Servant implements 
 	* 
 	* @exception org.omg.CosNaming.NamingContextPackage.InvalidName Indicates that the name is invalid. <p>
 	*/
-	@:overload @:public @:public public function rebind_context(n : java.NativeArray<org.omg.CosNaming.NameComponent>, nc : org.omg.CosNaming.NamingContext) : Void;
+	@:overload @:public public function rebind_context(n : java.NativeArray<org.omg.CosNaming.NameComponent>, nc : org.omg.CosNaming.NamingContext) : Void;
 	
 	/** 
 	* The destroy operation deletes a naming context. If the naming 
@@ -50,7 +50,7 @@ extern class NamingContextPOA extends org.omg.PortableServer.Servant implements 
 	* 
 	* @exception org.omg.CosNaming.NamingContextPackage.NotEmpty Indicates that the Naming Context contains bindings.
 	*/
-	@:overload @:public @:public public function destroy() : Void;
+	@:overload @:public public function destroy() : Void;
 	
 	/** 
 	* The resolve operation is the process of retrieving an object
@@ -70,7 +70,7 @@ extern class NamingContextPOA extends org.omg.PortableServer.Servant implements 
 	* 
 	* @exception org.omg.CosNaming.NamingContextPackage.InvalidName Indicates that the name is invalid. <p>
 	*/
-	@:overload @:public @:public public function resolve(n : java.NativeArray<org.omg.CosNaming.NameComponent>) : org.omg.CORBA.Object;
+	@:overload @:public public function resolve(n : java.NativeArray<org.omg.CosNaming.NameComponent>) : org.omg.CORBA.Object;
 	
 	/**
 	* The list operation allows a client to iterate through a set of
@@ -92,7 +92,7 @@ extern class NamingContextPOA extends org.omg.PortableServer.Servant implements 
 	* 
 	* @param bi the returned binding iterator <p>
 	*/
-	@:overload @:public @:public public function list(how_many : Int, bl : org.omg.CosNaming.BindingListHolder, bi : org.omg.CosNaming.BindingIteratorHolder) : Void;
+	@:overload @:public public function list(how_many : Int, bl : org.omg.CosNaming.BindingListHolder, bi : org.omg.CosNaming.BindingIteratorHolder) : Void;
 	
 	/**
 	* This operation creates a new context and binds it to the name
@@ -114,7 +114,7 @@ extern class NamingContextPOA extends org.omg.PortableServer.Servant implements 
 	* 
 	* @exception org.omg.CosNaming.NamingContextPackage.InvalidName Indicates that the name is invalid. <p>
 	*/
-	@:overload @:public @:public public function bind_new_context(n : java.NativeArray<org.omg.CosNaming.NameComponent>) : org.omg.CosNaming.NamingContext;
+	@:overload @:public public function bind_new_context(n : java.NativeArray<org.omg.CosNaming.NameComponent>) : org.omg.CosNaming.NamingContext;
 	
 	/**
 	* Names an object that is a naming context. Naming contexts that
@@ -136,7 +136,7 @@ extern class NamingContextPOA extends org.omg.PortableServer.Servant implements 
 	* @exception org.omg.CosNaming.NamingContextPackage.AlreadyBound Indicates an object is already 
 	* bound to the specified name.<p>
 	*/
-	@:overload @:public @:public public function bind_context(n : java.NativeArray<org.omg.CosNaming.NameComponent>, nc : org.omg.CosNaming.NamingContext) : Void;
+	@:overload @:public public function bind_context(n : java.NativeArray<org.omg.CosNaming.NameComponent>, nc : org.omg.CosNaming.NamingContext) : Void;
 	
 	/**
 	* Creates a binding of a name and an object in the naming context
@@ -156,7 +156,7 @@ extern class NamingContextPOA extends org.omg.PortableServer.Servant implements 
 	* 
 	* @exception org.omg.CosNaming.NamingContextPackage.InvalidName Indicates that the name is invalid. <p>
 	*/
-	@:overload @:public @:public public function rebind(n : java.NativeArray<org.omg.CosNaming.NameComponent>, obj : org.omg.CORBA.Object) : Void;
+	@:overload @:public public function rebind(n : java.NativeArray<org.omg.CosNaming.NameComponent>, obj : org.omg.CORBA.Object) : Void;
 	
 	/** 
 	* The unbind operation removes a name binding from a context.
@@ -171,14 +171,14 @@ extern class NamingContextPOA extends org.omg.PortableServer.Servant implements 
 	* 
 	* @exception org.omg.CosNaming.NamingContextPackage.InvalidName Indicates that the name is invalid. <p>
 	*/
-	@:overload @:public @:public public function unbind(n : java.NativeArray<org.omg.CosNaming.NameComponent>) : Void;
+	@:overload @:public public function unbind(n : java.NativeArray<org.omg.CosNaming.NameComponent>) : Void;
 	
 	/**
 	* This operation returns a naming context implemented by the same
 	* naming server as the context on which the operation was invoked. 
 	* The new context is not bound to any name.
 	*/
-	@:overload @:public @:public public function new_context() : org.omg.CosNaming.NamingContext;
+	@:overload @:public public function new_context() : org.omg.CosNaming.NamingContext;
 	
 	/**
 	* Creates a binding of a name and an object in the naming context.
@@ -203,7 +203,7 @@ extern class NamingContextPOA extends org.omg.PortableServer.Servant implements 
 	* @exception org.omg.CosNaming.NamingContextPackage.AlreadyBound 
 	* Indicates an object is already bound to the specified name.<p> 
 	*/
-	@:overload @:public @:public public function bind(n : java.NativeArray<org.omg.CosNaming.NameComponent>, obj : org.omg.CORBA.Object) : Void;
+	@:overload @:public public function bind(n : java.NativeArray<org.omg.CosNaming.NameComponent>, obj : org.omg.CORBA.Object) : Void;
 	
 	
 }

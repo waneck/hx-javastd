@@ -36,7 +36,7 @@ extern interface XMLComponentManager
 	* @param featureId The feature identifier.
 	* @param defaultValue Default value if future is not available.
 	*/
-	@:overload @:public @:public public function getFeature(featureId : String, defaultValue : Bool) : Bool;
+	@:overload @:public public function getFeature(featureId : String, defaultValue : Bool) : Bool;
 	
 	/**
 	* Returns the value of a property.
@@ -55,11 +55,11 @@ extern interface XMLComponentManager
 	* @param defaultObject Return value if property is not available.
 	*
 	*/
-	@:overload @:public @:public public function getProperty(propertyId : String, defaultObject : Dynamic) : Dynamic;
+	@:overload @:public public function getProperty(propertyId : String, defaultObject : Dynamic) : Dynamic;
 	
-	@:overload @:public @:public public function getFeatureState(featureId : String) : com.sun.org.apache.xerces.internal.util.FeatureState;
+	@:overload @:public public function getFeatureState(featureId : String) : com.sun.org.apache.xerces.internal.util.FeatureState;
 	
-	@:overload @:public @:public public function getPropertyState(propertyId : String) : com.sun.org.apache.xerces.internal.util.PropertyState;
+	@:overload @:public public function getPropertyState(propertyId : String) : com.sun.org.apache.xerces.internal.util.PropertyState;
 	
 	
 }

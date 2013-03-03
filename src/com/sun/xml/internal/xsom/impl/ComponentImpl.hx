@@ -54,12 +54,12 @@ extern class ComponentImpl implements com.sun.xml.internal.xsom.XSComponent
 	/**
 	* Accepts a functor.
 	*/
-	@:overload @:public @:public override public function apply<T>(_function : com.sun.xml.internal.xsom.visitor.XSFunction<T>) : T;
+	@:overload @:public public function apply<T>(_function : com.sun.xml.internal.xsom.visitor.XSFunction<T>) : T;
 	
 	/**
 	* Accepts a visitor.
 	*/
-	@:overload @:public @:public override public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
+	@:overload @:public public function visit(visitor : com.sun.xml.internal.xsom.visitor.XSVisitor) : Void;
 	
 	
 }

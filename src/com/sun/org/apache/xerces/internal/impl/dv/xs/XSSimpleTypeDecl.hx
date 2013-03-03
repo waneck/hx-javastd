@@ -559,7 +559,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	*         this list
 	* @throws NullPointerException if the specified array is null
 	*/
-	@:overload @:public @:public @:public override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
+	@:overload @:public override public function toArray<T>(a : java.NativeArray<T>) : java.NativeArray<T>;
 	
 	/**
 	* Appends the specified element to the end of this list (optional
@@ -583,7 +583,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	* @throws IllegalArgumentException if some property of this element
 	*         prevents it from being added to this list
 	*/
-	@:overload @:public @:public override public function add(e : Dynamic) : Bool;
+	@:overload @:public override public function add(e : Dynamic) : Bool;
 	
 	/**
 	* Returns <tt>true</tt> if this list contains all of the elements of the
@@ -603,7 +603,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	*         or if the specified collection is null
 	* @see #contains(Object)
 	*/
-	@:overload @:public @:public @:public override public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function containsAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Retains only the elements in this list that are contained in the
@@ -625,7 +625,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	* @see #remove(Object)
 	* @see #contains(Object)
 	*/
-	@:overload @:public @:public @:public override public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function retainAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Removes from this list all of its elements that are contained in the
@@ -645,7 +645,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	* @see #remove(Object)
 	* @see #contains(Object)
 	*/
-	@:overload @:public @:public @:public override public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function removeAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Inserts all of the elements in the specified collection into this
@@ -674,7 +674,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	* @throws IndexOutOfBoundsException if the index is out of range
 	*         (<tt>index &lt; 0 || index &gt; size()</tt>)
 	*/
-	@:overload @:public @:public override public function addAll(index : Int, c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function addAll(index : Int, c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Returns a list iterator over the elements in this list (in proper
@@ -691,7 +691,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	* @throws IndexOutOfBoundsException if the index is out of range
 	*         ({@code index < 0 || index > size()})
 	*/
-	@:overload @:public @:public override public function listIterator(index : Int) : java.util.ListIterator<Dynamic>;
+	@:overload @:public override public function listIterator(index : Int) : java.util.ListIterator<Dynamic>;
 	
 	/**
 	* Appends all of the elements in the specified collection to the end of
@@ -714,7 +714,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	*         specified collection prevents it from being added to this list
 	* @see #add(Object)
 	*/
-	@:overload @:public @:public @:public override public function addAll(c : java.util.Collection<Dynamic>) : Bool;
+	@:overload @:public override public function addAll(c : java.util.Collection<Dynamic>) : Bool;
 	
 	/**
 	* Replaces the element at the specified position in this list with the
@@ -734,13 +734,13 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	* @throws IndexOutOfBoundsException if the index is out of range
 	*         (<tt>index &lt; 0 || index &gt;= size()</tt>)
 	*/
-	@:overload @:public @:public override public function set(index : Int, element : Dynamic) : Dynamic;
+	@:overload @:public override public function set(index : Int, element : Dynamic) : Dynamic;
 	
 	/**
 	* The number of <code>Object</code>s in the list. The range of
 	* valid child object indices is 0 to <code>length-1</code> inclusive.
 	*/
-	@:overload @:public @:public public function getLength() : Int;
+	@:overload @:public public function getLength() : Int;
 	
 	/**
 	* Returns the <code>index</code>th item in the collection or
@@ -752,7 +752,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	*   the index specified is not valid - greater than or equal to the
 	*   number of items in the list or less than zero.
 	*/
-	@:overload @:public @:public public function item(index : Int) : Dynamic;
+	@:overload @:public public function item(index : Int) : Dynamic;
 	
 	/**
 	* Returns an array containing all of the elements in this list in proper
@@ -770,7 +770,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	*         sequence
 	* @see Arrays#asList(Object[])
 	*/
-	@:overload @:public @:public @:public override public function toArray() : java.NativeArray<Dynamic>;
+	@:overload @:public override public function toArray() : java.NativeArray<Dynamic>;
 	
 	/**
 	* Returns a list iterator over the elements in this list (in proper
@@ -779,7 +779,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	* @return a list iterator over the elements in this list (in proper
 	*         sequence)
 	*/
-	@:overload @:public @:public override public function listIterator() : java.util.ListIterator<Dynamic>;
+	@:overload @:public override public function listIterator() : java.util.ListIterator<Dynamic>;
 	
 	/**
 	* Returns a view of the portion of this list between the specified
@@ -815,14 +815,14 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	*         (<tt>fromIndex &lt; 0 || toIndex &gt; size ||
 	*         fromIndex &gt; toIndex</tt>)
 	*/
-	@:overload @:public @:public override public function subList(fromIndex : Int, toIndex : Int) : java.util.List<Dynamic>;
+	@:overload @:public override public function subList(fromIndex : Int, toIndex : Int) : java.util.List<Dynamic>;
 	
 	/**
 	* Returns <tt>true</tt> if this list contains no elements.
 	*
 	* @return <tt>true</tt> if this list contains no elements
 	*/
-	@:overload @:public @:public @:public override public function isEmpty() : Bool;
+	@:overload @:public override public function isEmpty() : Bool;
 	
 	/**
 	* Inserts the specified element at the specified position in this list
@@ -843,7 +843,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	* @throws IndexOutOfBoundsException if the index is out of range
 	*         (<tt>index &lt; 0 || index &gt; size()</tt>)
 	*/
-	@:overload @:public @:public override public function add(index : Int, element : Dynamic) : Void;
+	@:overload @:public override public function add(index : Int, element : Dynamic) : Void;
 	
 	/**
 	* Removes the element at the specified position in this list (optional
@@ -858,7 +858,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	* @throws IndexOutOfBoundsException if the index is out of range
 	*         (<tt>index &lt; 0 || index &gt;= size()</tt>)
 	*/
-	@:overload @:public @:public override public function remove(index : Int) : Dynamic;
+	@:overload @:public override public function remove(index : Int) : Dynamic;
 	
 	/**
 	* Removes the first occurrence of the specified element from this list,
@@ -881,7 +881,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	* @throws UnsupportedOperationException if the <tt>remove</tt> operation
 	*         is not supported by this list
 	*/
-	@:overload @:public @:public @:public override public function remove(o : Dynamic) : Bool;
+	@:overload @:public override public function remove(o : Dynamic) : Bool;
 	
 	/**
 	* Removes all of the elements from this list (optional operation).
@@ -890,7 +890,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	* @throws UnsupportedOperationException if the <tt>clear</tt> operation
 	*         is not supported by this list
 	*/
-	@:overload @:public @:public override public function clear() : Void;
+	@:overload @:public override public function clear() : Void;
 	
 	/**
 	* Returns the index of the last occurrence of the specified element
@@ -909,14 +909,14 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	*         list does not permit null elements
 	*         (<a href="Collection.html#optional-restrictions">optional</a>)
 	*/
-	@:overload @:public @:public override public function lastIndexOf(o : Dynamic) : Int;
+	@:overload @:public override public function lastIndexOf(o : Dynamic) : Int;
 	
 	/**
 	* Returns an iterator over the elements in this list in proper sequence.
 	*
 	* @return an iterator over the elements in this list in proper sequence
 	*/
-	@:overload @:public @:public override public function iterator() : java.util.Iterator<Dynamic>;
+	@:overload @:public override public function iterator() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Checks if the <code>Object</code> <code>item</code> is a
@@ -926,7 +926,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	* @return  True if this list contains the <code>Object</code>
 	*   <code>item</code>.
 	*/
-	@:overload @:public @:public override public function contains(item : Dynamic) : Bool;
+	@:overload @:public override public function contains(item : Dynamic) : Bool;
 	
 	/**
 	* Returns the index of the first occurrence of the specified element
@@ -945,7 +945,7 @@ extern class XSSimpleTypeDecl implements com.sun.org.apache.xerces.internal.impl
 	*         list does not permit null elements
 	*         (<a href="Collection.html#optional-restrictions">optional</a>)
 	*/
-	@:overload @:public @:public override public function indexOf(o : Dynamic) : Int;
+	@:overload @:public override public function indexOf(o : Dynamic) : Int;
 	
 	
 }

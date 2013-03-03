@@ -271,7 +271,7 @@ extern class BasicParserConfiguration extends com.sun.org.apache.xerces.internal
 	* @throws XMLConfigurationException Thrown if there is a configuration
 	*                                   error.
 	*/
-	@:overload @:public @:public override public function getFeature(featureId : String) : Bool;
+	@:overload @:public override public function getFeature(featureId : String) : Bool;
 	
 	/**
 	* Returns the state of a feature.
@@ -280,9 +280,9 @@ extern class BasicParserConfiguration extends com.sun.org.apache.xerces.internal
 	* @param featureId The feature identifier.
 	* @param defaultValue Default value if future is not available.
 	*/
-	@:overload @:public @:public override public function getFeature(featureId : String, defaultValue : Bool) : Bool;
+	@:overload @:public override public function getFeature(featureId : String, defaultValue : Bool) : Bool;
 	
-	@:overload @:public @:public override public function getPropertyState(propertyId : String) : com.sun.org.apache.xerces.internal.util.PropertyState;
+	@:overload @:public override public function getPropertyState(propertyId : String) : com.sun.org.apache.xerces.internal.util.PropertyState;
 	
 	/**
 	* Allows a parser to add parser specific features to be recognized
@@ -291,7 +291,7 @@ extern class BasicParserConfiguration extends com.sun.org.apache.xerces.internal
 	* @param featureIds An array of the additional feature identifiers
 	*                   to be recognized.
 	*/
-	@:overload @:public @:public override public function addRecognizedFeatures(featureIds : java.NativeArray<String>) : Void;
+	@:overload @:public override public function addRecognizedFeatures(featureIds : java.NativeArray<String>) : Void;
 	
 	/**
 	* Allows a parser to add parser specific properties to be recognized
@@ -300,9 +300,9 @@ extern class BasicParserConfiguration extends com.sun.org.apache.xerces.internal
 	* @param propertyIds An array of the additional property identifiers
 	*                    to be recognized.
 	*/
-	@:overload @:public @:public override public function addRecognizedProperties(propertyIds : java.NativeArray<String>) : Void;
+	@:overload @:public override public function addRecognizedProperties(propertyIds : java.NativeArray<String>) : Void;
 	
-	@:overload @:public @:public override public function getFeatureState(featureId : String) : com.sun.org.apache.xerces.internal.util.FeatureState;
+	@:overload @:public override public function getFeatureState(featureId : String) : com.sun.org.apache.xerces.internal.util.FeatureState;
 	
 	/**
 	* Returns the value of a property.
@@ -312,7 +312,7 @@ extern class BasicParserConfiguration extends com.sun.org.apache.xerces.internal
 	* @throws XMLConfigurationException Thrown if there is a configuration
 	*                                   error.
 	*/
-	@:overload @:public @:public override public function getProperty(propertyId : String) : Dynamic;
+	@:overload @:public override public function getProperty(propertyId : String) : Dynamic;
 	
 	/**
 	* Returns the value of a property.
@@ -322,7 +322,7 @@ extern class BasicParserConfiguration extends com.sun.org.apache.xerces.internal
 	* @param defaultObject Return value if property is not available.
 	*
 	*/
-	@:overload @:public @:public override public function getProperty(propertyId : String, defaultObject : Dynamic) : Dynamic;
+	@:overload @:public override public function getProperty(propertyId : String, defaultObject : Dynamic) : Dynamic;
 	
 	
 }

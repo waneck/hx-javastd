@@ -48,14 +48,14 @@ package com.sun.org.apache.xerces.internal.jaxp.validation;
 	* @return whether the schema components contained in this object
 	* can be considered to be a fully composed schema
 	*/
-	@:overload @:public @:public public function isFullyComposed() : Bool;
+	@:overload @:public public function isFullyComposed() : Bool;
 	
 	/**
 	* <p>Returns the grammar pool contained inside the container.</p>
 	*
 	* @return the grammar pool contained inside the container
 	*/
-	@:overload @:public @:public public function getGrammarPool() : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool;
+	@:overload @:public public function getGrammarPool() : com.sun.org.apache.xerces.internal.xni.grammars.XMLGrammarPool;
 	
 	
 }

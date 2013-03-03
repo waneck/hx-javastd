@@ -31,15 +31,15 @@ extern interface TextLineComponent
 {
 	@:overload @:public public function getCoreMetrics() : sun.font.CoreMetrics;
 	
-	@:overload @:public @:public public function draw(g2d : java.awt.Graphics2D, x : Single, y : Single) : Void;
+	@:overload @:public public function draw(g2d : java.awt.Graphics2D, x : Single, y : Single) : Void;
 	
 	@:overload @:public public function getCharVisualBounds(index : Int) : java.awt.geom.Rectangle2D;
 	
-	@:overload @:public @:public public function getVisualBounds() : java.awt.geom.Rectangle2D;
+	@:overload @:public public function getVisualBounds() : java.awt.geom.Rectangle2D;
 	
-	@:overload @:public @:public public function getAdvance() : Single;
+	@:overload @:public public function getAdvance() : Single;
 	
-	@:overload @:public @:public public function getOutline(x : Single, y : Single) : java.awt.Shape;
+	@:overload @:public public function getOutline(x : Single, y : Single) : java.awt.Shape;
 	
 	@:overload @:public public function getNumCharacters() : Int;
 	
@@ -55,15 +55,15 @@ extern interface TextLineComponent
 	
 	@:overload @:public public function getAdvanceBetween(start : Int, limit : Int) : Single;
 	
-	@:overload @:public @:public public function getLogicalBounds() : java.awt.geom.Rectangle2D;
+	@:overload @:public public function getLogicalBounds() : java.awt.geom.Rectangle2D;
 	
-	@:overload @:public @:public public function getItalicBounds() : java.awt.geom.Rectangle2D;
+	@:overload @:public public function getItalicBounds() : java.awt.geom.Rectangle2D;
 	
-	@:overload @:public @:public public function getBaselineTransform() : java.awt.geom.AffineTransform;
+	@:overload @:public public function getBaselineTransform() : java.awt.geom.AffineTransform;
 	
-	@:overload @:public @:public public function isSimple() : Bool;
+	@:overload @:public public function isSimple() : Bool;
 	
-	@:overload @:public @:public public function getPixelBounds(frc : java.awt.font.FontRenderContext, x : Single, y : Single) : java.awt.Rectangle;
+	@:overload @:public public function getPixelBounds(frc : java.awt.font.FontRenderContext, x : Single, y : Single) : java.awt.Rectangle;
 	
 	/**
 	* Return a TextLineComponent for the characters in the range

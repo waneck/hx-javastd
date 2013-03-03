@@ -37,9 +37,9 @@ extern class ParserDataBase implements com.sun.corba.se.spi.orb.ParserData
 	
 	@:overload @:public public function getTestValue() : Dynamic;
 	
-	@:overload @:public @:public public function addToProperties(props : java.util.Properties) : Void;
+	@:overload @:public public function addToProperties(props : java.util.Properties) : Void;
 	
-	@:overload @:public @:public public function addToParser(parser : com.sun.corba.se.spi.orb.PropertyParser) : Void;
+	@:overload @:public public function addToParser(parser : com.sun.corba.se.spi.orb.PropertyParser) : Void;
 	
 	
 }

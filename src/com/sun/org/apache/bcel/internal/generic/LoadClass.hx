@@ -84,7 +84,7 @@ extern interface LoadClass
 	* an int[][].
 	* @see #getLoadClassType(ConstantPoolGen)
 	*/
-	@:overload @:public @:public public function getType(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload @:public public function getType(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
 	
 	
 }

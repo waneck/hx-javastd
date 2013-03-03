@@ -174,7 +174,7 @@ package java.nio.channels;
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload @:public @:public public function read(dsts : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int) : haxe.Int64;
+	@:overload @:public public function read(dsts : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int) : haxe.Int64;
 	
 	/**
 	* Reads a sequence of bytes from this channel into the given buffer.
@@ -232,14 +232,14 @@ package java.nio.channels;
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload @:public @:public public function read(dst : java.nio.ByteBuffer) : Int;
+	@:overload @:public public function read(dst : java.nio.ByteBuffer) : Int;
 	
 	/**
 	* Tells whether or not this channel is open.  </p>
 	*
 	* @return <tt>true</tt> if, and only if, this channel is open
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function isOpen() : Bool;
+	@:overload @:public override public function isOpen() : Bool;
 	
 	/**
 	* Reads a sequence of bytes from this channel into the given buffers.
@@ -275,7 +275,7 @@ package java.nio.channels;
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload @:public @:public public function read(dsts : java.NativeArray<java.nio.ByteBuffer>) : haxe.Int64;
+	@:overload @:public public function read(dsts : java.NativeArray<java.nio.ByteBuffer>) : haxe.Int64;
 	
 	/**
 	* Closes this channel.
@@ -294,7 +294,7 @@ package java.nio.channels;
 	*
 	* @throws  IOException  If an I/O error occurs
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }
@@ -395,7 +395,7 @@ package java.nio.channels;
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload @:public @:public public function write(srcs : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int) : haxe.Int64;
+	@:overload @:public public function write(srcs : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int) : haxe.Int64;
 	
 	/**
 	* Writes a sequence of bytes to this channel from the given buffer.
@@ -448,7 +448,7 @@ package java.nio.channels;
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload @:public @:public public function write(src : java.nio.ByteBuffer) : Int;
+	@:overload @:public public function write(src : java.nio.ByteBuffer) : Int;
 	
 	/**
 	* Writes a sequence of bytes to this channel from the given buffers.
@@ -483,14 +483,14 @@ package java.nio.channels;
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload @:public @:public public function write(srcs : java.NativeArray<java.nio.ByteBuffer>) : haxe.Int64;
+	@:overload @:public public function write(srcs : java.NativeArray<java.nio.ByteBuffer>) : haxe.Int64;
 	
 	/**
 	* Tells whether or not this channel is open.  </p>
 	*
 	* @return <tt>true</tt> if, and only if, this channel is open
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function isOpen() : Bool;
+	@:overload @:public override public function isOpen() : Bool;
 	
 	/**
 	* Closes this channel.
@@ -509,7 +509,7 @@ package java.nio.channels;
 	*
 	* @throws  IOException  If an I/O error occurs
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function close() : Void;
+	@:overload @:public override public function close() : Void;
 	
 	
 }

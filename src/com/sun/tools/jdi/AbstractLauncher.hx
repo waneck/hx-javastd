@@ -39,7 +39,7 @@ package com.sun.tools.jdi;
 	*
 	* @return the {@link Transport} used by this connector.
 	*/
-	@:overload @:public @:public override public function transport() : com.sun.jdi.connect.Transport;
+	@:overload @:public override public function transport() : com.sun.jdi.connect.Transport;
 	
 	/**
 	* Returns the arguments accepted by this Connector and their

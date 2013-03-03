@@ -86,7 +86,7 @@ extern class X509ExtendedKeyManager implements javax.net.ssl.X509KeyManager
 	* @return the alias name for the desired key, or null if there
 	*          are no matches.
 	*/
-	@:overload @:public @:public public function chooseServerAlias(keyType : String, issuers : java.NativeArray<java.security.Principal>, socket : java.net.Socket) : String;
+	@:overload @:public public function chooseServerAlias(keyType : String, issuers : java.NativeArray<java.security.Principal>, socket : java.net.Socket) : String;
 	
 	/**
 	* Get the matching aliases for authenticating the client side of a secure
@@ -99,7 +99,7 @@ extern class X509ExtendedKeyManager implements javax.net.ssl.X509KeyManager
 	* @return an array of the matching alias names, or null if there
 	*          were no matches.
 	*/
-	@:overload @:public @:public public function getClientAliases(keyType : String, issuers : java.NativeArray<java.security.Principal>) : java.NativeArray<String>;
+	@:overload @:public public function getClientAliases(keyType : String, issuers : java.NativeArray<java.security.Principal>) : java.NativeArray<String>;
 	
 	/**
 	* Get the matching aliases for authenticating the server side of a secure
@@ -112,7 +112,7 @@ extern class X509ExtendedKeyManager implements javax.net.ssl.X509KeyManager
 	* @return an array of the matching alias names, or null
 	*          if there were no matches.
 	*/
-	@:overload @:public @:public public function getServerAliases(keyType : String, issuers : java.NativeArray<java.security.Principal>) : java.NativeArray<String>;
+	@:overload @:public public function getServerAliases(keyType : String, issuers : java.NativeArray<java.security.Principal>) : java.NativeArray<String>;
 	
 	/**
 	* Choose an alias to authenticate the client side of a secure
@@ -130,7 +130,7 @@ extern class X509ExtendedKeyManager implements javax.net.ssl.X509KeyManager
 	* @return the alias name for the desired key, or null if there
 	*          are no matches.
 	*/
-	@:overload @:public @:public public function chooseClientAlias(keyType : java.NativeArray<String>, issuers : java.NativeArray<java.security.Principal>, socket : java.net.Socket) : String;
+	@:overload @:public public function chooseClientAlias(keyType : java.NativeArray<String>, issuers : java.NativeArray<java.security.Principal>, socket : java.net.Socket) : String;
 	
 	/**
 	* Returns the certificate chain associated with the given alias.
@@ -140,7 +140,7 @@ extern class X509ExtendedKeyManager implements javax.net.ssl.X509KeyManager
 	*          and the root certificate authority last), or null
 	*          if the alias can't be found.
 	*/
-	@:overload @:public @:public public function getCertificateChain(alias : String) : java.NativeArray<java.security.cert.X509Certificate>;
+	@:overload @:public public function getCertificateChain(alias : String) : java.NativeArray<java.security.cert.X509Certificate>;
 	
 	/**
 	* Returns the key associated with the given alias.
@@ -148,7 +148,7 @@ extern class X509ExtendedKeyManager implements javax.net.ssl.X509KeyManager
 	* @param alias the alias name
 	* @return the requested key, or null if the alias can't be found.
 	*/
-	@:overload @:public @:public public function getPrivateKey(alias : String) : java.security.PrivateKey;
+	@:overload @:public public function getPrivateKey(alias : String) : java.security.PrivateKey;
 	
 	
 }

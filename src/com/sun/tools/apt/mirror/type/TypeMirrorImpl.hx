@@ -54,7 +54,7 @@ extern class TypeMirrorImpl implements com.sun.mirror.type.TypeMirror
 	*
 	* @param v the visitor operating on this type
 	*/
-	@:overload @:public @:public override public function accept(v : com.sun.mirror.util.TypeVisitor) : Void;
+	@:overload @:public public function accept(v : com.sun.mirror.util.TypeVisitor) : Void;
 	
 	
 }

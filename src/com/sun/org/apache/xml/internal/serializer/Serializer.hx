@@ -36,7 +36,7 @@ extern interface Serializer
 	*
 	* @param output The output stream
 	*/
-	@:overload @:public @:public public function setOutputStream(output : java.io.OutputStream) : Void;
+	@:overload @:public public function setOutputStream(output : java.io.OutputStream) : Void;
 	
 	/**
 	* Get the output stream where the events will be serialized to.
@@ -44,7 +44,7 @@ extern interface Serializer
 	* @return reference to the result stream, or null if only a writer was
 	* set.
 	*/
-	@:overload @:public @:public public function getOutputStream() : java.io.OutputStream;
+	@:overload @:public public function getOutputStream() : java.io.OutputStream;
 	
 	/**
 	* Specifies a writer to which the document should be serialized.
@@ -59,14 +59,14 @@ extern interface Serializer
 	*
 	* @param writer The output writer stream
 	*/
-	@:overload @:public @:public public function setWriter(writer : java.io.Writer) : Void;
+	@:overload @:public public function setWriter(writer : java.io.Writer) : Void;
 	
 	/**
 	* Get the character stream where the events will be serialized to.
 	*
 	* @return Reference to the result Writer, or null.
 	*/
-	@:overload @:public @:public public function getWriter() : java.io.Writer;
+	@:overload @:public public function getWriter() : java.io.Writer;
 	
 	/**
 	* Specifies an output format for this serializer. It the
@@ -99,14 +99,14 @@ extern interface Serializer
 	*
 	* @param format The output format to use, as a set of key/value pairs.
 	*/
-	@:overload @:public @:public public function setOutputFormat(format : java.util.Properties) : Void;
+	@:overload @:public public function setOutputFormat(format : java.util.Properties) : Void;
 	
 	/**
 	* Returns the output format properties for this serializer.
 	*
 	* @return The output format key/value pairs in use.
 	*/
-	@:overload @:public @:public public function getOutputFormat() : java.util.Properties;
+	@:overload @:public public function getOutputFormat() : java.util.Properties;
 	
 	/**
 	* Return a {@link ContentHandler} interface to provide SAX input to.

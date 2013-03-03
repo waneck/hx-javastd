@@ -205,7 +205,7 @@ extern class AbstractUnmarshallerImpl implements javax.xml.bind.Unmarshaller
 	*      If the Node parameter is null
 	* @see #unmarshal(org.w3c.dom.Node, Class)
 	*/
-	@:overload @:public @:public public function unmarshal(node : org.w3c.dom.Node) : Dynamic;
+	@:overload @:public public function unmarshal(node : org.w3c.dom.Node) : Dynamic;
 	
 	/**
 	* Get an unmarshaller handler object that can be used as a component in
@@ -221,7 +221,7 @@ extern class AbstractUnmarshallerImpl implements javax.xml.bind.Unmarshaller
 	* @return the unmarshaller handler object
 	* @see UnmarshallerHandler
 	*/
-	@:overload @:public @:public public function getUnmarshallerHandler() : javax.xml.bind.UnmarshallerHandler;
+	@:overload @:public public function getUnmarshallerHandler() : javax.xml.bind.UnmarshallerHandler;
 	
 	
 }

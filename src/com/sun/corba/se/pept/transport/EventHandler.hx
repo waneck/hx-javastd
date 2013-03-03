@@ -34,9 +34,9 @@ extern interface EventHandler
 	
 	@:overload @:public public function shouldUseSelectThreadToWait() : Bool;
 	
-	@:overload @:public @:public public function getChannel() : java.nio.channels.SelectableChannel;
+	@:overload @:public public function getChannel() : java.nio.channels.SelectableChannel;
 	
-	@:overload @:public @:public public function getInterestOps() : Int;
+	@:overload @:public public function getInterestOps() : Int;
 	
 	@:overload @:public public function setSelectionKey(selectionKey : java.nio.channels.SelectionKey) : Void;
 	
@@ -52,9 +52,9 @@ extern interface EventHandler
 	
 	@:overload @:public public function getWork() : com.sun.corba.se.spi.orbutil.threadpool.Work;
 	
-	@:overload @:public @:public public function getAcceptor() : com.sun.corba.se.pept.transport.Acceptor;
+	@:overload @:public public function getAcceptor() : com.sun.corba.se.pept.transport.Acceptor;
 	
-	@:overload @:public @:public public function getConnection() : com.sun.corba.se.pept.transport.Connection;
+	@:overload @:public public function getConnection() : com.sun.corba.se.pept.transport.Connection;
 	
 	
 }

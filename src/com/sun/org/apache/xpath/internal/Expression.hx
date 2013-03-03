@@ -381,7 +381,7 @@ extern class Expression implements java.io.Serializable implements com.sun.org.a
 	*              rewritten if needed.
 	* @param visitor The visitor whose appropriate method will be called.
 	*/
-	@:overload @:public @:public public function callVisitors(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
+	@:overload @:public public function callVisitors(owner : com.sun.org.apache.xpath.internal.ExpressionOwner, visitor : com.sun.org.apache.xpath.internal.XPathVisitor) : Void;
 	
 	
 }

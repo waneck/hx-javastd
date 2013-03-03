@@ -385,7 +385,7 @@ extern class XMLScanner implements com.sun.org.apache.xerces.internal.xni.parser
 	*
 	* @since Xerces 2.2.0
 	*/
-	@:require(java2) @:overload @:public @:public public function getFeatureDefault(featureId : String) : Null<Bool>;
+	@:require(java2) @:overload @:public public function getFeatureDefault(featureId : String) : Null<Bool>;
 	
 	/**
 	* Returns the default state for a property, or null if this
@@ -396,21 +396,21 @@ extern class XMLScanner implements com.sun.org.apache.xerces.internal.xni.parser
 	*
 	* @since Xerces 2.2.0
 	*/
-	@:require(java2) @:overload @:public @:public public function getPropertyDefault(propertyId : String) : Dynamic;
+	@:require(java2) @:overload @:public public function getPropertyDefault(propertyId : String) : Dynamic;
 	
 	/**
 	* Returns a list of property identifiers that are recognized by
 	* this component. This method may return null if no properties
 	* are recognized by this component.
 	*/
-	@:overload @:public @:public public function getRecognizedProperties() : java.NativeArray<String>;
+	@:overload @:public public function getRecognizedProperties() : java.NativeArray<String>;
 	
 	/**
 	* Returns a list of feature identifiers that are recognized by
 	* this component. This method may return null if no features
 	* are recognized by this component.
 	*/
-	@:overload @:public @:public public function getRecognizedFeatures() : java.NativeArray<String>;
+	@:overload @:public public function getRecognizedFeatures() : java.NativeArray<String>;
 	
 	
 }

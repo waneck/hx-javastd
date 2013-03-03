@@ -50,7 +50,7 @@ package javax.xml.ws;
 	*          avoid any overriding of a pre-configured handler
 	*          chain.
 	*/
-	@:overload @:public @:public public function setHandlerChain(chain : java.util.List<javax.xml.ws.handler.Handler<Dynamic>>) : Void;
+	@:overload @:public public function setHandlerChain(chain : java.util.List<javax.xml.ws.handler.Handler<Dynamic>>) : Void;
 	
 	/**
 	* Get the URI for this binding instance.

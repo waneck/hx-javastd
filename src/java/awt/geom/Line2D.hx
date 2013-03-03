@@ -641,7 +641,7 @@ extern class Line2D implements java.awt.Shape implements java.lang.Cloneable
 	* @see #getBounds
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:public @:public @:public @:public public function getBounds2D() : java.awt.geom.Rectangle2D;
+	@:require(java2) @:overload @:public public function getBounds2D() : java.awt.geom.Rectangle2D;
 	
 	
 }

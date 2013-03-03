@@ -195,7 +195,7 @@ extern class CPropertyInfo implements com.sun.xml.internal.bind.v2.model.core.Pr
 	* @return
 	*      always non-null.
 	*/
-	@:overload @:public @:public public function kind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
+	@:overload @:public public function kind() : com.sun.xml.internal.bind.v2.model.core.PropertyKind;
 	
 	/**
 	* Expected MIME type, if any.

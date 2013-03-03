@@ -129,7 +129,7 @@ extern class JType implements com.sun.codemodel.internal.JGenerable implements j
 	*/
 	@:overload @:public public function compareTo(o : com.sun.codemodel.internal.JType) : Int;
 	
-	@:overload @:public @:public @:public public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
 	/**
 	* Compares this object with the specified object for order.  Returns a
@@ -170,7 +170,7 @@ extern class JType implements com.sun.codemodel.internal.JGenerable implements j
 	* @throws ClassCastException if the specified object's type prevents it
 	*         from being compared to this object.
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function compareTo(o : Dynamic) : Int;
+	@:overload @:public public function compareTo(o : Dynamic) : Int;
 	
 	
 }

@@ -45,14 +45,14 @@ extern class DOMSignatureMethod extends org.jcp.xml.dsig.internal.dom.DOMStructu
 	*    <code>false</code> otherwise
 	* @throws NullPointerException if <code>feature</code> is <code>null</code>
 	*/
-	@:overload @:public @:public @:public override public function isFeatureSupported(feature : String) : Bool;
+	@:overload @:public override public function isFeatureSupported(feature : String) : Bool;
 	
 	/**
 	* Returns the algorithm URI of this <code>AlgorithmMethod</code>.
 	*
 	* @return the algorithm URI of this <code>AlgorithmMethod</code>
 	*/
-	@:overload @:public @:public public function getAlgorithm() : String;
+	@:overload @:public public function getAlgorithm() : String;
 	
 	
 }

@@ -73,19 +73,19 @@ extern interface Document extends org.w3c.dom.Node
 	*
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public public function getDoctype() : org.w3c.dom.DocumentType;
+	@:overload @:public public function getDoctype() : org.w3c.dom.DocumentType;
 	
 	/**
 	* The <code>DOMImplementation</code> object that handles this document. A
 	* DOM application may use objects from multiple implementations.
 	*/
-	@:overload @:public @:public public function getImplementation() : org.w3c.dom.DOMImplementation;
+	@:overload @:public public function getImplementation() : org.w3c.dom.DOMImplementation;
 	
 	/**
 	* This is a convenience attribute that allows direct access to the child
 	* node that is the document element of the document.
 	*/
-	@:overload @:public @:public public function getDocumentElement() : org.w3c.dom.Element;
+	@:overload @:public public function getDocumentElement() : org.w3c.dom.Element;
 	
 	/**
 	* Creates an element of the type specified. Note that the instance
@@ -110,27 +110,27 @@ extern interface Document extends org.w3c.dom.Node
 	*   name according to the XML version in use specified in the
 	*   <code>Document.xmlVersion</code> attribute.
 	*/
-	@:overload @:public @:public public function createElement(tagName : String) : org.w3c.dom.Element;
+	@:overload @:public public function createElement(tagName : String) : org.w3c.dom.Element;
 	
 	/**
 	* Creates an empty <code>DocumentFragment</code> object.
 	* @return A new <code>DocumentFragment</code>.
 	*/
-	@:overload @:public @:public public function createDocumentFragment() : org.w3c.dom.DocumentFragment;
+	@:overload @:public public function createDocumentFragment() : org.w3c.dom.DocumentFragment;
 	
 	/**
 	* Creates a <code>Text</code> node given the specified string.
 	* @param data The data for the node.
 	* @return The new <code>Text</code> object.
 	*/
-	@:overload @:public @:public public function createTextNode(data : String) : org.w3c.dom.Text;
+	@:overload @:public public function createTextNode(data : String) : org.w3c.dom.Text;
 	
 	/**
 	* Creates a <code>Comment</code> node given the specified string.
 	* @param data The data for the node.
 	* @return The new <code>Comment</code> object.
 	*/
-	@:overload @:public @:public public function createComment(data : String) : org.w3c.dom.Comment;
+	@:overload @:public public function createComment(data : String) : org.w3c.dom.Comment;
 	
 	/**
 	* Creates a <code>CDATASection</code> node whose value is the specified
@@ -140,7 +140,7 @@ extern interface Document extends org.w3c.dom.Node
 	* @exception DOMException
 	*   NOT_SUPPORTED_ERR: Raised if this document is an HTML document.
 	*/
-	@:overload @:public @:public public function createCDATASection(data : String) : org.w3c.dom.CDATASection;
+	@:overload @:public public function createCDATASection(data : String) : org.w3c.dom.CDATASection;
 	
 	/**
 	* Creates a <code>ProcessingInstruction</code> node given the specified
@@ -160,7 +160,7 @@ extern interface Document extends org.w3c.dom.Node
 	*   <code>Document.xmlVersion</code> attribute.
 	*   <br>NOT_SUPPORTED_ERR: Raised if this document is an HTML document.
 	*/
-	@:overload @:public @:public public function createProcessingInstruction(target : String, data : String) : org.w3c.dom.ProcessingInstruction;
+	@:overload @:public public function createProcessingInstruction(target : String, data : String) : org.w3c.dom.ProcessingInstruction;
 	
 	/**
 	* Creates an <code>Attr</code> of the given name. Note that the
@@ -178,7 +178,7 @@ extern interface Document extends org.w3c.dom.Node
 	*   name according to the XML version in use specified in the
 	*   <code>Document.xmlVersion</code> attribute.
 	*/
-	@:overload @:public @:public public function createAttribute(name : String) : org.w3c.dom.Attr;
+	@:overload @:public public function createAttribute(name : String) : org.w3c.dom.Attr;
 	
 	/**
 	* Creates an <code>EntityReference</code> object. In addition, if the
@@ -205,7 +205,7 @@ extern interface Document extends org.w3c.dom.Node
 	*   <code>Document.xmlVersion</code> attribute.
 	*   <br>NOT_SUPPORTED_ERR: Raised if this document is an HTML document.
 	*/
-	@:overload @:public @:public public function createEntityReference(name : String) : org.w3c.dom.EntityReference;
+	@:overload @:public public function createEntityReference(name : String) : org.w3c.dom.EntityReference;
 	
 	/**
 	* Returns a <code>NodeList</code> of all the <code>Elements</code> in
@@ -218,7 +218,7 @@ extern interface Document extends org.w3c.dom.Node
 	* @return A new <code>NodeList</code> object containing all the matched
 	*   <code>Elements</code>.
 	*/
-	@:overload @:public @:public public function getElementsByTagName(tagname : String) : org.w3c.dom.NodeList;
+	@:overload @:public public function getElementsByTagName(tagname : String) : org.w3c.dom.NodeList;
 	
 	/**
 	* Imports a node from another document to this document, without altering
@@ -331,7 +331,7 @@ extern interface Document extends org.w3c.dom.Node
 	*   into an XML 1.0 document, for instance.
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public public function importNode(importedNode : org.w3c.dom.Node, deep : Bool) : org.w3c.dom.Node;
+	@:overload @:public public function importNode(importedNode : org.w3c.dom.Node, deep : Bool) : org.w3c.dom.Node;
 	
 	/**
 	* Creates an element of the given qualified name and namespace URI.
@@ -393,7 +393,7 @@ extern interface Document extends org.w3c.dom.Node
 	*   defined by XML.
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public public function createElementNS(namespaceURI : String, qualifiedName : String) : org.w3c.dom.Element;
+	@:overload @:public public function createElementNS(namespaceURI : String, qualifiedName : String) : org.w3c.dom.Element;
 	
 	/**
 	* Creates an attribute of the given qualified name and namespace URI.
@@ -460,7 +460,7 @@ extern interface Document extends org.w3c.dom.Node
 	*   defined by XML.
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public public function createAttributeNS(namespaceURI : String, qualifiedName : String) : org.w3c.dom.Attr;
+	@:overload @:public public function createAttributeNS(namespaceURI : String, qualifiedName : String) : org.w3c.dom.Attr;
 	
 	/**
 	* Returns a <code>NodeList</code> of all the <code>Elements</code> with a
@@ -473,7 +473,7 @@ extern interface Document extends org.w3c.dom.Node
 	*   <code>Elements</code>.
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public public function getElementsByTagNameNS(namespaceURI : String, localName : String) : org.w3c.dom.NodeList;
+	@:overload @:public public function getElementsByTagNameNS(namespaceURI : String, localName : String) : org.w3c.dom.NodeList;
 	
 	/**
 	* Returns the <code>Element</code> that has an ID attribute with the
@@ -488,7 +488,7 @@ extern interface Document extends org.w3c.dom.Node
 	* @return The matching element or <code>null</code> if there is none.
 	* @since DOM Level 2
 	*/
-	@:overload @:public @:public public function getElementById(elementId : String) : org.w3c.dom.Element;
+	@:overload @:public public function getElementById(elementId : String) : org.w3c.dom.Element;
 	
 	/**
 	* An attribute specifying the encoding used for this document at the time
@@ -496,7 +496,7 @@ extern interface Document extends org.w3c.dom.Node
 	* as when the <code>Document</code> was created in memory.
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public public function getInputEncoding() : String;
+	@:overload @:public public function getInputEncoding() : String;
 	
 	/**
 	* An attribute specifying, as part of the <a href='http://www.w3.org/TR/2004/REC-xml-20040204#NT-XMLDecl'>XML declaration</a>, the encoding of this document. This is <code>null</code> when
@@ -504,7 +504,7 @@ extern interface Document extends org.w3c.dom.Node
 	* <code>Document</code> was created in memory.
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public public function getXmlEncoding() : String;
+	@:overload @:public public function getXmlEncoding() : String;
 	
 	/**
 	* An attribute specifying, as part of the <a href='http://www.w3.org/TR/2004/REC-xml-20040204#NT-XMLDecl'>XML declaration</a>, whether this document is standalone. This is <code>false</code> when
@@ -516,7 +516,7 @@ extern interface Document extends org.w3c.dom.Node
 	* constraint for standalone document declaration</a> as defined in [<a href='http://www.w3.org/TR/2004/REC-xml-20040204'>XML 1.0</a>].
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public public function getXmlStandalone() : Bool;
+	@:overload @:public public function getXmlStandalone() : Bool;
 	
 	/**
 	* An attribute specifying, as part of the <a href='http://www.w3.org/TR/2004/REC-xml-20040204#NT-XMLDecl'>XML declaration</a>, whether this document is standalone. This is <code>false</code> when
@@ -531,7 +531,7 @@ extern interface Document extends org.w3c.dom.Node
 	*   "XML" feature.
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public public function setXmlStandalone(xmlStandalone : Bool) : Void;
+	@:overload @:public public function setXmlStandalone(xmlStandalone : Bool) : Void;
 	
 	/**
 	*  An attribute specifying, as part of the <a href='http://www.w3.org/TR/2004/REC-xml-20040204#NT-XMLDecl'>XML declaration</a>, the version number of this document. If there is no declaration and if
@@ -557,7 +557,7 @@ extern interface Document extends org.w3c.dom.Node
 	* number when using <code>Document.xmlVersion</code>.
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public public function getXmlVersion() : String;
+	@:overload @:public public function getXmlVersion() : String;
 	
 	/**
 	*  An attribute specifying, as part of the <a href='http://www.w3.org/TR/2004/REC-xml-20040204#NT-XMLDecl'>XML declaration</a>, the version number of this document. If there is no declaration and if
@@ -587,7 +587,7 @@ extern interface Document extends org.w3c.dom.Node
 	*   does not support the "XML" feature.
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public public function setXmlVersion(xmlVersion : String) : Void;
+	@:overload @:public public function setXmlVersion(xmlVersion : String) : Void;
 	
 	/**
 	* An attribute specifying whether error checking is enforced or not. When
@@ -599,7 +599,7 @@ extern interface Document extends org.w3c.dom.Node
 	* <code>true</code> by default.
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public public function getStrictErrorChecking() : Bool;
+	@:overload @:public public function getStrictErrorChecking() : Bool;
 	
 	/**
 	* An attribute specifying whether error checking is enforced or not. When
@@ -611,7 +611,7 @@ extern interface Document extends org.w3c.dom.Node
 	* <code>true</code> by default.
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public public function setStrictErrorChecking(strictErrorChecking : Bool) : Void;
+	@:overload @:public public function setStrictErrorChecking(strictErrorChecking : Bool) : Void;
 	
 	/**
 	*  The location of the document or <code>null</code> if undefined or if
@@ -626,7 +626,7 @@ extern interface Document extends org.w3c.dom.Node
 	* this attribute when computing <code>Node.baseURI</code>.
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public public function getDocumentURI() : String;
+	@:overload @:public public function getDocumentURI() : String;
 	
 	/**
 	*  The location of the document or <code>null</code> if undefined or if
@@ -641,7 +641,7 @@ extern interface Document extends org.w3c.dom.Node
 	* this attribute when computing <code>Node.baseURI</code>.
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public public function setDocumentURI(documentURI : String) : Void;
+	@:overload @:public public function setDocumentURI(documentURI : String) : Void;
 	
 	/**
 	*  Attempts to adopt a node from another document to this document. If
@@ -712,14 +712,14 @@ extern interface Document extends org.w3c.dom.Node
 	*   readonly.
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public public function adoptNode(source : org.w3c.dom.Node) : org.w3c.dom.Node;
+	@:overload @:public public function adoptNode(source : org.w3c.dom.Node) : org.w3c.dom.Node;
 	
 	/**
 	*  The configuration used when <code>Document.normalizeDocument()</code>
 	* is invoked.
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public public function getDomConfig() : org.w3c.dom.DOMConfiguration;
+	@:overload @:public public function getDomConfig() : org.w3c.dom.DOMConfiguration;
 	
 	/**
 	*  This method acts as if the document was going through a save and load
@@ -753,7 +753,7 @@ extern interface Document extends org.w3c.dom.Node
 	* cannot recover from an error.
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public public function normalizeDocument() : Void;
+	@:overload @:public public function normalizeDocument() : Void;
 	
 	/**
 	* Rename an existing node of type <code>ELEMENT_NODE</code> or
@@ -822,7 +822,7 @@ extern interface Document extends org.w3c.dom.Node
 	*   <code>namespaceURI</code> is different from "<a href='http://www.w3.org/2000/xmlns/'>http://www.w3.org/2000/xmlns/</a>".
 	* @since DOM Level 3
 	*/
-	@:overload @:public @:public public function renameNode(n : org.w3c.dom.Node, namespaceURI : String, qualifiedName : String) : org.w3c.dom.Node;
+	@:overload @:public public function renameNode(n : org.w3c.dom.Node, namespaceURI : String, qualifiedName : String) : org.w3c.dom.Node;
 	
 	
 }

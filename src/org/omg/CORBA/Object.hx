@@ -65,7 +65,7 @@ extern interface Object
 	*         of a class that implements the interface;
 	*         <code>false</code> otherwise
 	*/
-	@:overload @:public @:public @:public public function _is_a(repositoryIdentifier : String) : Bool;
+	@:overload @:public public function _is_a(repositoryIdentifier : String) : Bool;
 	
 	/**
 	* Determines whether the two object references are equivalent,
@@ -82,7 +82,7 @@ extern interface Object
 	*         object references are distinct, not necessarily that
 	*         they reference distinct objects.
 	*/
-	@:overload @:public @:public @:public public function _is_equivalent(other : org.omg.CORBA.Object) : Bool;
+	@:overload @:public public function _is_equivalent(other : org.omg.CORBA.Object) : Bool;
 	
 	/**
 	* Determines whether the server object for this object reference has been
@@ -90,7 +90,7 @@ extern interface Object
 	* @return <code>true</code> if the ORB knows authoritatively that the
 	*         server object does not exist; <code>false</code> otherwise
 	*/
-	@:overload @:public @:public @:public public function _non_existent() : Bool;
+	@:overload @:public public function _non_existent() : Bool;
 	
 	/**
 	* Returns an ORB-internal identifier for this object reference.
@@ -106,7 +106,7 @@ extern interface Object
 	* @param maximum the upper bound on the hash value returned by the ORB
 	* @return the ORB-internal hash identifier for this object reference
 	*/
-	@:overload @:public @:public @:public public function _hash(maximum : Int) : Int;
+	@:overload @:public public function _hash(maximum : Int) : Int;
 	
 	/**
 	* Returns a duplicate of this CORBA object reference.
@@ -123,7 +123,7 @@ extern interface Object
 	* @return a duplicate of this object reference or this object reference
 	*         itself
 	*/
-	@:overload @:public @:public @:public public function _duplicate() : org.omg.CORBA.Object;
+	@:overload @:public public function _duplicate() : org.omg.CORBA.Object;
 	
 	/**
 	* Signals that the caller is done using this object reference, so
@@ -131,7 +131,7 @@ extern interface Object
 	* released. Note that the object implementation is not involved in
 	* this operation, and other references to the same object are not affected.
 	*/
-	@:overload @:public @:public @:public public function _release() : Void;
+	@:overload @:public public function _release() : Void;
 	
 	/**
 	* Obtains an <code>InterfaceDef</code> for the object implementation
@@ -144,7 +144,7 @@ extern interface Object
 	*         which provides type information about the object referred to by
 	*         this object reference
 	*/
-	@:overload @:public @:public @:public public function _get_interface_def() : org.omg.CORBA.Object;
+	@:overload @:public public function _get_interface_def() : org.omg.CORBA.Object;
 	
 	/**
 	* Creates a <code>Request</code> instance for use in the
@@ -154,7 +154,7 @@ extern interface Object
 	*                        <code>Request</code> instance
 	* @return the newly-created <code>Request</code> instance
 	*/
-	@:overload @:public @:public @:public public function _request(operation : String) : org.omg.CORBA.Request;
+	@:overload @:public public function _request(operation : String) : org.omg.CORBA.Request;
 	
 	/**
 	* Creates a <code>Request</code> instance initialized with the
@@ -174,7 +174,7 @@ extern interface Object
 	* @see NVList
 	* @see NamedValue
 	*/
-	@:overload @:public @:public @:public public function _create_request(ctx : org.omg.CORBA.Context, operation : String, arg_list : org.omg.CORBA.NVList, result : org.omg.CORBA.NamedValue) : org.omg.CORBA.Request;
+	@:overload @:public public function _create_request(ctx : org.omg.CORBA.Context, operation : String, arg_list : org.omg.CORBA.NVList, result : org.omg.CORBA.NamedValue) : org.omg.CORBA.Request;
 	
 	/**
 	* Creates a <code>Request</code> instance initialized with the
@@ -202,7 +202,7 @@ extern interface Object
 	* @see ExceptionList
 	* @see ContextList
 	*/
-	@:overload @:public @:public @:public public function _create_request(ctx : org.omg.CORBA.Context, operation : String, arg_list : org.omg.CORBA.NVList, result : org.omg.CORBA.NamedValue, exclist : org.omg.CORBA.ExceptionList, ctxlist : org.omg.CORBA.ContextList) : org.omg.CORBA.Request;
+	@:overload @:public public function _create_request(ctx : org.omg.CORBA.Context, operation : String, arg_list : org.omg.CORBA.NVList, result : org.omg.CORBA.NamedValue, exclist : org.omg.CORBA.ExceptionList, ctxlist : org.omg.CORBA.ContextList) : org.omg.CORBA.Request;
 	
 	/**
 	* Returns the <code>Policy</code> object of the specified type
@@ -216,7 +216,7 @@ extern interface Object
 	* ORB or because a policy object of that type is not associated with this
 	* Object
 	*/
-	@:overload @:public @:public @:public public function _get_policy(policy_type : Int) : org.omg.CORBA.Policy;
+	@:overload @:public public function _get_policy(policy_type : Int) : org.omg.CORBA.Policy;
 	
 	/**
 	* Retrieves the <code>DomainManagers</code> of this object.
@@ -229,7 +229,7 @@ extern interface Object
 	* default each object is associated with at least one domain manager at
 	* creation.
 	*/
-	@:overload @:public @:public @:public public function _get_domain_managers() : java.NativeArray<org.omg.CORBA.DomainManager>;
+	@:overload @:public public function _get_domain_managers() : java.NativeArray<org.omg.CORBA.DomainManager>;
 	
 	/**
 	* Returns a new <code>Object</code> with the given policies
@@ -247,7 +247,7 @@ extern interface Object
 	* @return a new <code>Object</code> with the given policies replacing
 	*         or added to those in this <code>Object</code>
 	*/
-	@:overload @:public @:public @:public public function _set_policy_override(policies : java.NativeArray<org.omg.CORBA.Policy>, set_add : org.omg.CORBA.SetOverrideType) : org.omg.CORBA.Object;
+	@:overload @:public public function _set_policy_override(policies : java.NativeArray<org.omg.CORBA.Policy>, set_add : org.omg.CORBA.SetOverrideType) : org.omg.CORBA.Object;
 	
 	
 }

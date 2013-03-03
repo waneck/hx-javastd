@@ -47,7 +47,7 @@ extern interface XMLComponent
 	* this component. This method may return null if no features
 	* are recognized by this component.
 	*/
-	@:overload @:public @:public public function getRecognizedFeatures() : java.NativeArray<String>;
+	@:overload @:public public function getRecognizedFeatures() : java.NativeArray<String>;
 	
 	/**
 	* Sets the state of a feature. This method is called by the component
@@ -72,7 +72,7 @@ extern interface XMLComponent
 	* this component. This method may return null if no properties
 	* are recognized by this component.
 	*/
-	@:overload @:public @:public public function getRecognizedProperties() : java.NativeArray<String>;
+	@:overload @:public public function getRecognizedProperties() : java.NativeArray<String>;
 	
 	/**
 	* Sets the value of a property. This method is called by the component
@@ -101,7 +101,7 @@ extern interface XMLComponent
 	*
 	* @since Xerces 2.2.0
 	*/
-	@:require(java2) @:overload @:public @:public public function getFeatureDefault(featureId : String) : Null<Bool>;
+	@:require(java2) @:overload @:public public function getFeatureDefault(featureId : String) : Null<Bool>;
 	
 	/**
 	* Returns the default state for a property, or null if this
@@ -112,7 +112,7 @@ extern interface XMLComponent
 	*
 	* @since Xerces 2.2.0
 	*/
-	@:require(java2) @:overload @:public @:public public function getPropertyDefault(propertyId : String) : Dynamic;
+	@:require(java2) @:overload @:public public function getPropertyDefault(propertyId : String) : Dynamic;
 	
 	
 }

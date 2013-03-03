@@ -189,7 +189,7 @@ extern class AbstractDiagnosticFormatter implements com.sun.tools.javac.api.Diag
 	* @param l locale object to be used for i18n
 	* @return a string representing the diagnostic
 	*/
-	@:overload @:public @:public public function format(diag : Dynamic, l : java.util.Locale) : String;
+	@:overload @:public public function format(diag : Dynamic, l : java.util.Locale) : String;
 	
 	/**
 	* Controls the way in which a diagnostic message is displayed.
@@ -198,7 +198,7 @@ extern class AbstractDiagnosticFormatter implements com.sun.tools.javac.api.Diag
 	* @param l locale object to be used for i18n
 	* @return string representation of the diagnostic message
 	*/
-	@:overload @:public @:public public function formatMessage(diag : Dynamic, l : java.util.Locale) : String;
+	@:overload @:public public function formatMessage(diag : Dynamic, l : java.util.Locale) : String;
 	
 	/**
 	* Controls the way in which a diagnostic kind is displayed.
@@ -207,7 +207,7 @@ extern class AbstractDiagnosticFormatter implements com.sun.tools.javac.api.Diag
 	* @param l locale object to be used for i18n
 	* @return string representation of the diagnostic prefix
 	*/
-	@:overload @:public @:public public function formatKind(diag : Dynamic, l : java.util.Locale) : String;
+	@:overload @:public public function formatKind(diag : Dynamic, l : java.util.Locale) : String;
 	
 	/**
 	* Controls the way in which a diagnostic position is displayed.
@@ -217,7 +217,7 @@ extern class AbstractDiagnosticFormatter implements com.sun.tools.javac.api.Diag
 	* @param l locale object to be used for i18n
 	* @return string representation of the diagnostic position
 	*/
-	@:overload @:public @:public public function formatPosition(diag : Dynamic, pk : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_PositionKind, l : java.util.Locale) : String;
+	@:overload @:public public function formatPosition(diag : Dynamic, pk : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_PositionKind, l : java.util.Locale) : String;
 	
 	/**
 	* Controls the way in which a diagnostic source is displayed.
@@ -227,7 +227,7 @@ extern class AbstractDiagnosticFormatter implements com.sun.tools.javac.api.Diag
 	* @param fullname whether the source fullname should be printed
 	* @return string representation of the diagnostic source
 	*/
-	@:overload @:public @:public public function formatSource(diag : Dynamic, fullname : Bool, l : java.util.Locale) : String;
+	@:overload @:public public function formatSource(diag : Dynamic, fullname : Bool, l : java.util.Locale) : String;
 	
 	
 }

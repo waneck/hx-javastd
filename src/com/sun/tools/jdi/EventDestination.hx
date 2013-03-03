@@ -90,7 +90,7 @@ extern class EventSetImpl extends java.util.ArrayList<com.sun.jdi.event.Event> i
 	*
 	* @return the {@link VirtualMachine} for which this mirror is a proxy.
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function virtualMachine() : com.sun.jdi.VirtualMachine;
+	@:overload @:public override public function virtualMachine() : com.sun.jdi.VirtualMachine;
 	
 	
 }
@@ -238,7 +238,7 @@ extern class EventSetImpl extends java.util.ArrayList<com.sun.jdi.event.Event> i
 	*
 	* @return the {@link VirtualMachine} for which this mirror is a proxy.
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public override public function virtualMachine() : com.sun.jdi.VirtualMachine;
+	@:overload @:public override public function virtualMachine() : com.sun.jdi.VirtualMachine;
 	
 	/**
 	* Returns the thread in which this event has occurred.
@@ -246,7 +246,7 @@ extern class EventSetImpl extends java.util.ArrayList<com.sun.jdi.event.Event> i
 	* @return a {@link ThreadReference} which mirrors the event's thread in
 	* the target VM.
 	*/
-	@:overload @:public @:public override public function thread() : com.sun.jdi.ThreadReference;
+	@:overload @:public override public function thread() : com.sun.jdi.ThreadReference;
 	
 	
 }

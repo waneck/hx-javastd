@@ -750,7 +750,7 @@ extern class Types
 	
 	@:overload @:public public function visitErrorType(t : com.sun.tools.javac.code.Type.Type_ErrorType, s : S) : R;
 	
-	@:overload @:public @:public public function visitType(t : com.sun.tools.javac.code.Type, s : S) : R;
+	@:overload @:public public function visitType(t : com.sun.tools.javac.code.Type, s : S) : R;
 	
 	
 }
@@ -782,7 +782,7 @@ extern class Types
 	
 	@:overload @:public public function visitVarSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_VarSymbol, arg : S) : R;
 	
-	@:overload @:public @:public public function visitSymbol(s : com.sun.tools.javac.code.Symbol, arg : Dynamic) : R;
+	@:overload @:public public function visitSymbol(s : com.sun.tools.javac.code.Symbol, arg : Dynamic) : R;
 	
 	
 }

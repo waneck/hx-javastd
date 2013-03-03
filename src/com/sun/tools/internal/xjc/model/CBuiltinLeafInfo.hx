@@ -160,14 +160,14 @@ extern class CBuiltinLeafInfo extends com.sun.xml.internal.bind.v2.model.impl.Bu
 	/**
 	* True if this type is a valid target from a property annotated with {@link XmlIDREF}.
 	*/
-	@:overload @:public @:public @:public @:public override public function canBeReferencedByIDREF() : Bool;
+	@:overload @:public override public function canBeReferencedByIDREF() : Bool;
 	
 	/**
 	* Gets the location object that this object points to.
 	*
 	* This operation could be inefficient and costly.
 	*/
-	@:overload @:public @:public @:public @:public override public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
+	@:overload @:public override public function getLocation() : com.sun.xml.internal.bind.v2.runtime.Location;
 	
 	/**
 	* Gets the primary XML type ANYTYPE_NAME of the class.
@@ -179,13 +179,13 @@ extern class CBuiltinLeafInfo extends com.sun.xml.internal.bind.v2.model.impl.Bu
 	* @return
 	*      null if the object doesn't have an explicit type ANYTYPE_NAME (AKA anonymous.)
 	*/
-	@:overload @:public @:public override public function getTypeName() : javax.xml.namespace.QName;
+	@:overload @:public override public function getTypeName() : javax.xml.namespace.QName;
 	
 	/**
 	* Returns true if this {@link NonElement} maps to text in XML,
 	* without any attribute nor child elements.
 	*/
-	@:overload @:public @:public override public function isSimpleType() : Bool;
+	@:overload @:public override public function isSimpleType() : Bool;
 	
 	/**
 	* Gets the upstream {@link Location} information.
@@ -193,7 +193,7 @@ extern class CBuiltinLeafInfo extends com.sun.xml.internal.bind.v2.model.impl.Bu
 	* @return
 	*      can be null.
 	*/
-	@:overload @:public @:public @:public override public function getUpstream() : com.sun.xml.internal.bind.v2.model.annotation.Locatable;
+	@:overload @:public override public function getUpstream() : com.sun.xml.internal.bind.v2.model.annotation.Locatable;
 	
 	/**
 	* Gets the underlying Java type that object represents.
@@ -201,7 +201,7 @@ extern class CBuiltinLeafInfo extends com.sun.xml.internal.bind.v2.model.impl.Bu
 	* @return
 	*      always non-null.
 	*/
-	@:overload @:public @:public @:public @:public @:public override public function getType() : Dynamic;
+	@:overload @:public override public function getType() : Dynamic;
 	
 	/**
 	* Gets the list of customizations attached to this model component.
@@ -212,7 +212,7 @@ extern class CBuiltinLeafInfo extends com.sun.xml.internal.bind.v2.model.impl.Bu
 	*
 	* @see Plugin#getCustomizationURIs()
 	*/
-	@:overload @:public @:public public function getCustomizations() : com.sun.tools.internal.xjc.model.CCustomizations;
+	@:overload @:public public function getCustomizations() : com.sun.tools.internal.xjc.model.CCustomizations;
 	
 	
 }

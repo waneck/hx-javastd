@@ -98,7 +98,7 @@ extern class InvokeInstruction extends com.sun.org.apache.bcel.internal.classfil
 	*/
 	@:overload @:public public function getArgumentTypes(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : java.NativeArray<com.sun.org.apache.bcel.internal.generic.Type>;
 	
-	@:overload @:public @:public public function getExceptions() : java.NativeArray<Class<Dynamic>>;
+	@:overload @:public public function getExceptions() : java.NativeArray<Class<Dynamic>>;
 	
 	
 }

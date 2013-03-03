@@ -196,7 +196,7 @@ extern class AbstractScriptEngine implements javax.script.ScriptEngine
 	*
 	* @return The <code>ScriptEngineFactory</code>
 	*/
-	@:overload @:public @:public public function getFactory() : javax.script.ScriptEngineFactory;
+	@:overload @:public public function getFactory() : javax.script.ScriptEngineFactory;
 	
 	/**
 	* Causes the immediate execution of the script whose source is the String
@@ -222,7 +222,7 @@ extern class AbstractScriptEngine implements javax.script.ScriptEngine
 	* implementations.
 	* @throws NullPointerException if either argument is null.
 	*/
-	@:overload @:public @:public public function eval(script : String, context : javax.script.ScriptContext) : Dynamic;
+	@:overload @:public public function eval(script : String, context : javax.script.ScriptContext) : Dynamic;
 	
 	/**
 	* Same as <code>eval(String, ScriptContext)</code> where the source of the script
@@ -237,14 +237,14 @@ extern class AbstractScriptEngine implements javax.script.ScriptEngine
 	* @throws ScriptException if an error occurrs in script.
 	* @throws NullPointerException if either argument is null.
 	*/
-	@:overload @:public @:public public function eval(reader : java.io.Reader, context : javax.script.ScriptContext) : Dynamic;
+	@:overload @:public public function eval(reader : java.io.Reader, context : javax.script.ScriptContext) : Dynamic;
 	
 	/**
 	* Returns an uninitialized <code>Bindings</code>.
 	*
 	* @return A <code>Bindings</code> that can be used to replace the state of this <code>ScriptEngine</code>.
 	**/
-	@:overload @:public @:public public function createBindings() : javax.script.Bindings;
+	@:overload @:public public function createBindings() : javax.script.Bindings;
 	
 	
 }

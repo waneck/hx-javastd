@@ -85,7 +85,7 @@ extern class CorbaContactInfoBase implements com.sun.corba.se.spi.transport.Corb
 	* {@link com.sun.corba.se.pept.transport.Connection Connection}
 	* will be used for an invocation.
 	*/
-	@:overload @:public @:public public function isConnectionBased() : Bool;
+	@:overload @:public public function isConnectionBased() : Bool;
 	
 	/**
 	* PEPt uses separate caches for each type of <code>ContactInfo</code>
@@ -93,7 +93,7 @@ extern class CorbaContactInfoBase implements com.sun.corba.se.spi.transport.Corb
 	*
 	* @return {@link java.lang.String}
 	*/
-	@:overload @:public @:public public function getConnectionCacheType() : String;
+	@:overload @:public public function getConnectionCacheType() : String;
 	
 	/**
 	* Used to get a
@@ -104,9 +104,9 @@ extern class CorbaContactInfoBase implements com.sun.corba.se.spi.transport.Corb
 	* @return
 	* {@link com.sun.corba.se.pept.transport.Connection Connection}
 	*/
-	@:overload @:public @:public public function createConnection() : com.sun.corba.se.pept.transport.Connection;
+	@:overload @:public public function createConnection() : com.sun.corba.se.pept.transport.Connection;
 	
-	@:overload @:public @:public public function getMonitoringName() : String;
+	@:overload @:public public function getMonitoringName() : String;
 	
 	/**
 	* Used to determine if the
@@ -122,7 +122,7 @@ extern class CorbaContactInfoBase implements com.sun.corba.se.spi.transport.Corb
 	* {@link com.sun.corba.se.pept.transport.Connection Connection}s
 	* created by this <code>ContactInfo</code> should be cached.
 	*/
-	@:overload @:public @:public public function shouldCacheConnection() : Bool;
+	@:overload @:public public function shouldCacheConnection() : Bool;
 	
 	
 }

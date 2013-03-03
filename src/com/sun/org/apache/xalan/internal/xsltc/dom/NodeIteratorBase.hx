@@ -118,17 +118,17 @@ extern class NodeIteratorBase implements com.sun.org.apache.xalan.internal.xsltc
 	/**
 	* Callers should not call next() after it returns END.
 	*/
-	@:overload @:public @:public public function next() : Int;
+	@:overload @:public public function next() : Int;
 	
 	/**
 	* Remembers the current node for the next call to gotoMark().
 	*/
-	@:overload @:public @:public public function setMark() : Void;
+	@:overload @:public public function setMark() : Void;
 	
 	/**
 	* Restores the current node remembered by setMark().
 	*/
-	@:overload @:public @:public public function gotoMark() : Void;
+	@:overload @:public public function gotoMark() : Void;
 	
 	
 }

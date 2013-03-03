@@ -284,19 +284,19 @@ extern class XMLEntityReader implements com.sun.org.apache.xerces.internal.xni.X
 	@:overload @:public @:abstract public function registerListener(listener : com.sun.xml.internal.stream.XMLBufferListener) : Void;
 	
 	/** Returns the expanded system identifier. */
-	@:overload @:public @:public public function getExpandedSystemId() : String;
+	@:overload @:public public function getExpandedSystemId() : String;
 	
 	/** Returns the base system identifier. */
-	@:overload @:public @:public public function getBaseSystemId() : String;
+	@:overload @:public public function getBaseSystemId() : String;
 	
 	/** Returns the line number, or <code>-1</code> if no line number is available. */
-	@:overload @:public @:public public function getLineNumber() : Int;
+	@:overload @:public public function getLineNumber() : Int;
 	
 	/** Returns the column number, or <code>-1</code> if no column number is available. */
-	@:overload @:public @:public public function getColumnNumber() : Int;
+	@:overload @:public public function getColumnNumber() : Int;
 	
 	/** Returns the literal system identifier. */
-	@:overload @:public @:public public function getLiteralSystemId() : String;
+	@:overload @:public public function getLiteralSystemId() : String;
 	
 	/**
 	* Returns the XML version of the current entity. This will normally be the
@@ -308,10 +308,10 @@ extern class XMLEntityReader implements com.sun.org.apache.xerces.internal.xni.X
 	* final once the XML or text declaration has been read or once it has been
 	* determined that there is no such declaration.
 	*/
-	@:overload @:public @:public public function getXMLVersion() : String;
+	@:overload @:public public function getXMLVersion() : String;
 	
 	/** Returns the public identifier. */
-	@:overload @:public @:public public function getPublicId() : String;
+	@:overload @:public public function getPublicId() : String;
 	
 	
 }

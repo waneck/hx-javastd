@@ -142,7 +142,7 @@ package org.xml.sax;
 	* @see #endElement
 	* @see org.xml.sax.AttributeList
 	*/
-	@:overload @:public @:abstract @:public public function startElement(name : String, atts : org.xml.sax.AttributeList) : Void;
+	@:overload @:public @:abstract public function startElement(name : String, atts : org.xml.sax.AttributeList) : Void;
 	
 	/**
 	* Receive notification of the end of an element.
@@ -159,7 +159,7 @@ package org.xml.sax;
 	* @exception org.xml.sax.SAXException Any SAX exception, possibly
 	*            wrapping another exception.
 	*/
-	@:overload @:public @:abstract @:public public function endElement(name : String) : Void;
+	@:overload @:public @:abstract public function endElement(name : String) : Void;
 	
 	/**
 	* Receive notification of character data.

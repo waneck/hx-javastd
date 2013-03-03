@@ -113,7 +113,7 @@ extern interface Shape
 	* @see #getBounds
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:public @:public @:public @:public @:public @:public public function getBounds2D() : java.awt.geom.Rectangle2D;
+	@:require(java2) @:overload @:public public function getBounds2D() : java.awt.geom.Rectangle2D;
 	
 	/**
 	* Tests if the specified coordinates are inside the boundary of the
@@ -127,7 +127,7 @@ extern interface Shape
 	*         otherwise.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:public @:public public function contains(x : Float, y : Float) : Bool;
+	@:require(java2) @:overload @:public public function contains(x : Float, y : Float) : Bool;
 	
 	/**
 	* Tests if a specified {@link Point2D} is inside the boundary
@@ -180,7 +180,7 @@ extern interface Shape
 	* @see java.awt.geom.Area
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:public @:public public function intersects(x : Float, y : Float, w : Float, h : Float) : Bool;
+	@:require(java2) @:overload @:public public function intersects(x : Float, y : Float, w : Float, h : Float) : Bool;
 	
 	/**
 	* Tests if the interior of the <code>Shape</code> intersects the
@@ -256,7 +256,7 @@ extern interface Shape
 	* @see #intersects
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:public @:public public function contains(x : Float, y : Float, w : Float, h : Float) : Bool;
+	@:require(java2) @:overload @:public public function contains(x : Float, y : Float, w : Float, h : Float) : Bool;
 	
 	/**
 	* Tests if the interior of the <code>Shape</code> entirely contains the
@@ -316,7 +316,7 @@ extern interface Shape
 	*          traverses the geometry of the <code>Shape</code>.
 	* @since 1.2
 	*/
-	@:require(java2) @:overload @:public @:public @:public public function getPathIterator(at : java.awt.geom.AffineTransform) : java.awt.geom.PathIterator;
+	@:require(java2) @:overload @:public public function getPathIterator(at : java.awt.geom.AffineTransform) : java.awt.geom.PathIterator;
 	
 	/**
 	* Returns an iterator object that iterates along the <code>Shape</code>

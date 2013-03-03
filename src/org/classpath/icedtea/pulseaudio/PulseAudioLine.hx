@@ -62,7 +62,7 @@ exception statement from your version.
 	* line.
 	* @return description of the line
 	*/
-	@:overload @:public @:public @:public @:public override public function getLineInfo() : javax.sound.sampled.Line.Line_Info;
+	@:overload @:public public function getLineInfo() : javax.sound.sampled.Line.Line_Info;
 	
 	/**
 	* Opens the line, indicating that it should acquire any required
@@ -108,7 +108,7 @@ exception statement from your version.
 	* @see Clip#open(AudioFormat, byte[], int, int)
 	* @see Clip#open(AudioInputStream)
 	*/
-	@:overload @:public @:public public function open() : Void;
+	@:overload @:public public function open() : Void;
 	
 	
 }

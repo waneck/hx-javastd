@@ -49,7 +49,7 @@ extern interface DiagnosticFormatter<D>
 	* @param l locale object to be used for i18n
 	* @return a string representing the diagnostic
 	*/
-	@:overload @:public @:public public function format(diag : D, l : java.util.Locale) : String;
+	@:overload @:public public function format(diag : D, l : java.util.Locale) : String;
 	
 	/**
 	* Controls the way in which a diagnostic message is displayed.
@@ -58,7 +58,7 @@ extern interface DiagnosticFormatter<D>
 	* @param l locale object to be used for i18n
 	* @return string representation of the diagnostic message
 	*/
-	@:overload @:public @:public public function formatMessage(diag : D, l : java.util.Locale) : String;
+	@:overload @:public public function formatMessage(diag : D, l : java.util.Locale) : String;
 	
 	/**
 	* Controls the way in which a diagnostic kind is displayed.
@@ -67,7 +67,7 @@ extern interface DiagnosticFormatter<D>
 	* @param l locale object to be used for i18n
 	* @return string representation of the diagnostic prefix
 	*/
-	@:overload @:public @:public public function formatKind(diag : D, l : java.util.Locale) : String;
+	@:overload @:public public function formatKind(diag : D, l : java.util.Locale) : String;
 	
 	/**
 	* Controls the way in which a diagnostic source is displayed.
@@ -77,7 +77,7 @@ extern interface DiagnosticFormatter<D>
 	* @param fullname whether the source fullname should be printed
 	* @return string representation of the diagnostic source
 	*/
-	@:overload @:public @:public public function formatSource(diag : D, fullname : Bool, l : java.util.Locale) : String;
+	@:overload @:public public function formatSource(diag : D, fullname : Bool, l : java.util.Locale) : String;
 	
 	/**
 	* Controls the way in which a diagnostic position is displayed.
@@ -87,7 +87,7 @@ extern interface DiagnosticFormatter<D>
 	* @param l locale object to be used for i18n
 	* @return string representation of the diagnostic position
 	*/
-	@:overload @:public @:public public function formatPosition(diag : D, pk : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_PositionKind, l : java.util.Locale) : String;
+	@:overload @:public public function formatPosition(diag : D, pk : com.sun.tools.javac.api.DiagnosticFormatter.DiagnosticFormatter_PositionKind, l : java.util.Locale) : String;
 	
 	/**
 	* Get a list of all the enabled verbosity options.

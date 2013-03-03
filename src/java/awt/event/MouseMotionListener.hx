@@ -36,13 +36,13 @@ extern interface MouseMotionListener extends java.util.EventListener
 	* <code>MOUSE_DRAGGED</code> events may not be delivered during a native
 	* Drag&Drop operation.
 	*/
-	@:overload @:public @:public public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseDragged(e : java.awt.event.MouseEvent) : Void;
 	
 	/**
 	* Invoked when the mouse cursor has been moved onto a component
 	* but no buttons have been pushed.
 	*/
-	@:overload @:public @:public public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
+	@:overload @:public public function mouseMoved(e : java.awt.event.MouseEvent) : Void;
 	
 	
 }

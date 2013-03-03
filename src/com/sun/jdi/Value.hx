@@ -174,7 +174,7 @@ package com.sun.jdi;
 	* @return a {@link Type} which mirrors the value's type in the
 	* target VM.
 	*/
-	@:overload @:public @:public public function type() : com.sun.jdi.Type;
+	@:overload @:public public function type() : com.sun.jdi.Type;
 	
 	
 }

@@ -262,7 +262,7 @@ extern class DatagramSocketImpl implements java.net.SocketOptions
 	* the socket is closed, or some low-level error occurred
 	* @see #getOption(int)
 	*/
-	@:overload @:public @:public public function setOption(optID : Int, value : Dynamic) : Void;
+	@:overload @:public public function setOption(optID : Int, value : Dynamic) : Void;
 	
 	/**
 	* Fetch the value of an option.
@@ -297,7 +297,7 @@ extern class DatagramSocketImpl implements java.net.SocketOptions
 	*         protocol stack (including the SocketImpl)
 	* @see #setOption(int, java.lang.Object)
 	*/
-	@:overload @:public @:public public function getOption(optID : Int) : Dynamic;
+	@:overload @:public public function getOption(optID : Int) : Dynamic;
 	
 	
 }

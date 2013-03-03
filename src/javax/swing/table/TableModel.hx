@@ -52,7 +52,7 @@ extern interface TableModel
 	* @return the number of rows in the model
 	* @see #getColumnCount
 	*/
-	@:overload @:public @:public public function getRowCount() : Int;
+	@:overload @:public public function getRowCount() : Int;
 	
 	/**
 	* Returns the number of columns in the model. A
@@ -62,7 +62,7 @@ extern interface TableModel
 	* @return the number of columns in the model
 	* @see #getRowCount
 	*/
-	@:overload @:public @:public public function getColumnCount() : Int;
+	@:overload @:public public function getColumnCount() : Int;
 	
 	/**
 	* Returns the name of the column at <code>columnIndex</code>.  This is used
@@ -105,7 +105,7 @@ extern interface TableModel
 	* @param   columnIndex     the column whose value is to be queried
 	* @return  the value Object at the specified cell
 	*/
-	@:overload @:public @:public public function getValueAt(rowIndex : Int, columnIndex : Int) : Dynamic;
+	@:overload @:public public function getValueAt(rowIndex : Int, columnIndex : Int) : Dynamic;
 	
 	/**
 	* Sets the value in the cell at <code>columnIndex</code> and

@@ -56,7 +56,7 @@ extern class Entity implements com.sun.tools.internal.ws.wsdl.framework.Elementa
 	*
 	* @author WS Development Team
 	*/
-	@:overload @:public @:public @:public override public function getElementName() : javax.xml.namespace.QName;
+	@:overload @:public public function getElementName() : javax.xml.namespace.QName;
 	
 	
 }

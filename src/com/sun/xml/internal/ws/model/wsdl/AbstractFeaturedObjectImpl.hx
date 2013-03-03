@@ -47,7 +47,7 @@ package com.sun.xml.internal.ws.model.wsdl;
 	*
 	* This is useful when producing error messages.
 	*/
-	@:overload @:public @:public override public function getLocation() : org.xml.sax.Locator;
+	@:overload @:public override public function getLocation() : org.xml.sax.Locator;
 	
 	
 }

@@ -128,7 +128,7 @@ extern interface Key extends java.io.Serializable
 	*
 	* @return the primary encoding format of the key.
 	*/
-	@:overload @:public @:public public function getFormat() : String;
+	@:overload @:public public function getFormat() : String;
 	
 	/**
 	* Returns the key in its primary encoding format, or null

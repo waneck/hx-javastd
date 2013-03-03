@@ -110,7 +110,7 @@ extern interface SOAPFault extends javax.xml.soap.SOAPBodyElement
 	*
 	* @since SAAJ 1.2
 	*/
-	@:require(java2) @:overload @:public @:public public function getFaultCodeAsName() : javax.xml.soap.Name;
+	@:require(java2) @:overload @:public public function getFaultCodeAsName() : javax.xml.soap.Name;
 	
 	/**
 	* Gets the fault code for this
@@ -122,7 +122,7 @@ extern interface SOAPFault extends javax.xml.soap.SOAPBodyElement
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public public function getFaultCodeAsQName() : javax.xml.namespace.QName;
+	@:require(java3) @:overload @:public public function getFaultCodeAsQName() : javax.xml.namespace.QName;
 	
 	/**
 	* Gets the Subcodes for this <code>SOAPFault</code> as an iterator over
@@ -139,7 +139,7 @@ extern interface SOAPFault extends javax.xml.soap.SOAPBodyElement
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public public function getFaultSubcodes() : java.util.Iterator<Dynamic>;
+	@:require(java3) @:overload @:public public function getFaultSubcodes() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Removes any Subcodes that may be contained by this
@@ -152,7 +152,7 @@ extern interface SOAPFault extends javax.xml.soap.SOAPBodyElement
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public public function removeAllFaultSubcodes() : Void;
+	@:require(java3) @:overload @:public public function removeAllFaultSubcodes() : Void;
 	
 	/**
 	* Adds a Subcode to the end of the sequence of Subcodes contained by this
@@ -168,7 +168,7 @@ extern interface SOAPFault extends javax.xml.soap.SOAPBodyElement
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public public function appendFaultSubcode(subcode : javax.xml.namespace.QName) : Void;
+	@:require(java3) @:overload @:public public function appendFaultSubcode(subcode : javax.xml.namespace.QName) : Void;
 	
 	/**
 	* Gets the fault code for this <code>SOAPFault</code> object.
@@ -177,7 +177,7 @@ extern interface SOAPFault extends javax.xml.soap.SOAPBodyElement
 	* @see #getFaultCodeAsName
 	* @see #setFaultCode
 	*/
-	@:overload @:public @:public public function getFaultCode() : String;
+	@:overload @:public public function getFaultCode() : String;
 	
 	/**
 	* Sets this <code>SOAPFault</code> object with the given fault actor.
@@ -227,7 +227,7 @@ extern interface SOAPFault extends javax.xml.soap.SOAPBodyElement
 	* @exception SOAPException if there was an error in adding the
 	*            <code>faultString</code> to the underlying XML tree.
 	*/
-	@:overload @:public @:public public function setFaultString(faultString : String) : Void;
+	@:overload @:public public function setFaultString(faultString : String) : Void;
 	
 	/**
 	* Sets the fault string for this <code>SOAPFault</code> object
@@ -251,7 +251,7 @@ extern interface SOAPFault extends javax.xml.soap.SOAPBodyElement
 	*
 	* @since SAAJ 1.2
 	*/
-	@:require(java2) @:overload @:public @:public public function setFaultString(faultString : String, locale : java.util.Locale) : Void;
+	@:require(java2) @:overload @:public public function setFaultString(faultString : String, locale : java.util.Locale) : Void;
 	
 	/**
 	* Gets the fault string for this <code>SOAPFault</code> object.
@@ -272,7 +272,7 @@ extern interface SOAPFault extends javax.xml.soap.SOAPBodyElement
 	* @see #setFaultString(String)
 	* @see #setFaultString(String, Locale)
 	*/
-	@:overload @:public @:public public function getFaultString() : String;
+	@:overload @:public public function getFaultString() : String;
 	
 	/**
 	* Gets the locale of the fault string for this <code>SOAPFault</code>
@@ -295,7 +295,7 @@ extern interface SOAPFault extends javax.xml.soap.SOAPBodyElement
 	*
 	* @since SAAJ 1.2
 	*/
-	@:require(java2) @:overload @:public @:public public function getFaultStringLocale() : java.util.Locale;
+	@:require(java2) @:overload @:public public function getFaultStringLocale() : java.util.Locale;
 	
 	/**
 	* Returns true if this <code>SOAPFault</code> has a <code>Detail</code>
@@ -357,7 +357,7 @@ extern interface SOAPFault extends javax.xml.soap.SOAPBodyElement
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public public function getFaultReasonLocales() : java.util.Iterator<Dynamic>;
+	@:require(java3) @:overload @:public public function getFaultReasonLocales() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Returns an <code>Iterator</code> over a sequence of
@@ -373,7 +373,7 @@ extern interface SOAPFault extends javax.xml.soap.SOAPBodyElement
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public public function getFaultReasonTexts() : java.util.Iterator<Dynamic>;
+	@:require(java3) @:overload @:public public function getFaultReasonTexts() : java.util.Iterator<Dynamic>;
 	
 	/**
 	* Returns the Reason Text associated with the given <code>Locale</code>.
@@ -394,7 +394,7 @@ extern interface SOAPFault extends javax.xml.soap.SOAPBodyElement
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public public function getFaultReasonText(locale : java.util.Locale) : String;
+	@:require(java3) @:overload @:public public function getFaultReasonText(locale : java.util.Locale) : String;
 	
 	/**
 	* Appends or replaces a Reason Text item containing the specified
@@ -421,7 +421,7 @@ extern interface SOAPFault extends javax.xml.soap.SOAPBodyElement
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public public function addFaultReasonText(text : String, locale : java.util.Locale) : Void;
+	@:require(java3) @:overload @:public public function addFaultReasonText(text : String, locale : java.util.Locale) : Void;
 	
 	/**
 	* Returns the optional Node element value for this
@@ -436,7 +436,7 @@ extern interface SOAPFault extends javax.xml.soap.SOAPBodyElement
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public public function getFaultNode() : String;
+	@:require(java3) @:overload @:public public function getFaultNode() : String;
 	
 	/**
 	* Creates or replaces any existing Node element value for
@@ -451,7 +451,7 @@ extern interface SOAPFault extends javax.xml.soap.SOAPBodyElement
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public public function setFaultNode(uri : String) : Void;
+	@:require(java3) @:overload @:public public function setFaultNode(uri : String) : Void;
 	
 	/**
 	* Returns the optional Role element value for this
@@ -466,7 +466,7 @@ extern interface SOAPFault extends javax.xml.soap.SOAPBodyElement
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public public function getFaultRole() : String;
+	@:require(java3) @:overload @:public public function getFaultRole() : String;
 	
 	/**
 	* Creates or replaces any existing Role element value for
@@ -483,7 +483,7 @@ extern interface SOAPFault extends javax.xml.soap.SOAPBodyElement
 	*
 	* @since SAAJ 1.3
 	*/
-	@:require(java3) @:overload @:public @:public public function setFaultRole(uri : String) : Void;
+	@:require(java3) @:overload @:public public function setFaultRole(uri : String) : Void;
 	
 	
 }

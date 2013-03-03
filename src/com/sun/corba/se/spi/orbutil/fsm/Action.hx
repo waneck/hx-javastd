@@ -47,7 +47,7 @@ extern interface Action
 	* @param FSM fsm is the state machine causing this action.
 	* @param Input in is the input that caused the transition.
 	*/
-	@:overload @:public @:public public function doIt(fsm : com.sun.corba.se.spi.orbutil.fsm.FSM, _in : com.sun.corba.se.spi.orbutil.fsm.Input) : Void;
+	@:overload @:public public function doIt(fsm : com.sun.corba.se.spi.orbutil.fsm.FSM, _in : com.sun.corba.se.spi.orbutil.fsm.Input) : Void;
 	
 	
 }

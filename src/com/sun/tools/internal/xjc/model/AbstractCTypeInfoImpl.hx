@@ -67,7 +67,7 @@ package com.sun.tools.internal.xjc.model;
 	*
 	* @see NType#toType(Outline, Aspect)
 	*/
-	@:overload @:public @:public override public function toType(o : com.sun.tools.internal.xjc.outline.Outline, aspect : com.sun.tools.internal.xjc.outline.Aspect) : com.sun.codemodel.internal.JType;
+	@:overload @:public public function toType(o : com.sun.tools.internal.xjc.outline.Outline, aspect : com.sun.tools.internal.xjc.outline.Aspect) : com.sun.codemodel.internal.JType;
 	
 	/**
 	* Gets the underlying Java type that object represents.
@@ -75,7 +75,7 @@ package com.sun.tools.internal.xjc.model;
 	* @return
 	*      always non-null.
 	*/
-	@:overload @:public @:public @:public @:public override public function getType() : Dynamic;
+	@:overload @:public public function getType() : Dynamic;
 	
 	
 }

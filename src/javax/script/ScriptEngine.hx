@@ -49,7 +49,7 @@ extern interface ScriptEngine
 	* implementations.
 	* @throws NullPointerException if either argument is null.
 	*/
-	@:overload @:public @:public public function eval(script : String, context : javax.script.ScriptContext) : Dynamic;
+	@:overload @:public public function eval(script : String, context : javax.script.ScriptContext) : Dynamic;
 	
 	/**
 	* Same as <code>eval(String, ScriptContext)</code> where the source of the script
@@ -64,7 +64,7 @@ extern interface ScriptEngine
 	* @throws ScriptException if an error occurrs in script.
 	* @throws NullPointerException if either argument is null.
 	*/
-	@:overload @:public @:public public function eval(reader : java.io.Reader, context : javax.script.ScriptContext) : Dynamic;
+	@:overload @:public public function eval(reader : java.io.Reader, context : javax.script.ScriptContext) : Dynamic;
 	
 	/**
 	* Executes the specified script.  The default <code>ScriptContext</code> for the <code>ScriptEngine</code>
@@ -217,7 +217,7 @@ extern interface ScriptEngine
 	*
 	* @return A <code>Bindings</code> that can be used to replace the state of this <code>ScriptEngine</code>.
 	**/
-	@:overload @:public @:public public function createBindings() : javax.script.Bindings;
+	@:overload @:public public function createBindings() : javax.script.Bindings;
 	
 	/**
 	* Returns the default <code>ScriptContext</code> of the <code>ScriptEngine</code> whose Bindings, Reader
@@ -242,7 +242,7 @@ extern interface ScriptEngine
 	*
 	* @return The <code>ScriptEngineFactory</code>
 	*/
-	@:overload @:public @:public public function getFactory() : javax.script.ScriptEngineFactory;
+	@:overload @:public public function getFactory() : javax.script.ScriptEngineFactory;
 	
 	
 }

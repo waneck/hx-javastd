@@ -218,7 +218,7 @@ package java.util;
 	* @throws IllegalArgumentException if some property of the specified element
 	*         prevents it from being added to this set
 	*/
-	@:overload @:public @:public public function add(e : E) : Bool;
+	@:overload @:public override public function add(e : E) : Bool;
 	
 	/**
 	* Returns the number of elements in this set (its cardinality).  If this

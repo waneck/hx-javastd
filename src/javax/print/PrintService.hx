@@ -35,14 +35,14 @@ extern interface PrintService
 	* attribute.
 	* @return name of the service.
 	*/
-	@:overload @:public @:public public function getName() : String;
+	@:overload @:public public function getName() : String;
 	
 	/**
 	* Creates and returns a PrintJob capable of handling data from
 	* any of the supported document flavors.
 	* @return a DocPrintJob object
 	*/
-	@:overload @:public @:public public function createPrintJob() : javax.print.DocPrintJob;
+	@:overload @:public public function createPrintJob() : javax.print.DocPrintJob;
 	
 	/**
 	* Registers a listener for events on this PrintService.
@@ -50,7 +50,7 @@ extern interface PrintService
 	*        monitors the status of a print service
 	* @see #removePrintServiceAttributeListener
 	*/
-	@:overload @:public @:public public function addPrintServiceAttributeListener(listener : javax.print.event.PrintServiceAttributeListener) : Void;
+	@:overload @:public public function addPrintServiceAttributeListener(listener : javax.print.event.PrintServiceAttributeListener) : Void;
 	
 	/**
 	* Removes the print-service listener from this print service.
@@ -59,7 +59,7 @@ extern interface PrintService
 	* @param listener  a PrintServiceAttributeListener object
 	* @see #addPrintServiceAttributeListener
 	*/
-	@:overload @:public @:public public function removePrintServiceAttributeListener(listener : javax.print.event.PrintServiceAttributeListener) : Void;
+	@:overload @:public public function removePrintServiceAttributeListener(listener : javax.print.event.PrintServiceAttributeListener) : Void;
 	
 	/**
 	* Obtains this print service's set of printer description attributes
@@ -76,7 +76,7 @@ extern interface PrintService
 	* @return  Unmodifiable snapshot of this Print Service's attribute set.
 	*          May be empty, but not null.
 	*/
-	@:overload @:public @:public public function getAttributes() : javax.print.attribute.PrintServiceAttributeSet;
+	@:overload @:public public function getAttributes() : javax.print.attribute.PrintServiceAttributeSet;
 	
 	/**
 	* Gets the value of the single specified service attribute.
@@ -92,7 +92,7 @@ extern interface PrintService
 	*     <code>Class</code> that implements interface
 	*{@link javax.print.attribute.PrintServiceAttribute PrintServiceAttribute}.
 	*/
-	@:overload @:public @:public public function getAttribute<T : javax.print.attribute.PrintServiceAttribute>(category : Class<T>) : T;
+	@:overload @:public public function getAttribute<T : javax.print.attribute.PrintServiceAttribute>(category : Class<T>) : T;
 	
 	/**
 	* Determines the print data formats a client can specify when setting
@@ -109,7 +109,7 @@ extern interface PrintService
 	*          one element.
 	*
 	*/
-	@:overload @:public @:public public function getSupportedDocFlavors() : java.NativeArray<javax.print.DocFlavor>;
+	@:overload @:public public function getSupportedDocFlavors() : java.NativeArray<javax.print.DocFlavor>;
 	
 	/**
 	* Determines if this print service supports a specific
@@ -127,7 +127,7 @@ extern interface PrintService
 	* @exception  NullPointerException
 	*     (unchecked exception) Thrown if <CODE>flavor</CODE> is null.
 	*/
-	@:overload @:public @:public public function isDocFlavorSupported(flavor : javax.print.DocFlavor) : Bool;
+	@:overload @:public public function isDocFlavorSupported(flavor : javax.print.DocFlavor) : Bool;
 	
 	/**
 	* Determines the printing attribute categories a client can specify
@@ -153,7 +153,7 @@ extern interface PrintService
 	*          javax.print.attribute.Attribute Attribute}.
 	*          The array is empty if no categories are supported.
 	*/
-	@:overload @:public @:public public function getSupportedAttributeCategories() : java.NativeArray<Class<Dynamic>>;
+	@:overload @:public public function getSupportedAttributeCategories() : java.NativeArray<Class<Dynamic>>;
 	
 	/**
 	* Determines whether a client can specify the given printing
@@ -191,7 +191,7 @@ extern interface PrintService
 	*     <code>Class</code> that implements interface
 	*     {@link javax.print.attribute.Attribute Attribute}.
 	*/
-	@:overload @:public @:public public function isAttributeCategorySupported(category : Class<javax.print.attribute.Attribute>) : Bool;
+	@:overload @:public public function isAttributeCategorySupported(category : Class<javax.print.attribute.Attribute>) : Bool;
 	
 	/**
 	* Determines this print service's default printing attribute value in
@@ -234,7 +234,7 @@ extern interface PrintService
 	*     {@link java.lang.Class Class} that implements interface {@link
 	*     javax.print.attribute.Attribute Attribute}.
 	*/
-	@:overload @:public @:public public function getDefaultAttributeValue(category : Class<javax.print.attribute.Attribute>) : Dynamic;
+	@:overload @:public public function getDefaultAttributeValue(category : Class<javax.print.attribute.Attribute>) : Dynamic;
 	
 	/**
 	* Determines the printing attribute values a client can specify in
@@ -309,7 +309,7 @@ extern interface PrintService
 	*     javax.print.attribute.Attribute Attribute}, or
 	*     <code>DocFlavor</code> is not supported by this service.
 	*/
-	@:overload @:public @:public public function getSupportedAttributeValues(category : Class<javax.print.attribute.Attribute>, flavor : javax.print.DocFlavor, attributes : javax.print.attribute.AttributeSet) : Dynamic;
+	@:overload @:public public function getSupportedAttributeValues(category : Class<javax.print.attribute.Attribute>, flavor : javax.print.DocFlavor, attributes : javax.print.attribute.AttributeSet) : Dynamic;
 	
 	/**
 	* Determines whether a client can specify the given printing
@@ -352,7 +352,7 @@ extern interface PrintService
 	* @exception  IllegalArgumentException if flavor is not supported by
 	*      this PrintService.
 	*/
-	@:overload @:public @:public public function isAttributeValueSupported(attrval : javax.print.attribute.Attribute, flavor : javax.print.DocFlavor, attributes : javax.print.attribute.AttributeSet) : Bool;
+	@:overload @:public public function isAttributeValueSupported(attrval : javax.print.attribute.Attribute, flavor : javax.print.DocFlavor, attributes : javax.print.attribute.AttributeSet) : Bool;
 	
 	/**
 	* Identifies the attributes that are unsupported for a print request
@@ -395,7 +395,7 @@ extern interface PrintService
 	* @exception IllegalArgumentException if<CODE>flavor</CODE> is
 	*             not supported by this PrintService.
 	*/
-	@:overload @:public @:public public function getUnsupportedAttributes(flavor : javax.print.DocFlavor, attributes : javax.print.attribute.AttributeSet) : javax.print.attribute.AttributeSet;
+	@:overload @:public public function getUnsupportedAttributes(flavor : javax.print.DocFlavor, attributes : javax.print.attribute.AttributeSet) : javax.print.attribute.AttributeSet;
 	
 	/**
 	* Returns a factory for UI components which allow users to interact
@@ -408,7 +408,7 @@ extern interface PrintService
 	* See <code>ServiceUIFactory</code> for more information.
 	* @return null or a factory for UI components.
 	*/
-	@:overload @:public @:public public function getServiceUIFactory() : javax.print.ServiceUIFactory;
+	@:overload @:public public function getServiceUIFactory() : javax.print.ServiceUIFactory;
 	
 	
 }

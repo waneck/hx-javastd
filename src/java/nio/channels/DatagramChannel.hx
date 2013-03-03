@@ -566,7 +566,7 @@ extern class DatagramChannel extends java.nio.channels.spi.AbstractSelectableCha
 	*
 	* @return <tt>true</tt> if, and only if, this channel is open
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public override public function isOpen() : Bool;
+	@:overload @:public override public function isOpen() : Bool;
 	
 	/**
 	* Joins a multicast group to begin receiving all datagrams sent to the group,

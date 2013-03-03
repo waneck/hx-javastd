@@ -67,7 +67,7 @@ extern interface Painter<T>
 	* @param width width of the area to paint.
 	* @param height height of the area to paint.
 	*/
-	@:overload @:public @:public public function paint(g : java.awt.Graphics2D, object : T, width : Int, height : Int) : Void;
+	@:overload @:public public function paint(g : java.awt.Graphics2D, object : T, width : Int, height : Int) : Void;
 	
 	
 }

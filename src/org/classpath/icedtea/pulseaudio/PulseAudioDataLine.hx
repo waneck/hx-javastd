@@ -129,7 +129,7 @@ exception statement from your version.
 	* line.
 	* @return description of the line
 	*/
-	@:overload @:public @:public @:public @:public override public function getLineInfo() : javax.sound.sampled.Line.Line_Info;
+	@:overload @:public override public function getLineInfo() : javax.sound.sampled.Line.Line_Info;
 	
 	/**
 	* Obtains a control of the specified type,
@@ -142,7 +142,7 @@ exception statement from your version.
 	* @see #getControls
 	* @see #isControlSupported(Control.Type control)
 	*/
-	@:overload @:public @:public @:public @:public override public function getControl(control : javax.sound.sampled.Control.Control_Type) : javax.sound.sampled.Control;
+	@:overload @:public override public function getControl(control : javax.sound.sampled.Control.Control_Type) : javax.sound.sampled.Control;
 	
 	/**
 	* Obtains the current position in the audio data, in microseconds.
@@ -155,7 +155,7 @@ exception statement from your version.
 	*
 	* @return the number of microseconds of data processed since the line was opened
 	*/
-	@:overload @:public @:public public function getMicrosecondPosition() : haxe.Int64;
+	@:overload @:public public function getMicrosecondPosition() : haxe.Int64;
 	
 	/**
 	* Obtains the current position in the audio data, in sample frames.
@@ -165,7 +165,7 @@ exception statement from your version.
 	* @return the number of frames already processed since the line was opened
 	* @since 1.5
 	*/
-	@:require(java5) @:overload @:public @:public @:public public function getLongFramePosition() : haxe.Int64;
+	@:require(java5) @:overload @:public public function getLongFramePosition() : haxe.Int64;
 	
 	/**
 	* Adds a listener to this line.  Whenever the line's status changes, the
@@ -176,7 +176,7 @@ exception statement from your version.
 	* @see LineListener#update
 	* @see LineEvent
 	*/
-	@:overload @:public @:public @:public @:public override public function addLineListener(listener : javax.sound.sampled.LineListener) : Void;
+	@:overload @:public override public function addLineListener(listener : javax.sound.sampled.LineListener) : Void;
 	
 	/**
 	* Obtains the current position in the audio data, in sample frames.
@@ -188,7 +188,7 @@ exception statement from your version.
 	* @return the number of frames already processed since the line was opened
 	* @see #getLongFramePosition()
 	*/
-	@:overload @:public @:public @:public public function getFramePosition() : Int;
+	@:overload @:public public function getFramePosition() : Int;
 	
 	/**
 	* Flushes queued data from the line.  The flushed data is discarded.
@@ -204,7 +204,7 @@ exception statement from your version.
 	* @see #stop()
 	* @see #drain()
 	*/
-	@:overload @:public @:public public function flush() : Void;
+	@:overload @:public public function flush() : Void;
 	
 	/**
 	* Indicates whether the line supports a control of the specified type.
@@ -213,7 +213,7 @@ exception statement from your version.
 	* @return <code>true</code> if at least one control of the specified type is
 	* supported, otherwise <code>false</code>.
 	*/
-	@:overload @:public @:public @:public @:public override public function isControlSupported(control : javax.sound.sampled.Control.Control_Type) : Bool;
+	@:overload @:public override public function isControlSupported(control : javax.sound.sampled.Control.Control_Type) : Bool;
 	
 	/**
 	* Obtains the number of bytes of data currently available to the
@@ -234,7 +234,7 @@ exception statement from your version.
 	*
 	* @return the amount of data available, in bytes
 	*/
-	@:overload @:public @:public public function available() : Int;
+	@:overload @:public public function available() : Int;
 	
 	/**
 	* Obtains the set of controls associated with this line.
@@ -243,7 +243,7 @@ exception statement from your version.
 	* @return the array of controls
 	* @see #getControl
 	*/
-	@:overload @:public @:public @:public @:public override public function getControls() : java.NativeArray<javax.sound.sampled.Control>;
+	@:overload @:public override public function getControls() : java.NativeArray<javax.sound.sampled.Control>;
 	
 	/**
 	* Drains queued data from the line by continuing data I/O until the
@@ -258,7 +258,7 @@ exception statement from your version.
 	*
 	* @see #flush()
 	*/
-	@:overload @:public @:public public function drain() : Void;
+	@:overload @:public public function drain() : Void;
 	
 	/**
 	* Indicates whether the line is open, meaning that it has reserved
@@ -269,14 +269,14 @@ exception statement from your version.
 	* @see #open()
 	* @see #close()
 	*/
-	@:overload @:public @:public @:public override public function isOpen() : Bool;
+	@:overload @:public override public function isOpen() : Bool;
 	
 	/**
 	* Removes the specified listener from this line's list of listeners.
 	* @param listener listener to remove
 	* @see #addLineListener
 	*/
-	@:overload @:public @:public @:public @:public override public function removeLineListener(listener : javax.sound.sampled.LineListener) : Void;
+	@:overload @:public override public function removeLineListener(listener : javax.sound.sampled.LineListener) : Void;
 	
 	
 }

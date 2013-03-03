@@ -91,7 +91,7 @@ extern class JExpressionImpl implements com.sun.codemodel.internal.JExpression
 	
 	@:overload @:public @:final public function component(index : com.sun.codemodel.internal.JExpression) : com.sun.codemodel.internal.JArrayCompRef;
 	
-	@:overload @:public @:public @:public @:public public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
 	
 }

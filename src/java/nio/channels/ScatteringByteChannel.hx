@@ -95,7 +95,7 @@ extern interface ScatteringByteChannel extends java.nio.channels.ReadableByteCha
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload @:public @:public public function read(dsts : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int) : haxe.Int64;
+	@:overload @:public public function read(dsts : java.NativeArray<java.nio.ByteBuffer>, offset : Int, length : Int) : haxe.Int64;
 	
 	/**
 	* Reads a sequence of bytes from this channel into the given buffers.
@@ -131,7 +131,7 @@ extern interface ScatteringByteChannel extends java.nio.channels.ReadableByteCha
 	* @throws  IOException
 	*          If some other I/O error occurs
 	*/
-	@:overload @:public @:public public function read(dsts : java.NativeArray<java.nio.ByteBuffer>) : haxe.Int64;
+	@:overload @:public public function read(dsts : java.NativeArray<java.nio.ByteBuffer>) : haxe.Int64;
 	
 	
 }

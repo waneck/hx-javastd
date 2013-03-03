@@ -101,7 +101,7 @@ extern class FieldOrMethod extends com.sun.org.apache.bcel.internal.generic.CPIn
 	* an int[][].
 	* @see #getLoadClassType(ConstantPoolGen)
 	*/
-	@:overload @:public @:public override public function getType(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
+	@:overload @:public override public function getType(cpg : com.sun.org.apache.bcel.internal.generic.ConstantPoolGen) : com.sun.org.apache.bcel.internal.generic.Type;
 	
 	
 }

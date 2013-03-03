@@ -529,7 +529,7 @@ extern class BaseMarkupSerializer implements org.xml.sax.ContentHandler implemen
 	* @see org.xml.sax.Attributes
 	* @see org.xml.sax.helpers.AttributesImpl
 	*/
-	@:overload @:public @:public @:public @:public @:public public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
+	@:overload @:public public function startElement(uri : String, localName : String, qName : String, atts : org.xml.sax.Attributes) : Void;
 	
 	/**
 	* Receive notification of the end of an element.
@@ -546,7 +546,7 @@ extern class BaseMarkupSerializer implements org.xml.sax.ContentHandler implemen
 	* @exception org.xml.sax.SAXException Any SAX exception, possibly
 	*            wrapping another exception.
 	*/
-	@:overload @:public @:abstract @:public public function endElement(name : String) : Void;
+	@:overload @:public @:abstract public function endElement(name : String) : Void;
 	
 	/**
 	* Receive notification of the end of an element.
@@ -569,7 +569,7 @@ extern class BaseMarkupSerializer implements org.xml.sax.ContentHandler implemen
 	* @throws org.xml.sax.SAXException any SAX exception, possibly
 	*            wrapping another exception
 	*/
-	@:overload @:public @:public @:public @:public @:public public function endElement(uri : String, localName : String, qName : String) : Void;
+	@:overload @:public public function endElement(uri : String, localName : String, qName : String) : Void;
 	
 	/**
 	* Receive notification of the beginning of an element.
@@ -593,7 +593,7 @@ extern class BaseMarkupSerializer implements org.xml.sax.ContentHandler implemen
 	* @see #endElement
 	* @see org.xml.sax.AttributeList
 	*/
-	@:overload @:public @:abstract @:public public function startElement(name : String, atts : org.xml.sax.AttributeList) : Void;
+	@:overload @:public @:abstract public function startElement(name : String, atts : org.xml.sax.AttributeList) : Void;
 	
 	
 }

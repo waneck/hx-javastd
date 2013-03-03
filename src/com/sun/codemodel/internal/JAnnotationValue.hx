@@ -31,7 +31,7 @@ package com.sun.codemodel.internal;
 */
 extern class JAnnotationValue implements com.sun.codemodel.internal.JGenerable
 {
-	@:overload @:public @:public @:public @:public public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
+	@:overload @:public public function generate(f : com.sun.codemodel.internal.JFormatter) : Void;
 	
 	
 }

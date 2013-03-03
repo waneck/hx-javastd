@@ -48,7 +48,7 @@ extern class PrimitiveValueImpl extends com.sun.tools.jdi.ValueImpl implements c
 	* @return a {@link Type} which mirrors the value's type in the
 	* target VM.
 	*/
-	@:overload @:public @:public override public function type() : com.sun.jdi.Type;
+	@:overload @:public override public function type() : com.sun.jdi.Type;
 	
 	/**
 	* Gets the VirtualMachine to which this
@@ -57,7 +57,7 @@ extern class PrimitiveValueImpl extends com.sun.tools.jdi.ValueImpl implements c
 	*
 	* @return the {@link VirtualMachine} for which this mirror is a proxy.
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public override public function virtualMachine() : com.sun.jdi.VirtualMachine;
+	@:overload @:public override public function virtualMachine() : com.sun.jdi.VirtualMachine;
 	
 	
 }

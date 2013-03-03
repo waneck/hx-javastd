@@ -66,7 +66,7 @@ extern class ExecutableDeclarationImpl extends com.sun.tools.apt.mirror.declarat
 	*
 	* @return the simple name of this declaration
 	*/
-	@:overload @:public @:public override public function getSimpleName() : String;
+	@:overload @:public override public function getSimpleName() : String;
 	
 	/**
 	* Returns the formal type parameters of this method or constructor.
@@ -111,7 +111,7 @@ extern class ExecutableDeclarationImpl extends com.sun.tools.apt.mirror.declarat
 	*
 	* @see #getAnnotationMirrors()
 	*/
-	@:overload @:public @:public override public function getAnnotation<A : java.lang.annotation.Annotation>(annotationType : Class<A>) : A;
+	@:overload @:public override public function getAnnotation<A : java.lang.annotation.Annotation>(annotationType : Class<A>) : A;
 	
 	/**
 	* Returns the source position of the beginning of this declaration.
@@ -124,7 +124,7 @@ extern class ExecutableDeclarationImpl extends com.sun.tools.apt.mirror.declarat
 	* @return the source position of the beginning of this declaration,
 	*          or null if the position is unknown or not applicable
 	*/
-	@:overload @:public @:public override public function getPosition() : com.sun.mirror.util.SourcePosition;
+	@:overload @:public override public function getPosition() : com.sun.mirror.util.SourcePosition;
 	
 	/**
 	* Returns the text of the documentation ("javadoc") comment of
@@ -133,7 +133,7 @@ extern class ExecutableDeclarationImpl extends com.sun.tools.apt.mirror.declarat
 	* @return the documentation comment of this declaration, or <tt>null</tt>
 	*          if there is none
 	*/
-	@:overload @:public @:public override public function getDocComment() : String;
+	@:overload @:public override public function getDocComment() : String;
 	
 	/**
 	* Returns the annotations that are directly present on this declaration.
@@ -141,7 +141,7 @@ extern class ExecutableDeclarationImpl extends com.sun.tools.apt.mirror.declarat
 	* @return the annotations directly present on this declaration;
 	*          an empty collection if there are none
 	*/
-	@:overload @:public @:public override public function getAnnotationMirrors() : java.util.Collection<com.sun.mirror.declaration.AnnotationMirror>;
+	@:overload @:public override public function getAnnotationMirrors() : java.util.Collection<com.sun.mirror.declaration.AnnotationMirror>;
 	
 	/**
 	* Returns the modifiers of this declaration, excluding annotations.
@@ -151,7 +151,7 @@ extern class ExecutableDeclarationImpl extends com.sun.tools.apt.mirror.declarat
 	* @return the modifiers of this declaration in undefined order;
 	*          an empty collection if there are none
 	*/
-	@:overload @:public @:public override public function getModifiers() : java.util.Collection<com.sun.mirror.declaration.Modifier>;
+	@:overload @:public override public function getModifiers() : java.util.Collection<com.sun.mirror.declaration.Modifier>;
 	
 	/**
 	* Applies a visitor to this declaration.

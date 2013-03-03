@@ -700,7 +700,7 @@ extern class Symbol implements javax.lang.model.element.Element
 	
 	@:overload @:public public function visitTypeSymbol(s : com.sun.tools.javac.code.Symbol.Symbol_TypeSymbol, arg : P) : R;
 	
-	@:overload @:public @:public public function visitSymbol(s : com.sun.tools.javac.code.Symbol, arg : P) : R;
+	@:overload @:public public function visitSymbol(s : com.sun.tools.javac.code.Symbol, arg : P) : R;
 	
 	
 }

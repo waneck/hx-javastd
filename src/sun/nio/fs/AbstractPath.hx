@@ -245,7 +245,7 @@ package sun.nio.fs;
 	* @throws ClassCastException if the specified object's type prevents it
 	*         from being compared to this object.
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function compareTo(o : Dynamic) : Int;
+	@:overload @:public public function compareTo(o : Dynamic) : Int;
 	
 	/**
 	* Constructs a relative path between this path and a given path.

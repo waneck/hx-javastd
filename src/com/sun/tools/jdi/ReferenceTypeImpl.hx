@@ -132,7 +132,7 @@ extern class ReferenceTypeImpl extends com.sun.tools.jdi.TypeImpl implements com
 	*
 	* @return the {@link VirtualMachine} for which this mirror is a proxy.
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public override public function virtualMachine() : com.sun.jdi.VirtualMachine;
+	@:overload @:public override public function virtualMachine() : com.sun.jdi.VirtualMachine;
 	
 	/**
 	* Compares this object with the specified object for order.  Returns a
@@ -173,7 +173,7 @@ extern class ReferenceTypeImpl extends com.sun.tools.jdi.TypeImpl implements com
 	* @throws ClassCastException if the specified object's type prevents it
 	*         from being compared to this object.
 	*/
-	@:overload @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public @:public public function compareTo(o : Dynamic) : Int;
+	@:overload @:public public function compareTo(o : Dynamic) : Int;
 	
 	/**
 	* Gets the fully qualified name of this type. The returned name
